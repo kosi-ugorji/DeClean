@@ -2,6 +2,8 @@ import React from "react";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import "./Footer.css";
+import { NavLink } from 'react-router-dom';
+
 
 export default function Footer() {
   return (
@@ -12,8 +14,8 @@ export default function Footer() {
           Join hundreds of Ottawa families who trust us with their homes. Get your personalized quote today!
         </div>
         <div className="footer-cta-btn-row">
-          <a href="/quote" className="footer-btn footer-btn--primary">Get Your Quote</a>
-          <a href="/book" className="footer-btn">Book Now</a>
+          <NavLink to="/quote" className="footer-btn footer-btn--outline">Get Your Quote</NavLink>
+          <NavLink to="/book" className="footer-btn footer-btn--primary">Book Now</NavLink>
         </div>
         <div className="footer-cta-phone">
           Questions? Call us at <span>(613) 513-9893</span>
@@ -39,13 +41,27 @@ export default function Footer() {
         <div className="footer-col">
           <div className="footer-col-title">Quick Links</div>
           <nav className="footer-links">
-            <a href="/">Home</a>
-            <a href="/services">Services</a>
-            <a href="/about">About Us</a>
-            <a href="/quote">Get a Quote</a>
-            <a href="/book">Book a Clean</a>
-            <a href="/faq">FAQ</a>
-            <a href="/contact">Contact</a>
+            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} end>
+              Home
+            </NavLink>
+            <NavLink to="/services" className={({ isActive }) => isActive ? "active" : ""}>
+              Services
+            </NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>
+              About Us
+            </NavLink>
+            <NavLink to="/quote" className={({ isActive }) => isActive ? "active" : ""}>
+              Get a Quote
+            </NavLink>
+            <NavLink to="/book" className={({ isActive }) => isActive ? "active" : ""}>
+              Book a Clean
+            </NavLink>
+            <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""}>
+              FAQ
+            </NavLink> 
+            <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>
+              Contact
+            </NavLink>   
           </nav>
         </div>
         <div className="footer-col">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FiPhone, FiMail, FiClock, FiMapPin } from "react-icons/fi";
 import "./FAQ.css";
 import { FaChevronDown } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const faqs = [
   {
@@ -147,7 +148,9 @@ export default function FAQ() {
             <div className="faqcontact-card-title">Get Quote</div>
             <div className="faqcontact-card-desc">Custom pricing</div>
             <div className="faqcontact-card-main">
-                <a href="/get-a-quote" className="faqcontact-quote-btn">Get Quote</a>
+                <NavLink to="/quote" className="faqcontact-quote-btn">
+                Get Your Quote
+                </NavLink>
             </div>
             <div className="faqcontact-card-extra">No obligation</div>
             </div>

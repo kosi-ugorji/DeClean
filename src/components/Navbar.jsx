@@ -48,8 +48,8 @@ export default function Navbar() {
               </a>
             </span>
           </div>
-          <a href="/quote" className="btn btn-outline">Get Quote</a>
-          <a href="/book" className="btn btn-primary">Book Now</a>
+          <NavLink to="/quote" className="btn btn-outline">Get Quote</NavLink>
+          <NavLink to="/book" className="btn btn-primary">Book Now</NavLink>
         </div>
       </nav>
     </header>
