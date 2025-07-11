@@ -1,0 +1,227 @@
+.faq-page {
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.faq-header {
+  text-align: center;
+  color: #b3c5e6;
+  font-size: 1.43rem;
+  font-weight: 500;
+  margin-bottom: 60px;
+  line-height: 1.5;
+}
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.faq-item {
+  background: #fafcff;
+  border: 1.8px solid #e4eaf6;
+  border-radius: 16px;
+  box-shadow: 0 4px 36px 0 rgba(92,160,242,0.06);
+  transition: box-shadow 0.15s;
+  overflow: hidden;
+}
+.faq-item.open {
+  box-shadow: 0 8px 48px 0 rgba(92,160,242,0.11);
+}
+.faq-question {
+  width: 100%;
+  padding: 26px 34px 26px 32px;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: #181d24;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+.faq-question:focus {
+  background: #f2f7fd;
+}
+.faq-chevron {
+  font-size: 1.04em;
+  color: #b3c5e6;
+  transition: transform 0.23s;
+}
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  padding: 0 34px 26px 32px;
+  color: #42506a;
+  font-size: 1.06rem;
+  font-weight: 500;
+  line-height: 1.65;
+  background: none;
+  border: none;
+  outline: none;
+}
+@media (max-width: 700px) {
+  .faq-header {
+    font-size: 1.09rem;
+    padding: 0 10px;
+    margin-bottom: 38px;
+  }
+  .faq-list {
+    gap: 18px;
+    padding: 0 6px;
+  }
+  .faq-question, .faq-answer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+.faqcontact-section {
+  padding: 70px 0 40px 0;
+  background: #fff;
+  text-align: center;
+}
+.faqcontact-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #181d24;
+  margin-bottom: 14px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.faqcontact-subtitle {
+  color: #5c6c7f;
+  font-size: 1.17rem;
+  font-weight: 500;
+  margin-bottom: 38px;
+}
+.faqcontact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.faqcontact-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid #e4eaf6;
+  box-shadow: 0 2px 18px 0 rgba(92,160,242,0.07);
+  padding: 36px 34px 22px 34px;
+  min-width: 230px;
+  flex: 1 1 230px;
+  max-width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.14s;
+}
+.faqcontact-card:hover {
+  box-shadow: 0 8px 48px 0 rgba(92,160,242,0.15);
+}
+.faqcontact-icon {
+  font-size: 2.3em;
+  color: #6cb8fa;
+  margin-bottom: 13px;
+}
+.faqcontact-card-title {
+  font-weight: 700;
+  font-size: 1.18rem;
+  margin-bottom: 2px;
+  color: #181d24;
+}
+.faqcontact-card-desc {
+  color: #5c6c7f;
+  font-size: 1.01rem;
+  margin-bottom: 13px;
+}
+.faqcontact-card-main {
+  font-size: 1.16rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.faqcontact-phone {
+  color: #49a6f3;
+  text-decoration: none;
+  font-size: 1.22em;
+}
+.faqcontact-email {
+  color: #49a6f3;
+  text-decoration: none;
+  font-weight: 700;
+  word-break: break-all;
+}
+.faqcontact-book-btn {
+  display: block;
+  background: #6cb8fa;
+  color: #fff;
+  padding: 11px 36px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.09em;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-bottom: 2px;
+}
+.faqcontact-book-btn:hover {
+  background: #4ea1e6;
+}
+.faqcontact-quote-btn {
+  display: block;
+  background: #fff;
+  color: #181d24;
+  border: 2px solid #d1e3f8;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.09em;
+  text-decoration: none;
+  margin-bottom: 2px;
+  transition: background 0.13s, border-color 0.13s;
+}
+.faqcontact-quote-btn:hover {
+  background: #f3f7fb;
+  border-color: #97cafd;
+}
+.faqcontact-card-extra {
+  color: #818da0;
+  font-size: 0.98em;
+  margin-top: 2px;
+}
+@media (max-width: 1050px) {
+  .faqcontact-cards {
+    gap: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .faqcontact-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  .faqcontact-card {
+    max-width: 410px;
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .faqcontact-section {
+    padding: 36px 0 18px 0;
+  }
+  .faqcontact-title {
+    font-size: 1.3rem;
+  }
+  .faqcontact-subtitle {
+    font-size: 1.01rem;
+    margin-bottom: 18px;
+  }
+}

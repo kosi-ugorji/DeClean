@@ -1,0 +1,554 @@
+.booknow-page {
+  background: #fcfdff;
+  min-height: 100vh;
+  padding: 40px 0 70px 0;
+}
+.booknow-header {
+  text-align: center;
+  color: #181d24;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.booknow-subheader {
+  text-align: center;
+  color: #a9b7cb;
+  font-size: 1.21rem;
+  font-weight: 500;
+  margin-bottom: 44px;
+}
+.booknow-main {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 0 24px;
+}
+.booknow-form-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid #e4eaf6;
+  box-shadow: none;
+  padding: 36px 28px 28px 28px;
+  flex: 1 1 0;
+  min-width: 330px;
+  max-width: 710px;
+  margin-bottom: 0;
+  transition: box-shadow 0.15s, border 0.15s;
+  overflow: visible;
+  box-sizing: border-box;
+}
+.booknow-form-title {
+  font-size: 1.51rem;
+  font-weight: 800;
+  color: #181d24;
+  margin-bottom: 12px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.booknow-form-section {
+  margin-bottom: 28px;
+}
+.booknow-form-section-header {
+  font-size: 1.16rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #181d24;
+  border-bottom: 1px solid #edeff1;
+  padding-bottom: 8px;
+  margin-top: 10px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.booknow-form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 190px;
+}
+.booknow-form-group label {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.booknow-form-group input,
+.booknow-form-group select,
+.booknow-form-group textarea {
+  background: #fafdff;
+  border: 1.5px solid #e4eaf6;
+  border-radius: 8px;
+  padding: 16px 16px;
+  font-size: 1.09rem;
+  font-family: inherit;
+  color: #212d3b;
+  margin-bottom: 0;
+  outline: none;
+  transition: border 0.17s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.booknow-form-group input:focus,
+.booknow-form-group select:focus,
+.booknow-form-group textarea:focus {
+  border-color: #7cb7f7;
+}
+.booknow-form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+  max-height: 240px;
+}
+.booknow-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.booknow-radio-list {
+  display: flex;
+  gap: 18px;
+  margin-top: 5px;
+}
+.booknow-radio-list label {
+  font-size: 1.04rem;
+  color: #222;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.booknow-radio-list input[type="radio"] {
+  accent-color: #7cb7f7;
+  width: 18px;
+  height: 18px;
+}
+.booknow-form-message {
+  color: #7e8fa6;
+  font-size: 1.06rem;
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.booknow-optional {
+  color: #b3c5e6;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 7px;
+}
+.booknow-checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 26px;
+  margin-top: 8px;
+}
+.booknow-checkbox-label {
+  font-weight: 500;
+  color: #222;
+  font-size: 1.04rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.booknow-checkbox-label input[type="checkbox"] {
+  accent-color: #7cb7f7;
+  width: 18px;
+  height: 18px;
+}
+.booknow-form-submit {
+  width: 100%;
+  background: #7cb7f7;
+  color: #fff;
+  padding: 15px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.12rem;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.booknow-form-submit:disabled {
+  opacity: 0.8;
+  cursor: wait;
+}
+.booknow-form-submit:hover:not(:disabled) {
+  background: #57a5ed;
+}
+.booknow-form-followup {
+  color: #7e8fa6;
+  font-size: 1.06rem;
+  margin-top: 14px;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 500;
+}
+.booknow-form-success {
+  color: #39b045;
+  margin-top: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.booknow-form-error {
+  color: #e02c2c;
+  margin-top: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Right Panel */
+.booknow-rightside {
+  flex: 1 1 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 285px;
+}
+
+/* Trust & Security Box */
+.booknow-info-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 2px solid #e4eaf6;
+  box-shadow: none;
+  padding: 38px 36px 32px 36px;
+  margin-bottom: 0;
+  transition: box-shadow 0.15s, border 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.booknow-info-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #181d24;
+  margin-bottom: 18px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.booknow-trust-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 10px;
+  font-size: 1.11rem;
+  color: #181d24;
+  font-weight: 600;
+}
+.booknow-trust-icons div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.booknow-trust-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.booknow-icon-shield {
+  background: url('data:image/svg+xml;utf8,<svg fill="none" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L2 8v5c0 5.25 3.75 10 10 10s10-4.75 10-10V8l-10-5z" stroke="%237CB7F7" stroke-width="2" fill="none"/><circle cx="12" cy="13" r="3" stroke="%237CB7F7" stroke-width="2" fill="none"/></svg>') no-repeat center/contain;
+}
+.booknow-icon-insured {
+  background: url('data:image/svg+xml;utf8,<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 00-4-4h-2a4 4 0 00-4 4v2" stroke="%237CB7F7" stroke-width="2"/><circle cx="12" cy="7" r="4" stroke="%237CB7F7" stroke-width="2"/></svg>') no-repeat center/contain;
+}
+.booknow-icon-check {
+  background: url('data:image/svg+xml;utf8,<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="%237cdd8a" stroke-width="2" fill="white"/><path d="M8 12l2.5 2.5L16 9" stroke="%237cdd8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center/contain;
+}
+.booknow-icon-lock {
+  background: url('data:image/svg+xml;utf8,<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect width="14" height="7" x="5" y="11" rx="2" stroke="%237CB7F7" stroke-width="2"/><path d="M8 11V8a4 4 0 118 0v3" stroke="%237CB7F7" stroke-width="2"/></svg>') no-repeat center/contain;
+}
+.booknow-icon-clock {
+  background: url('data:image/svg+xml;utf8,<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="%237CB7F7" stroke-width="2"/><path d="M12 7v5l3 3" stroke="%237CB7F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center/contain;
+}
+.booknow-icon-camera {
+  background: url('data:image/svg+xml;utf8,<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect width="18" height="14" x="3" y="7" rx="3" stroke="%237CB7F7" stroke-width="2"/><circle cx="12" cy="14" r="3" stroke="%237CB7F7" stroke-width="2"/><path d="M9 7l1-2h4l1 2" stroke="%237CB7F7" stroke-width="2"/></svg>') no-repeat center/contain;
+}
+
+/* Book By Phone */
+.booknow-call-card {
+  background: #7cb7f7;
+  border-radius: 24px;
+  color: #fff;
+  padding: 38px 18px 30px 18px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.booknow-call-icon {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 12px auto;
+  background: url('data:image/svg+xml;utf8,<svg fill="none" height="38" viewBox="0 0 24 24" width="38" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.86 19.86 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13.94.37 1.85.7 2.72a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.6 6.6l1.27-1.27a2 2 0 012.11-.45c.87.33 1.78.57 2.72.7A2 2 0 0122 16.92z" stroke="%23fff" stroke-width="2" fill="none"/></svg>') no-repeat center/contain;
+}
+.booknow-call-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 11px;
+  color: #fff;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.booknow-call-desc {
+  font-size: 1.14rem;
+  margin-bottom: 23px;
+  color: #e6ecf3;
+  font-weight: 500;
+}
+.booknow-call-phone {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.booknow-call-phone a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+.booknow-call-phone a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1100px) {
+  .booknow-main {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .booknow-form-card, .booknow-rightside {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .booknow-header {
+    font-size: 1.41rem;
+  }
+  .booknow-subheader {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    padding: 0 10px;
+  }
+  .booknow-main {
+    padding: 0 6px;
+    gap: 18px;
+  }
+  .booknow-form-card,
+  .booknow-info-card,
+  .booknow-call-card {
+    padding: 14px 7px 10px 7px;
+    border-radius: 18px;
+  }
+  .booknow-form-title {
+    font-size: 1.08rem;
+  }
+  .booknow-info-title {
+    font-size: 1.06rem;
+  }
+  .booknow-call-title {
+    font-size: 1.07rem;
+  }
+  .booknow-call-phone {
+    font-size: 1.25rem;
+  }
+}
+
+.booking-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.booking-sidebar-card {
+  border-radius: 22px;
+  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+.booking-sidebar-card.trust {
+  background: #fff;
+  border: 2px solid #e4eaf6;
+  padding: 32px 24px 38px 24px;
+}
+.sidebar-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #181d24;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+  margin-bottom: 24px;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 34px;
+  column-gap: 0px;
+}
+.trust-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.22rem;
+  color: #181d24;
+  gap: 7px;
+  line-height: 1.14;
+}
+.trust-feature span:last-child {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #181d24;
+  line-height: 1.16;
+}
+.trust-icon {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+}
+.trust-icon.shield {
+  background: url('data:image/svg+xml;utf8,<svg fill="none" height="38" viewBox="0 0 24 24" width="38" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L2 8v5c0 5.25 3.75 10 10 10s10-4.75 10-10V8l-10-5z" stroke="%237CB7F7" stroke-width="2" fill="none"/><circle cx="12" cy="13" r="3" stroke="%237CB7F7" stroke-width="2" fill="none"/></svg>') no-repeat center/contain;
+}
+.trust-icon.ribbon {
+  background: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="10" r="6" stroke="%237CB7F7" stroke-width="2"/><path d="M7 17l2.5-2M17 17l-2.5-2" stroke="%237CB7F7" stroke-width="2" stroke-linecap="round"/><path d="M12 16v5" stroke="%237CB7F7" stroke-width="2"/></svg>') no-repeat center/contain;
+}
+.trust-icon.check {
+  background: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="%237cdd8a" stroke-width="2" fill="white"/><path d="M8 12l2.5 2.5L16 9" stroke="%237cdd8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center/contain;
+}
+.trust-icon.key {
+  background: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="15" cy="9" r="3" stroke="%237CB7F7" stroke-width="2"/><path d="M21 21l-6-6" stroke="%237CB7F7" stroke-width="2" stroke-linecap="round"/><circle cx="7" cy="17" r="2" stroke="%237CB7F7" stroke-width="2"/></svg>') no-repeat center/contain;
+}
+.trust-icon.clock {
+  background: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="%237CB7F7" stroke-width="2"/><path d="M12 7v5l3 3" stroke="%237CB7F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center/contain;
+}
+.trust-icon.camera {
+  background: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><rect width="18" height="14" x="3" y="7" rx="3" stroke="%237CB7F7" stroke-width="2"/><circle cx="12" cy="14" r="3" stroke="%237CB7F7" stroke-width="2"/><path d="M9 7l1-2h4l1 2" stroke="%237CB7F7" stroke-width="2"/></svg>') no-repeat center/contain;
+}
+
+/* Phone box */
+.booking-sidebar-card.phone {
+  background: #7cb7f7;
+  color: #fff;
+  border: none;
+  padding: 36px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 22px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.phone-icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 13px;
+  background: url('data:image/svg+xml;utf8,<svg fill="none" height="38" viewBox="0 0 24 24" width="38" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.86 19.86 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13.94.37 1.85.7 2.72a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.6 6.6l1.27-1.27a2 2 0 012.11-.45c.87.33 1.78.57 2.72.7A2 2 0 0122 16.92z" stroke="%23fff" stroke-width="2" fill="none"/></svg>') no-repeat center/contain;
+}
+.phone-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #fff;
+  text-align: center;
+}
+.phone-desc {
+  font-size: 1.13rem;
+  margin-bottom: 23px;
+  color: #e6ecf3;
+  font-weight: 500;
+  text-align: center;
+}
+.phone-number {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-align: center;
+}
+.phone-number a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+.phone-number a:hover {
+  text-decoration: underline;
+}
+.phone-hours {
+  font-size: 1.05rem;
+  color: #e6ecf3;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.phone-note {
+  color: #e6ecf3;
+  font-size: 1.01rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .booking-sidebar-card,
+  .booking-sidebar-card.trust,
+  .booking-sidebar-card.phone {
+    padding: 14px 7px 10px 7px;
+    border-radius: 16px;
+  }
+  .sidebar-title {
+    font-size: 1.2rem;
+  }
+  .phone-title {
+    font-size: 1.08rem;
+  }
+  .phone-number {
+    font-size: 1.25rem;
+  }
+}
+
+.trust-icon {
+  color: #008080;
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Shield (Background-Checked Cleaners) */
+.trust-icon.shield {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" height="38" viewBox="0 0 24 24" width="38" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L2 8v5c0 5.25 3.75 10 10 10s10-4.75 10-10V8l-10-5z" stroke="%237CB7F7" stroke-width="2" fill="none"/><circle cx="12" cy="13" r="3" stroke="%237CB7F7" stroke-width="2" fill="none"/></svg>');
+}
+
+/* Ribbon/Award (Liability Insured) */
+.trust-icon.ribbon {
+  background-image: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="10" r="6" stroke="%237CB7F7" stroke-width="2"/><path d="M7 17l2.5-2M17 17l-2.5-2" stroke="%237CB7F7" stroke-width="2" stroke-linecap="round"/><path d="M12 16v5" stroke="%237CB7F7" stroke-width="2"/></svg>');
+}
+
+/* Checkmark Circle (Satisfaction Guaranteed) */
+.trust-icon.check {
+  background-image: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="%237cdd8a" stroke-width="2" fill="white"/><path d="M8 12l2.5 2.5L16 9" stroke="%237cdd8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+/* Key (Safe & Secure Entry) */
+.trust-icon.key {
+  background-image: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="15" cy="9" r="3" stroke="%237CB7F7" stroke-width="2"/><path d="M21 21l-6-6" stroke="%237CB7F7" stroke-width="2" stroke-linecap="round"/><circle cx="7" cy="17" r="2" stroke="%237CB7F7" stroke-width="2"/></svg>');
+}
+
+/* Clock (On-Time Service) */
+.trust-icon.clock {
+  background-image: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="%237CB7F7" stroke-width="2"/><path d="M12 7v5l3 3" stroke="%237CB7F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+/* Camera (Before & After Photos) */
+.trust-icon.camera {
+  background-image: url('data:image/svg+xml;utf8,<svg width="38" height="38" fill="none" viewBox="0 0 24 24"><rect width="18" height="14" x="3" y="7" rx="3" stroke="%237CB7F7" stroke-width="2"/><circle cx="12" cy="14" r="3" stroke="%237CB7F7" stroke-width="2"/><path d="M9 7l1-2h4l1 2" stroke="%237CB7F7" stroke-width="2"/></svg>');
+}

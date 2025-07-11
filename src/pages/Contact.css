@@ -1,0 +1,405 @@
+.contactpage {
+  background: #fcfdff;
+  min-height: 100vh;
+  padding: 40px 0 70px 0;
+}
+.contactpage-header {
+  text-align: center;
+  color: #b3c5e6;
+  font-size: 1.37rem;
+  font-weight: 500;
+  margin: 0 0 36px 0;
+  line-height: 1.42;
+}
+.contactpage-main {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 0 24px;
+}
+
+/* Left: Contact Form Card */
+.contact-form-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid #e4eaf6;
+  box-shadow: none;
+  padding: 36px 28px 28px 28px;
+  flex: 1 1 0;
+  min-width: 330px;
+  max-width: 730px;
+  margin-bottom: 0;
+  transition: box-shadow 0.15s, border 0.15s;
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #181d24;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-form-title-icon {
+  color: #7cb7f7;
+  font-size: 1.2em;
+}
+.contact-form-caption {
+  color: #7e8fa6;
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.contact-form-row.twocols .contact-form-group {
+  flex: 1 1 0;
+}
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact-form-group label {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+  background: #fafdff;
+  border: 1.5px solid #e4eaf6;
+  border-radius: 8px;
+  padding: 16px 16px;
+  font-size: 1.09rem;
+  font-family: inherit;
+  color: #212d3b;
+  margin-bottom: 0;
+  outline: none;
+  transition: border 0.17s;
+}
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+  border-color: #7cb7f7;
+}
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+  max-height: 320px;
+}
+.contact-form-submit {
+  width: 100%;
+  background: #7cb7f7;
+  color: #fff;
+  padding: 15px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.13rem;
+  margin-top: 22px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.contact-form-submit:disabled {
+  opacity: 0.8;
+  cursor: wait;
+}
+.contact-form-submit:hover:not(:disabled) {
+  background: #57a5ed;
+}
+.contact-form-success {
+  color: #39b045;
+  margin-top: 16px;
+  font-weight: 600;
+}
+.contact-form-error {
+  color: #e02c2c;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+/* Right: Info and Actions */
+.contact-rightside {
+  flex: 1 1 286px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 286px;
+}
+
+/* Info Cards */
+.contact-info-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid #e4eaf6;
+  box-shadow: none;
+  padding: 28px 26px 22px 26px;
+  margin-bottom: 0;
+  transition: box-shadow 0.15s, border 0.15s;
+}
+.contact-info-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #181d24;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.contact-info-title-icon {
+  color: #7cb7f7;
+  font-size: 1.09em;
+}
+.contact-info-caption {
+  color: #7e8fa6;
+  font-size: 1.06rem;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+.contact-info-icon {
+  color: #6cb8fa;
+  font-size: 1.3em;
+  margin-top: 2px;
+}
+.contact-info-link {
+  color: #49a6f3;
+  font-weight: 700;
+  font-size: 1.10em;
+  text-decoration: none;
+  word-break: break-all;
+}
+.contact-info-link:hover {
+  text-decoration: underline;
+}
+.contact-info-detail {
+  color: #5c6c7f;
+  font-weight: 500;
+  font-size: 0.99em;
+}
+.contact-bizhours-table {
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+.contact-bizhours-table div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.07em;
+  color: #222e41;
+  margin-bottom: 2px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.contact-bizhours-table b {
+  font-weight: 700;
+}
+.contact-info-note {
+  margin-top: 9px;
+  color: #7e8fa6;
+  background: #f4f7fb;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+
+.quick-actions-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid #e4eaf6;
+  box-shadow: none;
+  padding: 26px 26px 22px 26px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.quick-actions-title {
+  font-size: 1.27rem;
+  font-weight: 800;
+  color: #181d24;
+  margin-bottom: 13px;
+  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+}
+.quick-actions-btn {
+  width: 100%;
+  background: #7cb7f7;
+  color: #fff;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.13rem;
+  font-weight: 700;
+  border: none;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.quick-actions-btn:hover {
+  background: #57a5ed;
+}
+.quick-actions-secondary {
+  width: 100%;
+  background: #fff;
+  color: #222e41;
+  border-radius: 8px;
+  padding: 13px 0;
+  font-size: 1.11rem;
+  font-weight: 700;
+  border: 1.5px solid #e4eaf6;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.quick-actions-secondary:hover {
+  background: #f4f7fb;
+  border-color: #b3c5e6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .contactpage-main {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-form-card, .contact-rightside {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .contactpage {
+    padding: 20px 0 36px 0;
+  }
+  .contactpage-header {
+    font-size: 1.01rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding: 0 10px;
+  }
+  .contactpage-main {
+    padding: 0 6px;
+    gap: 16px;
+  }
+  .contact-form-card,
+  .contact-info-card,
+  .quick-actions-card {
+    padding: 14px 7px 10px 7px;
+  }
+  .contact-form-title {
+    font-size: 1.09rem;
+  }
+  .contact-info-title, .quick-actions-title {
+    font-size: 1.05rem;
+  }
+  .quick-actions-btn, .quick-actions-secondary {
+    font-size: 1rem;
+    padding: 11px 0;
+  }
+}
+
+.contact-form-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid #e4eaf6;
+  box-shadow: none;
+  padding: 36px 28px 28px 28px;
+  flex: 1 1 0;
+  min-width: 330px;
+  /* Remove max-width restriction and allow the card to grow */
+  max-width: none;
+  width: 100%;
+  margin-bottom: 0;
+  transition: box-shadow 0.15s, border 0.15s;
+  /* Ensure overflow is handled */
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.contactpage-main {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 0 24px;
+  /* Ensure children will wrap if needed */
+  flex-wrap: wrap;
+}
+
+/* Ensure inputs and selects fill the card width */
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+  background: #fafdff;
+  border: 1.5px solid #e4eaf6;
+  border-radius: 8px;
+  padding: 16px 16px;
+  font-size: 1.09rem;
+  font-family: inherit;
+  color: #212d3b;
+  margin-bottom: 0;
+  outline: none;
+  transition: border 0.17s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* For better responsive handling */
+@media (max-width: 1100px) {
+  .contactpage-main {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-form-card, .contact-rightside {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-form-card,
+  .contact-info-card,
+  .quick-actions-card {
+    padding: 14px 7px 10px 7px;
+  }
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.contact-form-row.twocols .contact-form-group {
+  flex: 1 1 0;
+  min-width: 200px;
+}
