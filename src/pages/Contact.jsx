@@ -22,36 +22,44 @@ export default function Contact() {
     setForm((f) => ({ ...f, [name]: value }));
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const fd = new FormData(e.target);                // ① grab every input
-    const payload = Object.fromEntries(fd.entries()); // ② turn into object
+    /* 1 ─ gather all inputs (incl. hidden formName & honeypot) */
+    const fd       = new FormData(e.target);
+    const payload  = Object.fromEntries(fd.entries());
 
-      // 🛡️ 1. Honeypot: silently ignore bots
-      if (payload.website && payload.website.trim() !== "") {
-        console.warn("Spam detected – honeypot filled");
-        return; // abort before setting status or sending anything
-      }
-    setStatus("submitting");
+    /* 2 ─ honeypot spam check */
+    if (payload.website?.trim()) return;      // silently drop bots
 
-    // Fix array fields (checkbox groups come back as single values)
-    payload.spaces = form.spaces.join(", ");
-    payload.addOns = form.addOns.join(", ");
+    /* 3 ─ add origin + flatten checkbox arrays */
+    payload.origin    = window.location.origin;   // bare or www.
+    payload.formName  = 'contact';                  // this sheet tab
+    payload.spaces    = form.spaces.join(', ');
+    payload.addOns    = form.addOns.join(', ');
+
+    /* 4 ─ UX feedback + send */
+    setStatus('submitting');
 
     try {
       const res = await fetch(SCRIPT_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
 
-      res.ok ? setStatus("success") : setStatus("error");
-      if (res.ok) resetForm();
+      if (res.ok) {
+        setStatus('success');
+        resetForm();               // setForm(emptyForm) + e.target.reset()
+      } else {
+        setStatus('error');
+      }
     } catch {
-      setStatus("error");
+      setStatus('error');
     }
   };
+
 
   const resetForm = () => {
     setForm({
