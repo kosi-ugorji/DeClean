@@ -42,15 +42,15 @@ const HOME_TYPES = [
   "Student Housing"
 ];
 const ADDONS = [
-  { label: "Inside Fridge – $25", value: "Inside Fridge – $25" },
-  { label: "Inside Oven – $30", value: "Inside Oven – $30" },
-  { label: "Bed Linen Change – $10/bed", value: "Bed Linen Change – $10/bed" },
-  { label: "Laundry (Wash/Dry/Fold 2 loads) – $20", value: "Laundry (Wash/Dry/Fold 2 loads) – $20" },
-  { label: "Baseboard Detailing – $25+", value: "Baseboard Detailing – $25+" },
-  { label: "Interior Windows – $5/window", value: "Interior Windows – $5/window" },
-  { label: "Restocking (Airbnb) – $10", value: "Restocking (Airbnb) – $10" },
-  { label: "Post-party reset – $40", value: "Post-party reset – $40" },
-  { label: "Supply pickup – $15 + cost", value: "Supply pickup – $15 + cost" },
+  { label: "Inside Fridge", value: "Inside Fridge" },
+  { label: "Inside Oven", value: "Inside Oven" },
+  { label: "Bed Linen Change", value: "Bed Linen Change " },
+  { label: "Laundry (Wash/Dry/Fold 2 loads)", value: "Laundry (Wash/Dry/Fold 2 loads)" },
+  { label: "Baseboard Detailing", value: "Baseboard Detailing" },
+  { label: "Interior Windows", value: "Interior Windows" },
+  { label: "Restocking (Airbnb)", value: "Restocking (Airbnb)" },
+  { label: "Post-party reset", value: "Post-party reset" },
+  { label: "Supply pickup", value: "Supply pickup" },
 ];
 const CONTACT_METHODS = [
   "Email",
