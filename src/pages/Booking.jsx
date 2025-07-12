@@ -4,28 +4,8 @@ import { LuShieldCheck, LuCheckCheck, LuAward, LuKeyRound, LuClock, LuCamera } f
 import { FiCheckCircle } from "react-icons/fi";
 
 
-// Replace with your Google Form endpoint and entry IDs!
-const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/your-form-id/formResponse";
-const ENTRY_IDS = {
-  serviceType: "entry.1234567890",
-  serviceOther: "entry.2234567890",
-  bedrooms: "entry.2345678901",
-  bathrooms: "entry.3456789012",
-  hasPets: "entry.4567890123",
-  homeType: "entry.5678901234",
-  date: "entry.6789012345",
-  timeWindow: "entry.7890123456",
-  addons: "entry.8901234567",
-  address: "entry.9012345678",
-  postal: "entry.0123456789",
-  unit: "entry.1122334455",
-  entryInstructions: "entry.2233445566",
-  name: "entry.3344556677",
-  email: "entry.4455667788",
-  phone: "entry.5566778899",
-  contactMethod: "entry.6677889900",
-  notes: "entry.7788990011",
-};
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9Gu92SGEygwGEFJFyhCL8w_qYB5YhPO3ILndM2OpzjH_yephkRqANBAfYSFnV33CV/exec";
+
 
 const SERVICE_TYPES = [
   "Residential Cleaning",
@@ -95,62 +75,62 @@ export default function BookNow() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const fd = new FormData(e.target);                // ① grab every input
+    const payload = Object.fromEntries(fd.entries()); // ② turn into object
+
+      // 🛡️ 1. Honeypot: silently ignore bots
+      if (payload.website && payload.website.trim() !== "") {
+        console.warn("Spam detected – honeypot filled");
+        return; // abort before setting status or sending anything
+      }
     setStatus("submitting");
 
-    const formData = new FormData();
-    formData.append(ENTRY_IDS.serviceType, form.serviceType);
-    if (form.serviceType === "Other") {
-      formData.append(ENTRY_IDS.serviceOther, form.serviceOther);
-    }
-    formData.append(ENTRY_IDS.bedrooms, form.bedrooms);
-    formData.append(ENTRY_IDS.bathrooms, form.bathrooms);
-    formData.append(ENTRY_IDS.hasPets, form.hasPets);
-    formData.append(ENTRY_IDS.homeType, form.homeType);
-    formData.append(ENTRY_IDS.date, form.date);
-    formData.append(ENTRY_IDS.timeWindow, form.timeWindow);
-    form.addons.forEach(addon => formData.append(ENTRY_IDS.addons, addon));
-    formData.append(ENTRY_IDS.address, form.address);
-    formData.append(ENTRY_IDS.postal, form.postal);
-    formData.append(ENTRY_IDS.unit, form.unit);
-    formData.append(ENTRY_IDS.entryInstructions, form.entryInstructions);
-    formData.append(ENTRY_IDS.name, form.name);
-    formData.append(ENTRY_IDS.email, form.email);
-    formData.append(ENTRY_IDS.phone, form.phone);
-    formData.append(ENTRY_IDS.contactMethod, form.contactMethod);
-    formData.append(ENTRY_IDS.notes, form.notes);
+    // Fix array fields (checkbox groups come back as single values)
+    payload.spaces = form.spaces.join(", ");
+    payload.addOns = form.addOns.join(", ");
 
-    fetch(GOOGLE_FORM_ACTION_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: formData,
-    })
-      .then(() => {
-        setStatus("success");
-        setForm({
-          serviceType: "",
-          serviceOther: "",
-          bedrooms: "",
-          bathrooms: "",
-          hasPets: "",
-          homeType: "",
-          date: "",
-          timeWindow: "",
-          addons: [],
-          address: "",
-          postal: "",
-          unit: "",
-          entryInstructions: "",
-          name: "",
-          email: "",
-          phone: "",
-          contactMethod: "",
-          notes: "",
-        });
-      })
-      .catch(() => setStatus("error"));
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      res.ok ? setStatus("success") : setStatus("error");
+      if (res.ok) resetForm();
+    } catch {
+      setStatus("error");
+    }
   };
+
+  const resetForm = () => {
+    setForm({
+      serviceType: "",
+      serviceOther: "",
+      bedrooms: "",
+      bathrooms: "",
+      hasPets: "",
+      homeType: "",
+      date: "",
+      timeWindow: "",
+      addons: [],
+      address: "",
+      postal: "",
+      unit: "",
+      entryInstructions: "",
+      name: "",
+      email: "",
+      phone: "",
+      contactMethod: "",
+      notes: "",
+      website: ""  // reset honeypot field
+    });
+    setStatus("idle");
+  };  
+
 
   return (
     <div className="booknow-page">
@@ -160,6 +140,18 @@ export default function BookNow() {
       </div>
       <div className="booknow-main">
         <form className="booknow-form-card" onSubmit={handleSubmit}>
+          <input type="hidden" name="formName" value="booking" />
+          {/* --- honeypot field start --- */}
+          <input
+            type="text"
+            name="website"          // a name bots often try to fill
+            value={form.website}    // make it a controlled input like the others
+            onChange={handleChange}
+            style={{ display: "none" }}
+            tabIndex={-1}           // keeps it out of the natural tab order
+            autoComplete="off"
+          />
+
           <div className="booknow-form-title">Book Your Clean</div>
           {/* 1. Service Type */}
           <div className="booknow-form-section">

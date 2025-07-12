@@ -3,15 +3,8 @@ import { FiMessageSquare, FiPhone, FiMail, FiMapPin, FiClock } from "react-icons
 import "./Contact.css";
 
 // CHANGE these to match your Google Form
-const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/your-form-id/formResponse";
-const ENTRY_IDS = {
-  name: "entry.1234567890",
-  email: "entry.2345678901",
-  phone: "entry.3456789012",
-  contactMethod: "entry.4567890123",
-  subject: "entry.5678901234",
-  message: "entry.6789012345",
-};
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9Gu92SGEygwGEFJFyhCL8w_qYB5YhPO3ILndM2OpzjH_yephkRqANBAfYSFnV33CV/exec";
+
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -29,36 +22,49 @@ export default function Contact() {
     setForm((f) => ({ ...f, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const fd = new FormData(e.target);                // ① grab every input
+    const payload = Object.fromEntries(fd.entries()); // ② turn into object
+
+      // 🛡️ 1. Honeypot: silently ignore bots
+      if (payload.website && payload.website.trim() !== "") {
+        console.warn("Spam detected – honeypot filled");
+        return; // abort before setting status or sending anything
+      }
     setStatus("submitting");
 
-    const formData = new FormData();
-    formData.append(ENTRY_IDS.name, form.name);
-    formData.append(ENTRY_IDS.email, form.email);
-    formData.append(ENTRY_IDS.phone, form.phone);
-    formData.append(ENTRY_IDS.contactMethod, form.contactMethod);
-    formData.append(ENTRY_IDS.subject, form.subject);
-    formData.append(ENTRY_IDS.message, form.message);
+    // Fix array fields (checkbox groups come back as single values)
+    payload.spaces = form.spaces.join(", ");
+    payload.addOns = form.addOns.join(", ");
 
-    fetch(GOOGLE_FORM_ACTION_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: formData,
-    })
-      .then(() => {
-        setStatus("success");
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          contactMethod: "",
-          subject: "",
-          message: "",
-        });
-      })
-      .catch(() => setStatus("error"));
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      res.ok ? setStatus("success") : setStatus("error");
+      if (res.ok) resetForm();
+    } catch {
+      setStatus("error");
+    }
   };
+
+  const resetForm = () => {
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      contactMethod: "",
+      subject: "",
+      message: "",
+      website: ""  // reset honeypot field
+    });
+  };
+
 
   return (
     <div className="contactpage">
@@ -67,6 +73,19 @@ export default function Contact() {
       </div>
       <div className="contactpage-main">
         <form className="contact-form-card" onSubmit={handleSubmit}>
+
+          <input type="hidden" name="formName" value="contact" />
+          {/* --- honeypot field start --- */}
+          <input
+            type="text"
+            name="website"          // a name bots often try to fill
+            value={form.website}    // make it a controlled input like the others
+            onChange={handleChange}
+            style={{ display: "none" }}
+            tabIndex={-1}           // keeps it out of the natural tab order
+            autoComplete="off"
+          />
+
           <div className="contact-form-title">
             <FiMessageSquare className="contact-form-title-icon" />
             Send Us a Message

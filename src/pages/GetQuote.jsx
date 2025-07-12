@@ -3,26 +3,10 @@ import { FiCheckCircle, FiClock} from "react-icons/fi";
 import { LuShield, LuDollarSign, LuCheckCheck, LuClock } from "react-icons/lu";
 import "./GetQuote.css";
 
-// Replace with your Google Form endpoint and entry IDs!
-const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/your-form-id/formResponse";
-const ENTRY_IDS = {
-  typeOfService: "entry.1234567890",
-  homeType: "entry.2345678901",
-  bedrooms: "entry.3456789012",
-  bathrooms: "entry.4567890123",
-  spaces: "entry.5678901234",
-  hasPets: "entry.6789012345",
-  frequency: "entry.7890123456",
-  addOns: "entry.8901234567",
-  preferredDate: "entry.9012345678",
-  urgent: "entry.0123456789",
-  fullName: "entry.1122334455",
-  phone: "entry.2233445566",
-  email: "entry.3344556677",
-  contactMethod: "entry.4455667788",
-  notes: "entry.5566778899",
-  serviceOther: "entry.9988776655"
-};
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9Gu92SGEygwGEFJFyhCL8w_qYB5YhPO3ILndM2OpzjH_yephkRqANBAfYSFnV33CV/exec";
+
+
 
 const SERVICE_TYPES = [
   "Residential Cleaning",
@@ -82,7 +66,8 @@ export default function GetQuote() {
     phone: "",
     email: "",
     contactMethod: "",
-    notes: ""
+    notes: "",
+    website: ""  // honeypot field
   });
   const [status, setStatus] = useState("idle");
 
@@ -107,58 +92,57 @@ export default function GetQuote() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const fd = new FormData(e.target);                // ① grab every input
+    const payload = Object.fromEntries(fd.entries()); // ② turn into object
+
+      // 🛡️ 1. Honeypot: silently ignore bots
+      if (payload.website && payload.website.trim() !== "") {
+        console.warn("Spam detected – honeypot filled");
+        return; // abort before setting status or sending anything
+      }
     setStatus("submitting");
 
-    const formData = new FormData();
-    formData.append(ENTRY_IDS.typeOfService, form.typeOfService);
-    if (form.typeOfService === "Other") {
-      formData.append(ENTRY_IDS.serviceOther, form.serviceOther);
-    }
-    formData.append(ENTRY_IDS.homeType, form.homeType);
-    formData.append(ENTRY_IDS.bedrooms, form.bedrooms);
-    formData.append(ENTRY_IDS.bathrooms, form.bathrooms);
-    form.spaces.forEach(space => formData.append(ENTRY_IDS.spaces, space));
-    formData.append(ENTRY_IDS.hasPets, form.hasPets);
-    formData.append(ENTRY_IDS.frequency, form.frequency);
-    form.addOns.forEach(addon => formData.append(ENTRY_IDS.addOns, addon));
-    formData.append(ENTRY_IDS.preferredDate, form.preferredDate);
-    formData.append(ENTRY_IDS.urgent, form.urgent);
-    formData.append(ENTRY_IDS.fullName, form.fullName);
-    formData.append(ENTRY_IDS.phone, form.phone);
-    formData.append(ENTRY_IDS.email, form.email);
-    formData.append(ENTRY_IDS.contactMethod, form.contactMethod);
-    formData.append(ENTRY_IDS.notes, form.notes);
+    // Fix array fields (checkbox groups come back as single values)
+    payload.spaces = form.spaces.join(", ");
+    payload.addOns = form.addOns.join(", ");
 
-    fetch(GOOGLE_FORM_ACTION_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: formData,
-    })
-      .then(() => {
-        setStatus("success");
-        setForm({
-          typeOfService: "",
-          serviceOther: "",
-          homeType: "",
-          bedrooms: "",
-          bathrooms: "",
-          spaces: [],
-          hasPets: "",
-          frequency: "",
-          addOns: [],
-          preferredDate: "",
-          urgent: "",
-          fullName: "",
-          phone: "",
-          email: "",
-          contactMethod: "",
-          notes: ""
-        });
-      })
-      .catch(() => setStatus("error"));
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      res.ok ? setStatus("success") : setStatus("error");
+      if (res.ok) resetForm();
+    } catch {
+      setStatus("error");
+    }
   };
+  const resetForm = () => {
+    setForm({
+      typeOfService: "",
+      serviceOther: "",
+      homeType: "",
+      bedrooms: "",
+      bathrooms: "",
+      spaces: [],
+      hasPets: "",
+      frequency: "",
+      addOns: [],
+      preferredDate: "",
+      urgent: "",
+      fullName: "",
+      phone: "",
+      email: "",
+      contactMethod: "",
+      notes: "",
+      website: ""  // reset honeypot field
+    });
+  };  
 
   return (
     <div className="getquote-page">
@@ -168,6 +152,19 @@ export default function GetQuote() {
       </div>
       <div className="getquote-main">
         <form className="getquote-form-card" onSubmit={handleSubmit}>
+
+          <input type="hidden" name="formName" value="quote" />
+
+          {/* --- honeypot field start --- */}
+          <input
+            type="text"
+            name="website"          // a name bots often try to fill
+            value={form.website}    // make it a controlled input like the others
+            onChange={handleChange}
+            style={{ display: "none" }}
+            tabIndex={-1}           // keeps it out of the natural tab order
+            autoComplete="off"
+          />
           <div className="getquote-form-title">Quote Request Form</div>
           <div className="getquote-form-section">
             <div className="getquote-form-section-header">1. Your Home or Property</div>
