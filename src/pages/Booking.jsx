@@ -4,7 +4,7 @@ import { LuShieldCheck, LuCheckCheck, LuAward, LuKeyRound, LuClock, LuCamera } f
 import { FiCheckCircle } from "react-icons/fi";
 
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9Gu92SGEygwGEFJFyhCL8w_qYB5YhPO3ILndM2OpzjH_yephkRqANBAfYSFnV33CV/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-i8RJbbknkYFEAJlhGHZAjEmCPAumNTfM0r5aNOm3HNNJy4GMLBXZYI7wrGTeh1Oc/exec";
 
 
 const SERVICE_TYPES = [
