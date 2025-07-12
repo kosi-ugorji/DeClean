@@ -15,7 +15,7 @@ const services = [
       "Dusting all surfaces", "Bathroom cleaning", "Trash removal", "Pet-safe products available"
     ],
     addOns: [
-      "Inside Fridge – $25", "Inside Oven – $30", "Bed Linen Change – $10/bed",
+      "Inside Fridge", "Inside Oven – $30", "Bed Linen Change – $10/bed",
       "Laundry (2 loads) – $20", "Baseboards – $25+", "Interior Windows – $5/window"
     ],
     offers: [
