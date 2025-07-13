@@ -93,6 +93,7 @@ export default function BookNow() {
           setStatus("success");
           formElem.reset();
           resetForm();  
+          setTimeout(() => setStatus("idle"), 3000);
         })
         .catch((err) => {
           console.error(err);
@@ -124,7 +125,6 @@ export default function BookNow() {
       notes: "",
       website: ""  // reset honeypot field
     });
-    setStatus("idle");
   };  
 
 

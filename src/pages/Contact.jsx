@@ -40,6 +40,7 @@ export default function Contact() {
         setStatus("success");
         formElem.reset();
         resetForm();  // reset form state
+        setTimeout(() => setStatus("idle"), 3000);
       })
       .catch((err) => {
         console.error(err);

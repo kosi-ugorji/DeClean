@@ -5,7 +5,7 @@ import { FiShield, FiMapPin, FiAward, FiCheckCircle, FiHeart, FiSmile } from "re
 import { FiCheck, FiArrowRight, FiCalendar, FiUsers } from "react-icons/fi";
 import { FiStar } from "react-icons/fi";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 export default function Home() {
