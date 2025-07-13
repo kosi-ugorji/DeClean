@@ -39,12 +39,13 @@ export default function Contact() {
         console.log(txt);
         setStatus("success");
         formElem.reset();
+        resetForm();  // reset form state
       })
       .catch((err) => {
         console.error(err);
         setStatus("error");
       });
-  };
+    };
 
 
   const resetForm = () => {

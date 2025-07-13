@@ -76,41 +76,30 @@ export default function BookNow() {
   };
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setStatus("submitting");
 
-    /* 1 ─ gather all inputs (incl. hidden formName & honeypot) */
-    const fd       = new FormData(e.target);
-    const payload  = Object.fromEntries(fd.entries());
+      const formElem = e.target;
+      const formData = new FormData(formElem);
 
-    /* 2 ─ honeypot spam check */
-    if (payload.website?.trim()) return;      // silently drop bots
+      fetch(SCRIPT_URL, {
+        method: "POST",
+        body: formData,       
+      })
+        .then((res) => res.text())  
+        .then((txt) => {
+          console.log(txt);
+          setStatus("success");
+          formElem.reset();
+          resetForm();  
+        })
+        .catch((err) => {
+          console.error(err);
+          setStatus("error");
+        });
+    };
 
-    /* 3 ─ add origin + flatten checkbox arrays */
-    payload.origin    = window.location.origin;   // bare or www.
-    payload.formName  = 'booking';                  // this sheet tab
-    // payload.spaces    = form.spaces.join(', ');
-    // payload.addOns    = form.addOns.join(', ');
-
-    /* 4 ─ UX feedback + send */
-    setStatus('submitting');
-
-    try {
-      const res = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        body: JSON.stringify(payload)
-      });
-
-      if (res.ok) {
-        setStatus('success');
-        resetForm();               // setForm(emptyForm) + e.target.reset()
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
-};
 
 
   const resetForm = () => {
