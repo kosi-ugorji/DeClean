@@ -89,8 +89,8 @@ export default function BookNow() {
     /* 3 ─ add origin + flatten checkbox arrays */
     payload.origin    = window.location.origin;   // bare or www.
     payload.formName  = 'booking';                  // this sheet tab
-    payload.spaces    = form.spaces.join(', ');
-    payload.addOns    = form.addOns.join(', ');
+    // payload.spaces    = form.spaces.join(', ');
+    // payload.addOns    = form.addOns.join(', ');
 
     /* 4 ─ UX feedback + send */
     setStatus('submitting');
@@ -98,7 +98,6 @@ export default function BookNow() {
     try {
       const res = await fetch(SCRIPT_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
 
