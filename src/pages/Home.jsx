@@ -23,8 +23,8 @@ export default function Home() {
               Professional cleaning services that bring peace of mind to your home. Background-checked, insured, and dedicated to making your space sparkle.
             </p>
             <div className="hero-cta-row">
-              <a href="/quote" className="btn btn-outline hero-btn">Get a Quote</a>
-              <a href="/book" className="btn btn-primary hero-btn">Book a Clean</a>
+              <NavLink to="/quote" className="btn btn-outline hero-btn">Get a Quote</NavLink>
+              <NavLink to="/book" className="btn btn-primary hero-btn">Book a Clean</NavLink>
             </div>
             <div className="hero-contact-row">
               <FiPhone size={22} style={{ opacity: 0.5, marginRight: 8 }} />
