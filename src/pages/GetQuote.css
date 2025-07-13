@@ -100,7 +100,7 @@
 .getquote-form-group input:focus,
 .getquote-form-group select:focus,
 .getquote-form-group textarea:focus {
-  border-color: #7cb7f7;
+  border-color: var(--color-primary);
 }
 .getquote-form-group textarea {
   resize: vertical;
@@ -128,7 +128,7 @@
   gap: 7px;
 }
 .getquote-checkbox-label input[type="checkbox"] {
-  accent-color: #7cb7f7;
+  accent-color: var(--color-primary);
   margin-right: 4px;
   width: 18px;
   height: 18px;
@@ -136,7 +136,7 @@
 
 .getquote-form-submit {
   width: 100%;
-  background: #7cb7f7;
+  background: var(--color-primary);
   color: #fff;
   padding: 15px 0;
   border: none;
@@ -216,7 +216,7 @@
   margin-bottom: 0;
 }
 .getquote-call-card {
-  background: #7cb7f7;
+  background: var(--color-primary);
   border-radius: 16px;
   color: #fff;
   padding: 34px 26px 18px 26px;
@@ -392,7 +392,7 @@
 
 /* --- Prefer to Talk Box --- */
 .getquote-call-card {
-  background: #7cb7f7;
+  background: var(--color-primary);
   border-radius: 24px;
   color: #fff;
   padding: 38px 18px 30px 18px;
@@ -508,7 +508,7 @@
 }
 
 .trust-blue {
-  color: #7cb7f7;
+  color: var(--color-primary);
 }
 .trust-green {
   color: #7cdd8a;

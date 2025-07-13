@@ -120,7 +120,7 @@
   gap: 5px;
 }
 .booknow-radio-list input[type="radio"] {
-  accent-color: #7cb7f7;
+  accent-color: var(--color-primary);
   width: 18px;
   height: 18px;
 }
@@ -152,13 +152,13 @@
   gap: 8px;
 }
 .booknow-checkbox-label input[type="checkbox"] {
-  accent-color: #7cb7f7;
+  accent-color: var(--color-primary);
   width: 18px;
   height: 18px;
 }
 .booknow-form-submit {
   width: 100%;
-  background: #7cb7f7;
+  background: var(--color-primary);
   color: #fff;
   padding: 15px 0;
   border: none;
@@ -265,7 +265,7 @@
 
 /* Book By Phone */
 .booknow-call-card {
-  background: #7cb7f7;
+  background: var(--color-primary);
   border-radius: 24px;
   color: #fff;
   padding: 38px 18px 30px 18px;
@@ -434,7 +434,7 @@
 
 /* Phone box */
 .booking-sidebar-card.phone {
-  background: #7cb7f7;
+  background: var(--color-primary);
   color: #fff;
   border: none;
   padding: 36px 20px 30px 20px;

@@ -129,7 +129,7 @@
 }
 .faqcontact-icon {
   font-size: 2.3em;
-  color: #6cb8fa;
+  color: var(--color-primary);
   margin-bottom: 13px;
 }
 .faqcontact-card-title {
@@ -149,19 +149,19 @@
   margin-bottom: 10px;
 }
 .faqcontact-phone {
-  color: #49a6f3;
+  color: var(--color-primary);
   text-decoration: none;
   font-size: 1.22em;
 }
 .faqcontact-email {
-  color: #49a6f3;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 700;
   word-break: break-all;
 }
 .faqcontact-book-btn {
   display: block;
-  background: #6cb8fa;
+  background: var(--color-primary);
   color: #fff;
   padding: 11px 36px;
   border-radius: 8px;

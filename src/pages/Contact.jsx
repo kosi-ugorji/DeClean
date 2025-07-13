@@ -3,8 +3,7 @@ import { FiMessageSquare, FiPhone, FiMail, FiMapPin, FiClock } from "react-icons
 import "./Contact.css";
 
 // CHANGE these to match your Google Form
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxR4uWi4VI8qDoR2-ywrl1r8gldB6rbQaQGIb3S7Ria-8M8sVTlBstLUyuU3ymET9S9/exec";
-
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwVdp0DYNbKsIBroZJPqZhi4lp7UgEwN14uPVROertd4IF60HM-XyPg0HeebLHJgNx0uw/exec";
 
 export default function Contact() {
   const [form, setForm] = useState({

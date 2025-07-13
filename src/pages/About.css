@@ -170,14 +170,14 @@
   margin-bottom: 28px;
 }
 .trust-cta-link {
-  color: #2196f3;
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 1.05rem;
   text-decoration: none;
   transition: color 0.13s;
 }
 .trust-cta-link:hover {
-  color: #176cb0;
+  color: #2196f3;
 }
 
 @media (max-width: 1060px) {
