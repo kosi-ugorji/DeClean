@@ -22,41 +22,28 @@ export default function Contact() {
     setForm((f) => ({ ...f, [name]: value }));
   };
 
-
-  const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
     e.preventDefault();
+    setStatus("submitting");
 
-    /* 1 ─ gather all inputs (incl. hidden formName & honeypot) */
-    const fd       = new FormData(e.target);
-    const payload  = Object.fromEntries(fd.entries());
+    // Collect form fields (including hidden formName & honeypot)
+    const formElem = e.target;
+    const formData = new FormData(formElem);
 
-    /* 2 ─ honeypot spam check */
-    if (payload.website?.trim()) return;      // silently drop bots
-
-    /* 3 ─ add origin + flatten checkbox arrays */
-    payload.origin    = window.location.origin;   // bare or www.
-    payload.formName  = 'contact';                  // this sheet tab
-    //payload.spaces    = form.spaces.join(', ');
-    //payload.addOns    = form.addOns.join(', ');
-
-    /* 4 ─ UX feedback + send */
-    setStatus('submitting');
-
-    try {
-      const res = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        body: JSON.stringify(payload)
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      body: formData,       // <<< send multipart/form-data
+    })
+      .then((res) => res.text())  // Apps Script returns plain text
+      .then((txt) => {
+        console.log(txt);
+        setStatus("success");
+        formElem.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        setStatus("error");
       });
-
-      if (res.ok) {
-        setStatus('success');
-        resetForm();               // setForm(emptyForm) + e.target.reset()
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
   };
 
 
