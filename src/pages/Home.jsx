@@ -3,13 +3,13 @@ import { FiHome, FiPhone } from "react-icons/fi";
 import "./Home.css";
 import { FiShield, FiMapPin, FiAward, FiCheckCircle, FiHeart, FiSmile } from "react-icons/fi";
 import { FiCheck, FiArrowRight, FiCalendar, FiUsers } from "react-icons/fi";
-import { FiStarFill } from "react-icons/fi";
+import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
-import airbnbTurnovers   from "../assets/airbnb_turnover.jpg";
-import residentialCleaning from "../assets/residential_cleaning.jpg";
-import seniorFriendlyCleaning from "../assets/senior_friendly_cleaning.jpg";
-import moveInMoveOut from "../assets/move_in_move_out.jpg";
+import airbnbTurnovers   from "../assets/airbnb_turnover.png";
+import residentialCleaning from "../assets/residential_cleaning.png";
+import seniorFriendlyCleaning from "../assets/senior_friendly.png";
+import moveInMoveOut from "../assets/empty_apartment.png";
 import houseImage from "../assets/house_pic.png";
 
 export default function Home() {
@@ -218,7 +218,7 @@ export default function Home() {
             <div className="testimonial-card">
               <div className="testimonial-stars">
                 {Array(5).fill().map((_, i) => (
-                  <FiStarFill key={i} className="star" />
+                  <FaStar key={i} className="star" />
                 ))}
               </div>
               <BiSolidQuoteAltLeft className="testimonial-quote-icon" />
@@ -229,7 +229,7 @@ export default function Home() {
             <div className="testimonial-card">
               <div className="testimonial-stars">
                 {Array(5).fill().map((_, i) => (
-                  <FiStarFill key={i} className="star" />
+                  <FaStar key={i} className="star" />
                 ))}
               </div>
               <BiSolidQuoteAltLeft className="testimonial-quote-icon" />
@@ -240,7 +240,7 @@ export default function Home() {
             <div className="testimonial-card">
               <div className="testimonial-stars">
                 {Array(5).fill().map((_, i) => (
-                  <FiStarFill key={i} className="star" />
+                  <FaStar key={i} className="star" />
                 ))}
               </div>
               <BiSolidQuoteAltLeft className="testimonial-quote-icon" />
