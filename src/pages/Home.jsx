@@ -6,8 +6,11 @@ import { FiCheck, FiArrowRight, FiCalendar, FiUsers } from "react-icons/fi";
 import { FiStarFill } from "react-icons/fi";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
-import {houseImage, residentialCleaning, seniorFriendlyCleaning, airbnbTurnovers, moveInMoveOut} from "@/assets";  
-
+import airbnbTurnovers   from "../assets/airbnb_turnover.jpg";
+import residentialCleaning from "../assets/residential_cleaning.jpg";
+import seniorFriendlyCleaning from "../assets/senior_friendly_cleaning.jpg";
+import moveInMoveOut from "../assets/move_in_move_out.jpg";
+import houseImage from "../assets/house_pic.png";
 
 export default function Home() {
   return (
