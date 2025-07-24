@@ -242,3 +242,42 @@
   .navbar-menu.open { max-height: 400px; }
   .navbar-menu li { width: 100%; }
 }
+
+/* ─────────  Tagline stack  ───────── */
+.navbar-tagline {
+  display: inline-flex;
+  flex-direction: column;   /* each line below the previous one   */
+  line-height: 1.1;
+  font-size: 0.55em;        /* ~55 % of the main logo size         */
+  font-weight: 700;
+  margin-left: 6px;         /* little gap from “DECLEAN”           */
+  color: var(--color-primary);           /* blue by default       */
+  transition: color 0.18s;
+}
+
+/* make the commas disappear (they’re now line breaks) */
+.navbar-tagline .break::after { content: ""; }
+
+/* keep hover colour in sync with the main logo */
+.navbar-logo:hover .navbar-tagline {
+  color: #2196f3;           /* or whichever hover colour you use   */
+}
+
+/* ─────────  Responsive tweak  ───────── */
+@media (max-width: 600px) {
+  .navbar-tagline {
+    line-height: 1;         /* tighten stack on phones             */
+    font-size: 0.5em;       /* a hair smaller                      */
+  }
+}
+
+@media (min-width: 900px) {
+  /* optional: collapse back to single line on big screens */
+  .navbar-tagline {
+    flex-direction: row;
+    gap: 0.25em;
+  }
+  .navbar-tagline .break {
+    display: none;
+  }
+}
