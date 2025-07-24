@@ -44,11 +44,7 @@ export default function Home() {
           </div>
           <div className="hero-right">
             <div className="hero-card">
-              <FiHome size={72} />
               <img src={houseImage} alt="Clean home" className="hero-card-image" height="100%" width="100%" />
-              <div className="hero-card-label">
-                Clean, modern homes across Ottawa
-              </div>
             </div>
           </div>
         </div>
