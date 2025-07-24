@@ -545,3 +545,93 @@
     font-size: 1.1rem;
   }
 }
+
+/* ───────── 0.  Page paddings & header text ───────── */
+.faq-page {
+  padding-block: clamp(40px, 10vw, 70px);
+}
+
+.faq-header {
+  font-size: clamp(1.09rem, 3.8vw + .2rem, 1.43rem);
+  margin-block-end: clamp(38px, 8vw, 60px);
+  padding-inline: clamp(10px, 4vw, 0px);
+}
+
+/* ───────── 1.  FAQ accordion list ───────── */
+.faq-list {
+  gap: clamp(18px, 4vw, 30px);
+  padding-inline: clamp(6px, 4vw, 0px);
+}
+
+/* Question + answer paddings shrink on phones */
+.faq-question,
+.faq-answer {
+  padding-inline: clamp(14px, 4.5vw, 34px);
+}
+
+/* Font sizes adapt */
+.faq-question {
+  font-size: clamp(1rem, 2.8vw + .4rem, 1.16rem);
+}
+.faq-answer {
+  font-size: clamp(0.95rem, 2.6vw + .35rem, 1.06rem);
+  line-height: 1.65;
+}
+
+/* ───────── 2.  “Contact us” cards section ───────── */
+.faqcontact-section {
+  padding-block: clamp(36px, 11vw, 70px) clamp(18px, 8vw, 40px);
+}
+
+.faqcontact-title {
+  font-size: clamp(1.3rem, 5vw + .3rem, 2.1rem);
+}
+
+.faqcontact-subtitle {
+  font-size: clamp(1.01rem, 3.5vw + .25rem, 1.17rem);
+  margin-block-end: clamp(18px, 6vw, 38px);
+}
+
+/* Cards grid auto‑wraps from 1→4 columns */
+.faqcontact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+  gap: clamp(22px, 5vw, 32px);
+  max-width: 1200px;
+  padding-inline: clamp(6px, 4vw, 0px);
+}
+
+/* Card paddings & radius scale with screen size */
+.faqcontact-card {
+  padding: clamp(22px, 4.5vw, 36px) clamp(18px, 4vw, 34px);
+  border-radius: clamp(16px, 3vw, 16px);
+}
+
+/* Typography inside cards */
+.faqcontact-card-title {
+  font-size: clamp(1.05rem, 3vw + .25rem, 1.18rem);
+}
+.faqcontact-card-desc,
+.faqcontact-card-extra {
+  font-size: clamp(0.9rem, 2.6vw + .2rem, 1.01rem);
+}
+.faqcontact-card-main,
+.faqcontact-phone {
+  font-size: clamp(1.05rem, 3vw + .3rem, 1.22rem);
+}
+
+/* Buttons */
+.faqcontact-book-btn,
+.faqcontact-quote-btn {
+  font-size: clamp(1rem, 3vw + .2rem, 1.09rem);
+  padding-block: clamp(9px, 3vh, 11px);
+}
+
+/* ───────── 3.  Ultra‑small safeguard (≤ 360 px) ───────── */
+@media (max-width: 360px) {
+  .faq-contact-card-desc,
+  .faqcontact-card-extra,
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}

@@ -166,3 +166,66 @@
     font-size: 1.11em;
   }
 }
+
+/* ───────── 0 . Section spacing & lead text ───────── */
+.services-section {
+  /* 90 px on large screens → 48 px on phones */
+  padding-block: clamp(48px, 10vw, 90px) clamp(32px, 7vw, 54px);
+}
+
+.services-section-lead {
+  font-size: clamp(1.05rem, 3.8vw + .2rem, 1.37rem);
+  margin-block: clamp(18px, 6vw, 30px);
+}
+
+/* ───────── 1 . Container & grid ───────── */
+.services-section-container {
+  padding-inline: clamp(8px, 4vw, 36px);
+}
+
+/* Auto‑wrapping grid: 1–3 columns depending on width */
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  gap: clamp(28px, 5vw, 48px) clamp(16px, 4vw, 36px);
+}
+
+/* ───────── 2 . Card padding & typography ───────── */
+.service-card {
+  padding: clamp(14px, 4.5vw, 34px) clamp(12px, 4vw, 38px);
+  font-size: clamp(0.98rem, 2.5vw + .3rem, 1.09rem);
+  border-radius: clamp(16px, 3vw, 18px);
+}
+
+/* Header block */
+.service-title {
+  font-size: clamp(1.11em, 3.4vw + .2em, 1.35em);
+}
+
+.service-section-title {
+  font-size: clamp(1rem, 2.8vw + .15em, 1.07em);
+  margin-block: 14px 10px;   /* top margin shrinks on phones */
+}
+
+/* ───────── 3 . Lists inside cards ───────── */
+.service-included {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.36em 0.9em;
+}
+
+.service-addons {
+  gap: 6px 10px;
+  margin-block-end: 13px;
+}
+
+.service-addons li,
+.service-included li,
+.service-offers li {
+  font-size: clamp(0.9em, 2.4vw + .15em, 1em);
+}
+
+/* ───────── 4 . Micro‑fallback for ≤ 360 px ───────── */
+@media (max-width: 360px) {
+  .service-card { font-size: 0.93rem; }
+  .service-title { font-size: 1.05em; }
+}

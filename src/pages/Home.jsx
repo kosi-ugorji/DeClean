@@ -3,9 +3,10 @@ import { FiHome, FiPhone } from "react-icons/fi";
 import "./Home.css";
 import { FiShield, FiMapPin, FiAward, FiCheckCircle, FiHeart, FiSmile } from "react-icons/fi";
 import { FiCheck, FiArrowRight, FiCalendar, FiUsers } from "react-icons/fi";
-import { FiStar } from "react-icons/fi";
+import { FiStarFill } from "react-icons/fi";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
+import {houseImage, residentialCleaning, seniorFriendlyCleaning, airbnbTurnovers, moveInMoveOut} from "@/assets";  
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
           <div className="hero-right">
             <div className="hero-card">
               <FiHome size={72} />
+              <img src={houseImage} alt="Clean home" className="hero-card-image" height="100%" width="100%" />
               <div className="hero-card-label">
                 Clean, modern homes across Ottawa
               </div>
@@ -107,7 +109,7 @@ export default function Home() {
 
             {/* Residential Cleaning */}
             <div className="service-card">
-              <FiHome className="service-icon" />
+              <img className="service-image" src={residentialCleaning} alt="Residential Cleaning" />
               <div>
                 <div className="service-title">Residential Cleaning</div>
                 <div className="service-desc">Regular home cleaning for busy professionals and families</div>
@@ -121,7 +123,7 @@ export default function Home() {
 
             {/* Senior-Friendly Cleaning */}
             <div className="service-card">
-              <FiHeart className="service-icon" />
+              <img className="service-image" src={seniorFriendlyCleaning} alt="Senior Friendly Cleaning" />
               <div>
                 <div className="service-title">Senior-Friendly Cleaning</div>
                 <div className="service-desc">Gentle, patient service designed for seniors and their families</div>
@@ -135,7 +137,7 @@ export default function Home() {
 
             {/* Airbnb Turnovers */}
             <div className="service-card">
-              <FiCalendar className="service-icon" />
+              <img className="service-image" src={airbnbTurnovers} alt="Airbnb Turnovers" />  
               <div>
                 <div className="service-title">Airbnb Turnovers</div>
                 <div className="service-desc">Fast, reliable turnovers that boost your reviews</div>
@@ -149,7 +151,7 @@ export default function Home() {
 
             {/* Move-In/Move-Out */}
             <div className="service-card">
-              <FiArrowRight className="service-icon" />
+              <img className="service-image" src={moveInMoveOut} alt="Move In/Move Out Cleaning" /> 
               <div>
                 <div className="service-title">Move-In/Move-Out</div>
                 <div className="service-desc">Deep cleaning for transitions and property handovers</div>
@@ -213,7 +215,7 @@ export default function Home() {
             <div className="testimonial-card">
               <div className="testimonial-stars">
                 {Array(5).fill().map((_, i) => (
-                  <FiStar key={i} className="star" />
+                  <FiStarFill key={i} className="star" />
                 ))}
               </div>
               <BiSolidQuoteAltLeft className="testimonial-quote-icon" />
@@ -224,7 +226,7 @@ export default function Home() {
             <div className="testimonial-card">
               <div className="testimonial-stars">
                 {Array(5).fill().map((_, i) => (
-                  <FiStar key={i} className="star" />
+                  <FiStarFill key={i} className="star" />
                 ))}
               </div>
               <BiSolidQuoteAltLeft className="testimonial-quote-icon" />
@@ -235,7 +237,7 @@ export default function Home() {
             <div className="testimonial-card">
               <div className="testimonial-stars">
                 {Array(5).fill().map((_, i) => (
-                  <FiStar key={i} className="star" />
+                  <FiStarFill key={i} className="star" />
                 ))}
               </div>
               <BiSolidQuoteAltLeft className="testimonial-quote-icon" />

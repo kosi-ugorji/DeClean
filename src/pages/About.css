@@ -222,3 +222,86 @@
     font-size: 1.05rem;
   }
 }
+
+/* ========== GLOBAL UTILITIES (add once) ========== */
+:root {
+  /* tweak if your base <html> font-size isn’t 16 px */
+  --spacer-1: 1rem;    /* ~16 px */
+  --spacer-2: 2rem;    /* ~32 px */
+}
+
+/* ========== HERO & STORY ========== */
+.about-hero {
+  /* fluid vertical spacing: 80 px down to 48 px */
+  padding-block: clamp(48px, 10vw, 80px) clamp(24px, 4vw, 30px);
+}
+
+.about-hero-quote {
+  font-size: clamp(1.1rem, 3.2vw + .5rem, 1.67rem);
+  line-height: 1.35;
+  padding-inline: var(--spacer-1);
+}
+
+.about-story {
+  font-size: clamp(1rem, 2.1vw + .5rem, 1.13rem);
+  margin-block: var(--spacer-1) var(--spacer-2);
+}
+
+/* ========== VALUES GRID ========== */
+.about-values-section {
+  padding-block: clamp(38px, 9vw, 80px);
+}
+
+.about-values-grid {
+  /* 1–4 columns auto‑adjusting, min 260 px card width */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: clamp(18px, 4vw, 32px);
+}
+
+.about-value-card {
+  padding: clamp(18px, 4vw, 32px) clamp(12px, 3vw, 22px);
+}
+
+/* ========== TRUST SECTION ========== */
+.trust-section {
+  padding-block: clamp(40px, 10vw, 68px);
+}
+
+.trust-pills {
+  gap: clamp(12px, 4vw, 26px);
+}
+
+.trust-cta-row {
+  margin-top: clamp(38px, 10vw, 70px);
+}
+
+.trust-cta-text {
+  font-size: clamp(1rem, 2.5vw + .5rem, 1.32rem);
+}
+
+/* ========== SMALL‑SCREEN TWEAKS (≤ 600 px) ========== */
+@media (max-width: 600px) {
+  /* Containers breathe closer to edges */
+  .about-main.container,
+  .about-values-container.container,
+  .trust-section-container {
+    padding-inline: 10px;
+  }
+
+  /* Mission card tighter on phones */
+  .about-mission-card {
+    margin-block: 24px;
+    padding: 22px 18px 16px;
+  }
+
+  /* Value cards full‑width */
+  .about-value-card {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about-value-icon {
+    margin-bottom: 12px;
+  }
+}
