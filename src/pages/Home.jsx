@@ -1,5 +1,17 @@
 import React from "react";
-import { FiPhone, FiShield, FiMapPin, FiAward, FiCheckCircle, FiHeart, FiSmile, FiCheck } from "react-icons/fi";
+import { motion } from "framer-motion";
+import {
+  FiPhone,
+  FiShield,
+  FiMapPin,
+  FiAward,
+  FiCheckCircle,
+  FiHeart,
+  FiSmile,
+  FiCheck,
+  FiMessageCircle
+} from "react-icons/fi";
+
 import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
@@ -15,107 +27,91 @@ export default function Home() {
   return (
     <main>
 
+      {/* FLOATING WHATSAPP BUTTON */}
+      <a
+        href="https://wa.me/234XXXXXXXXXX"
+        target="_blank"
+        rel="noreferrer"
+        className="whatsapp-float"
+      >
+        <FiMessageCircle />
+      </a>
+
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner container">
-          <div className="hero-left">
+
+          <motion.div
+            className="hero-left"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1>
-              Ottawa's Trusted<br />
-              Cleaning for Homes,<br />
-              Rentals & Busy Lives
+              Premium Cleaning<br />
+              for Homes & Rentals
             </h1>
 
             <p className="hero-subtitle">
-              Professional cleaning services that bring peace of mind to your home.
-              Background-checked, insured, and dedicated to making your space sparkle.
+              Reliable, insured cleaners delivering spotless results every time.
             </p>
 
             <div className="hero-cta-row">
               <NavLink to="/quote" className="btn btn-outline hero-btn">
-                Get a Quote
+                Get Quote
               </NavLink>
               <NavLink to="/book" className="btn btn-primary hero-btn">
-                Book a Clean
+                Book Now
               </NavLink>
             </div>
 
             <div className="hero-contact-row">
-              <FiPhone size={22} style={{ opacity: 0.5, marginRight: 8 }} />
-              <span>Call us:</span>
-              <a href="tel:6135139893" className="hero-contact-phone">
-                (613) 513-9893
-              </a>
+              <FiPhone />
+              <a href="tel:6135139893">(613) 513-9893</a>
             </div>
-          </div>
 
-          <div className="hero-right">
-            <div className="hero-card">
-              <img src={houseImage} alt="Clean home" />
+            <div className="hero-rating">
+              ⭐ Rated 5.0 by customers
             </div>
-          </div>
+          </motion.div>
+
+          <motion.div
+            className="hero-right"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <img src={houseImage} alt="Clean home" />
+          </motion.div>
+
         </div>
       </section>
 
       {/* FEATURES */}
       <section className="features">
-
-        {/* Elfsight widget (IMPORTANT: do NOT use script tag in JSX) */}
-        <div
-          className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
-          data-elfsight-app-lazy
-        ></div>
-
         <div className="container">
-          <h2 className="section-title">Why Ottawa Families Trust Us</h2>
+
+          <h2 className="section-title">Why Choose Us</h2>
 
           <div className="features-row">
-            <div className="feature">
-              <FiShield className="feature-icon" />
-              <div>
-                <div className="feature-title">Background-Checked</div>
-                <div className="feature-desc">All cleaners vetted</div>
-              </div>
-            </div>
 
-            <div className="feature">
-              <FiMapPin className="feature-icon" />
-              <div>
-                <div className="feature-title">Locally Owned</div>
-                <div className="feature-desc">Ottawa-based business</div>
+            {[
+              [FiShield, "Background Checked", "Trusted cleaners"],
+              [FiMapPin, "Locally Owned", "Proudly serving Ottawa"],
+              [FiAward, "Insured", "Full protection"],
+              [FiCheckCircle, "Trained Staff", "Professional cleaning"],
+              [FiHeart, "Senior Friendly", "Gentle care"],
+              [FiSmile, "Guaranteed", "100% satisfaction"]
+            ].map(([Icon, title, desc], i) => (
+              <div className="feature" key={i}>
+                <Icon className="feature-icon" />
+                <div>
+                  <div className="feature-title">{title}</div>
+                  <div className="feature-desc">{desc}</div>
+                </div>
               </div>
-            </div>
+            ))}
 
-            <div className="feature">
-              <FiAward className="feature-icon" />
-              <div>
-                <div className="feature-title">Liability Insured</div>
-                <div className="feature-desc">Fully protected service</div>
-              </div>
-            </div>
-
-            <div className="feature">
-              <FiCheckCircle className="feature-icon" />
-              <div>
-                <div className="feature-title">Professionally Trained</div>
-                <div className="feature-desc">Expert cleaning standards</div>
-              </div>
-            </div>
-
-            <div className="feature">
-              <FiHeart className="feature-icon" />
-              <div>
-                <div className="feature-title">Senior Friendly</div>
-                <div className="feature-desc">Compassionate care</div>
-              </div>
-            </div>
-
-            <div className="feature">
-              <FiSmile className="feature-icon" />
-              <div>
-                <div className="feature-title">Satisfaction Guaranteed</div>
-                <div className="feature-desc">100% quality promise</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -123,92 +119,93 @@ export default function Home() {
       {/* SERVICES */}
       <section className="services">
         <div className="container">
-          <h2 className="section-title">Our Cleaning Services</h2>
 
-          <div className="services-subtitle">
-            From regular home maintenance to specialized cleaning needs.
-          </div>
+          <h2 className="section-title">Our Services</h2>
 
           <div className="services-grid">
 
-            <div className="service-card">
-              <img src={residentialCleaning} alt="Residential Cleaning" />
-              <div className="service-title">Residential Cleaning</div>
-              <div className="service-desc">Regular home cleaning for busy families</div>
-              <ul>
-                <li><FiCheck /> Weekly/Bi-weekly options</li>
-                <li><FiCheck /> Eco-friendly products</li>
-                <li><FiCheck /> Consistent cleaners</li>
-              </ul>
-            </div>
+            {[
+              {
+                img: residentialCleaning,
+                title: "Residential Cleaning",
+                desc: "Regular home cleaning",
+                features: ["Weekly/bi-weekly", "Eco-friendly", "Trusted staff"]
+              },
+              {
+                img: seniorFriendlyCleaning,
+                title: "Senior Cleaning",
+                desc: "Careful, respectful service",
+                features: ["Discounted", "Same cleaner", "Gentle care"]
+              },
+              {
+                img: airbnbTurnovers,
+                title: "Airbnb Turnovers",
+                desc: "Fast guest-ready cleaning",
+                features: ["Same-day", "Photos", "5-star ready"]
+              },
+              {
+                img: moveInMoveOut,
+                title: "Move Cleaning",
+                desc: "Deep cleaning service",
+                features: ["Deep clean", "Landlord ready", "Deposit safe"]
+              }
+            ].map((s, i) => (
+              <div className="service-card" key={i}>
+                <img src={s.img} alt={s.title} />
 
-            <div className="service-card">
-              <img src={seniorFriendlyCleaning} alt="Senior Cleaning" />
-              <div className="service-title">Senior-Friendly Cleaning</div>
-              <div className="service-desc">Gentle service designed for seniors</div>
-              <ul>
-                <li><FiCheck /> 10% senior discount</li>
-                <li><FiCheck /> Same cleaner guarantee</li>
-                <li><FiCheck /> Respectful service</li>
-              </ul>
-            </div>
+                <div className="service-title">{s.title}</div>
+                <div className="service-desc">{s.desc}</div>
 
-            <div className="service-card">
-              <img src={airbnbTurnovers} alt="Airbnb Cleaning" />
-              <div className="service-title">Airbnb Turnovers</div>
-              <div className="service-desc">Fast turnovers for hosts</div>
-              <ul>
-                <li><FiCheck /> Same-day service</li>
-                <li><FiCheck /> Before/after photos</li>
-                <li><FiCheck /> Guest-ready setup</li>
-              </ul>
-            </div>
-
-            <div className="service-card">
-              <img src={moveInMoveOut} alt="Move Cleaning" />
-              <div className="service-title">Move-In/Move-Out</div>
-              <div className="service-desc">Deep cleaning for transitions</div>
-              <ul>
-                <li><FiCheck /> Top-to-bottom clean</li>
-                <li><FiCheck /> Landlord-ready</li>
-                <li><FiCheck /> Deposit protection</li>
-              </ul>
-            </div>
+                <ul>
+                  {s.features.map((f, j) => (
+                    <li key={j}>
+                      <FiCheck /> {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
 
           </div>
 
-          <div className="services-btn-row">
-            <Link to="/services" className="btn btn-outline">
-              View All Services
+          <div className="cta-banner">
+            <h3>Need cleaning this week?</h3>
+            <p>Book in under 1 minute.</p>
+            <Link to="/book" className="btn btn-primary">
+              Book Now
             </Link>
           </div>
+
         </div>
       </section>
 
       {/* TESTIMONIALS */}
       <section className="testimonials">
         <div className="container">
-          <h2 className="section-title">Why Clients Love Us</h2>
+
+          <h2 className="section-title">Happy Clients</h2>
 
           <div className="testimonials-grid">
 
-            {[1, 2, 3].map((item) => (
-              <div className="testimonial-card" key={item}>
+            {[
+              "Super clean and reliable service.",
+              "Very professional cleaners.",
+              "Best cleaning service I’ve used."
+            ].map((text, i) => (
+              <div className="testimonial-card" key={i}>
                 <div className="testimonial-stars">
-                  {Array(5).fill(0).map((_, i) => (
-                    <FaStar key={i} />
+                  {Array(5).fill(0).map((_, j) => (
+                    <FaStar key={j} />
                   ))}
                 </div>
 
                 <BiSolidQuoteAltLeft />
-
-                <div className="testimonial-text">
-                  Great service, very reliable and professional. Would recommend!
-                </div>
+                <p>{text}</p>
               </div>
             ))}
 
           </div>
+
         </div>
       </section>
 
