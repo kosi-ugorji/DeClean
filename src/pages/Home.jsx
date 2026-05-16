@@ -51,9 +51,19 @@ export default function Home() {
       </section>
 
       
-      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754" data-elfsight-app-lazy></div>
+      <section className="google-reviews">
+        <h2>What Our Clients Say</h2>
+
+        <script
+            src="https://elfsightcdn.com/platform.js"
+              async
+              ></script>
+  
+            <div
+              className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
+              data-elfsight-app-lazy
+            ></div>
+          </section>
 
 
         
