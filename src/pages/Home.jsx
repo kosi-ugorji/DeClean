@@ -1,19 +1,9 @@
 import React, { useEffect } from "react";
-import { FiPhone } from "react-icons/fi";
-import "./Home.css";
-import {
-  FiShield,
-  FiMapPin,
-  FiAward,
-  FiCheckCircle,
-  FiHeart,
-  FiSmile,
-  FiCheck
-} from "react-icons/fi";
-
+import { FiPhone, FiShield, FiMapPin, FiAward, FiCheckCircle, FiHeart, FiSmile, FiCheck } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
+import "./Home.css";
 
 import airbnbTurnovers from "../assets/airbnb_turnover.png";
 import residentialCleaning from "../assets/residential_cleaning.png";
@@ -22,7 +12,6 @@ import moveInMoveOut from "../assets/empty_apartment.png";
 import houseImage from "../assets/house_pic.png";
 
 export default function Home() {
-
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://elfsightcdn.com/platform.js";
@@ -31,388 +20,111 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
-
+    <main className="home-page">
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner container">
-
           <div className="hero-left">
-            <h1>
-              Ottawa's Trusted
-              <br />
-              Cleaning for Homes,
-              <br />
-              Rentals & Busy Lives
-            </h1>
-
+            <h1>Ottawa's Trusted<br />Cleaning for Homes,<br />Rentals & Busy Lives</h1>
             <p className="hero-subtitle">
-              Professional cleaning services that bring peace of mind
-              to your home. Background-checked, insured, and dedicated
-              to making your space sparkle.
+              Professional cleaning services that bring peace of mind to your home.
+              Background-checked, insured, and dedicated to making your space sparkle.
             </p>
-
             <div className="hero-cta-row">
-              <NavLink to="/quote" className="btn btn-outline hero-btn">
-                Get a Quote
-              </NavLink>
-
-              <NavLink to="/book" className="btn btn-primary hero-btn">
-                Book a Clean
-              </NavLink>
+              <NavLink to="/quote" className="btn btn-outline hero-btn">Get a Quote</NavLink>
+              <NavLink to="/book" className="btn btn-primary hero-btn">Book a Clean</NavLink>
             </div>
-
             <div className="hero-contact-row">
-              <FiPhone
-                size={22}
-                style={{ opacity: 0.5, marginRight: 8 }}
-              />
-
-              <span className="hero-contact-label">
-                Call us:
-              </span>
-
-              <span className="hero-contact-phone">
-                <a
-                  href="tel:6135139893"
-                  style={{
-                    color: "#fff",
-                    textDecoration: "none"
-                  }}
-                >
-                  (613) 513-9893
-                </a>
-              </span>
+              <FiPhone size={22} style={{ opacity: 0.6, marginRight: 8 }} />
+              <span className="hero-contact-label">Call us:</span>
+              <a href="tel:6135139893" className="hero-contact-phone">(613) 513-9893</a>
             </div>
           </div>
-
           <div className="hero-right">
-            <div className="hero-card">
-              <img
-                src={houseImage}
-                alt="Clean home"
-                className="hero-card-image"
-                width="100%"
-                height="100%"
-              />
-            </div>
+            <img src={houseImage} alt="Clean home" className="hero-image" />
           </div>
-
         </div>
       </section>
 
-      {/* FEATURES + GOOGLE REVIEWS */}
-      <section className="features">
+      {/* GOOGLE REVIEWS */}
+      <section className="reviews-section">
+        <h2 className="section-title">What Our Clients Say</h2>
+        <div className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754" data-elfsight-app-lazy></div>
+      </section>
 
-        <div className="google-reviews-widget">
-          <h2 className="section-title">
-            What Our Clients Say
-          </h2>
-
-          <div
-            className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
-            data-elfsight-app-lazy
-          ></div>
-        </div>
-
-        <div className="container">
-
-          <h2 className="section-title">
-            Why Ottawa Families Trust Us
-          </h2>
-
-          <div className="features-row">
-
-            <div className="feature">
-              <FiShield className="feature-icon" />
+      {/* TRUST FEATURES */}
+      <section className="trust-section">
+        <h2 className="section-title">Why Ottawa Families Trust Us</h2>
+        <div className="features-row">
+          {[
+            { icon: <FiShield />, title: "Background-Checked", desc: "All cleaners vetted" },
+            { icon: <FiMapPin />, title: "Locally Owned", desc: "Ottawa-based business" },
+            { icon: <FiAward />, title: "Liability Insured", desc: "Fully protected service" },
+            { icon: <FiCheckCircle />, title: "Professionally Trained", desc: "Expert cleaning standards" },
+            { icon: <FiHeart />, title: "Senior Friendly", desc: "Compassionate care" },
+            { icon: <FiSmile />, title: "Satisfaction Guaranteed", desc: "100% quality promise" },
+          ].map((f, i) => (
+            <div className="feature" key={i}>
+              <div className="feature-icon">{f.icon}</div>
               <div>
-                <div className="feature-title">
-                  Background-Checked
-                </div>
-                <div className="feature-desc">
-                  All cleaners vetted
-                </div>
+                <div className="feature-title">{f.title}</div>
+                <div className="feature-desc">{f.desc}</div>
               </div>
             </div>
-
-            <div className="feature">
-              <FiMapPin className="feature-icon" />
-              <div>
-                <div className="feature-title">
-                  Locally Owned
-                </div>
-                <div className="feature-desc">
-                  Ottawa-based business
-                </div>
-              </div>
-            </div>
-
-            <div className="feature">
-              <FiAward className="feature-icon" />
-              <div>
-                <div className="feature-title">
-                  Liability Insured
-                </div>
-                <div className="feature-desc">
-                  Fully protected service
-                </div>
-              </div>
-            </div>
-
-            <div className="feature">
-              <FiCheckCircle className="feature-icon" />
-              <div>
-                <div className="feature-title">
-                  Professionally Trained
-                </div>
-                <div className="feature-desc">
-                  Expert cleaning standards
-                </div>
-              </div>
-            </div>
-
-            <div className="feature">
-              <FiHeart className="feature-icon" />
-              <div>
-                <div className="feature-title">
-                  Senior Friendly
-                </div>
-                <div className="feature-desc">
-                  Compassionate care
-                </div>
-              </div>
-            </div>
-
-            <div className="feature">
-              <FiSmile className="feature-icon" />
-              <div>
-                <div className="feature-title">
-                  Satisfaction Guaranteed
-                </div>
-                <div className="feature-desc">
-                  100% quality promise
-                </div>
-              </div>
-            </div>
-
-          </div>
+          ))}
         </div>
       </section>
 
       {/* SERVICES */}
-      <section className="services">
-
-        <div className="container">
-
-          <h2 className="section-title">
-            Our Cleaning Services
-          </h2>
-
-          <div className="services-subtitle">
-            From regular home maintenance to specialized cleaning
-            needs, we've got the perfect service for your lifestyle.
-          </div>
-
-          <div className="services-grid">
-
-            {/* Residential */}
-            <div className="service-card">
-              <img
-                className="service-image"
-                src={residentialCleaning}
-                alt="Residential Cleaning"
-              />
-
-              <div>
-                <div className="service-title">
-                  Residential Cleaning
-                </div>
-
-                <div className="service-desc">
-                  Regular home cleaning for busy professionals
-                  and families
-                </div>
-
+      <section className="services-section">
+        <h2 className="section-title">Our Cleaning Services</h2>
+        <p className="services-subtitle">
+          From regular home maintenance to specialized cleaning needs, we've got the perfect service for your lifestyle.
+        </p>
+        <div className="services-grid">
+          {[
+            { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning for busy professionals and families", features: ["Weekly/Bi-weekly options", "Eco-friendly products", "Consistent cleaners"] },
+            { img: seniorFriendlyCleaning, title: "Senior-Friendly Cleaning", desc: "Gentle, patient service designed for seniors and their families", features: ["10% senior discount", "Same cleaner guarantee", "Respectful service"] },
+            { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast, reliable turnovers that boost your reviews", features: ["Same-day service", "Before/after photos", "Guest-ready touches"] },
+            { img: moveInMoveOut, title: "Move-In/Move-Out", desc: "Deep cleaning for transitions and property handovers", features: ["Top-to-bottom clean", "Landlord documentation", "Deposit protection"] },
+          ].map((s, i) => (
+            <div className="service-card" key={i}>
+              <img src={s.img} alt={s.title} className="service-image" />
+              <div className="service-info">
+                <div className="service-title">{s.title}</div>
+                <div className="service-desc">{s.desc}</div>
                 <ul className="service-features">
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Weekly/Bi-weekly options
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Eco-friendly products
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Consistent cleaners
-                  </li>
+                  {s.features.map((f, j) => (
+                    <li key={j}><FiCheck className="feature-check" /> {f}</li>
+                  ))}
                 </ul>
               </div>
             </div>
-
-            {/* Senior */}
-            <div className="service-card">
-              <img
-                className="service-image"
-                src={seniorFriendlyCleaning}
-                alt="Senior Friendly Cleaning"
-              />
-
-              <div>
-                <div className="service-title">
-                  Senior-Friendly Cleaning
-                </div>
-
-                <div className="service-desc">
-                  Gentle, patient service designed for seniors
-                  and their families
-                </div>
-
-                <ul className="service-features">
-                  <li>
-                    <FiCheck className="feature-check" />
-                    10% senior discount
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Same cleaner guarantee
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Respectful service
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Airbnb */}
-            <div className="service-card">
-              <img
-                className="service-image"
-                src={airbnbTurnovers}
-                alt="Airbnb Turnovers"
-              />
-
-              <div>
-                <div className="service-title">
-                  Airbnb Turnovers
-                </div>
-
-                <div className="service-desc">
-                  Fast, reliable turnovers that boost your reviews
-                </div>
-
-                <ul className="service-features">
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Same-day service
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Before/after photos
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Guest-ready touches
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Move Out */}
-            <div className="service-card">
-              <img
-                className="service-image"
-                src={moveInMoveOut}
-                alt="Move In Move Out Cleaning"
-              />
-
-              <div>
-                <div className="service-title">
-                  Move-In/Move-Out
-                </div>
-
-                <div className="service-desc">
-                  Deep cleaning for transitions and property
-                  handovers
-                </div>
-
-                <ul className="service-features">
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Top-to-bottom clean
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Landlord documentation
-                  </li>
-
-                  <li>
-                    <FiCheck className="feature-check" />
-                    Deposit protection
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="services-btn-row">
-            <Link to="/services" className="btn btn-outline">
-              View All Services
-            </Link>
-          </div>
-
+          ))}
+        </div>
+        <div className="services-btn-row">
+          <Link to="/services" className="btn btn-outline">View All Services</Link>
         </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="testimonials">
-
-        <div className="container">
-
-          <h2 className="section-title">
-            Why Clients Love Us
-          </h2>
-
-          <div className="testimonials-subtitle">
-            Peace of mind, every time
-          </div>
-
-          <div className="testimonials-grid">
-
-            {[1, 2, 3].map((item) => (
-              <div className="testimonial-card" key={item}>
-
-                <div className="testimonial-stars">
-                  {Array(5).fill().map((_, i) => (
-                    <FaStar key={i} className="star" />
-                  ))}
-                </div>
-
-                <BiSolidQuoteAltLeft className="testimonial-quote-icon" />
-
-                <div className="testimonial-text">
-                  "Absolutely seamless! Booking online was easy,
-                  and my cleaner was right on time and incredibly
-                  thorough."
-                </div>
-
+      <section className="testimonials-section">
+        <h2 className="section-title">Why Clients Love Us</h2>
+        <p className="testimonials-subtitle">Peace of mind, every time</p>
+        <div className="testimonials-grid">
+          {[1, 2, 3].map((item) => (
+            <div className="testimonial-card" key={item}>
+              <div className="testimonial-stars">
+                {Array(5).fill().map((_, i) => <FaStar key={i} className="star" />)}
               </div>
-            ))}
-
-          </div>
-
+              <BiSolidQuoteAltLeft className="testimonial-quote-icon" />
+              <p className="testimonial-text">
+                "Absolutely seamless! Booking online was easy, and my cleaner was right on time and incredibly thorough."
+              </p>
+            </div>
+          ))}
         </div>
       </section>
-
     </main>
   );
 }
