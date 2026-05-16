@@ -50,22 +50,11 @@ export default function Home() {
         </div>
       </section>
 
-     export default function Home() {
-  return (
-    <section className="google_reviews">
-      <h2>What our Clients Say</h2>
-      <div
-        className="elsight-app-3a7f519a-98ec-4909-9a40-2bc0511f754"
-        data-elsight-app-lazy
-      ></div>
-    </section>
-  );
-}
-
-
-
         
       <section className="features">
+        <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754" data-elfsight-app-lazy></div>
         <div className="container">
           <h2 className="section-title">Why Ottawa Families Trust Us</h2>
           <div className="features-row">
