@@ -49,6 +49,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
+      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754" data-elfsight-app-lazy></div>
+
+
+        
       <section className="features">
         <div className="container">
           <h2 className="section-title">Why Ottawa Families Trust Us</h2>
