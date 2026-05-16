@@ -53,7 +53,7 @@ export default function Home() {
             </h1>
 
             <p className="hero-subtitle">
-              Rel, insured cleaners delivering spotless results every time.
+              Reliable, insured cleaners delivering spotless results every time.
             </p>
 
             <div className="hero-cta-row">
@@ -120,7 +120,7 @@ export default function Home() {
       <section className="services">
         <div className="container">
 
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title">O Services</h2>
 
           <div className="services-grid">
 
