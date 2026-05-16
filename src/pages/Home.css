@@ -590,3 +590,15 @@
   .service-card { max-width: 100%; }
 }
 
+.google-reviews {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.google-reviews h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
