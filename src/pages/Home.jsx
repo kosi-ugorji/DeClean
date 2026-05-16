@@ -27,6 +27,55 @@ export default function Home() {
   return (
     <main>
 
+
+      import React from "react";
+import "./Home.css";
+import { NavLink } from "react-router-dom";
+
+export default function Home() {
+  return (
+    <main>
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-inner">
+          <h1>WELCOME<br />YOUR REAL ESTATE EXPERIENCE MADE SIMPLE</h1>
+          <div className="hero-buttons">
+            <NavLink to="/buy" className="btn btn-primary">BUY A HOME</NavLink>
+            <NavLink to="/sell" className="btn btn-outline">SELL A HOME</NavLink>
+          </div>
+        </div>
+      </section>
+
+      {/* GOOGLE REVIEWS */}
+      <section className="reviews-section">
+        <h2 className="section-title">Excellent on Google ⭐ 4.9 out of 5</h2>
+        <div
+          className="elfsight-app-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
+
+      {/* NAVIGATION */}
+      <header className="site-header">
+        <div className="contact-info">
+          <span>📞 (613) 853-3624</span>
+          <span>✉️ admin@inspireteam.ca</span>
+        </div>
+        <nav className="nav-menu">
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/communities">COMMUNITIES</NavLink>
+          <NavLink to="/sellers">SELLERS</NavLink>
+          <NavLink to="/buyers">BUYERS</NavLink>
+          <NavLink to="/blog">BLOG</NavLink>
+          <NavLink to="/about">ABOUT</NavLink>
+          <NavLink to="/contact">CONTACT</NavLink>
+        </nav>
+      </header>
+    </main>
+  );
+}
+
+
       {/* FLOATING WHATSAPP BUTTON */}
       <a
         href="https://wa.me/234XXXXXXXXXX"
