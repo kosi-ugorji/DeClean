@@ -53,7 +53,7 @@ export default function Home() {
             </h1>
 
             <p className="hero-subtitle">
-              Reliable, insured cleaners delivering spotless results every time.
+              Rel, insured cleaners delivering spotless results every time.
             </p>
 
             <div className="hero-cta-row">
