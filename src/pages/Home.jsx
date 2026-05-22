@@ -1,17 +1,5 @@
 import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import {
-  FiPhone,
-  FiShield,
-  FiMapPin,
-  FiAward,
-  FiCheckCircle,
-  FiHeart,
-  FiSmile,
-  FiCheck,
-  FiMessageCircle
-} from "react-icons/fi";
-
+import { FiShield, FiMapPin, FiAward, FiCheckCircle, FiHeart, FiSmile, FiCheck, FiMessageCircle } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
@@ -21,11 +9,9 @@ import airbnbTurnovers from "../assets/airbnb_turnover.png";
 import residentialCleaning from "../assets/residential_cleaning.png";
 import seniorFriendlyCleaning from "../assets/senior_friendly.png";
 import moveInMoveOut from "../assets/empty_apartment.png";
-import houseImage from "../assets/house_pic.png";
 
 export default function Home() {
   useEffect(() => {
-    // Load Elfsight script once when component mounts
     const script = document.createElement("script");
     script.src = "https://elfsightcdn.com/platform.js";
     script.async = true;
@@ -44,56 +30,53 @@ export default function Home() {
         <FiMessageCircle />
       </a>
 
-     {/* HERO with Navbar */}
-<section className="hero hero-bg">
-  <div className="hero-overlay">
-    {/* NAVBAR */}
-    <header className="hero-nav">
-      <div className="nav-left">
-        <span className="brand">Clean. Cared for. Yours.</span>
-      </div>
-      <nav className="nav-links">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/services">Services</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/faq">FAQ</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </nav>
-      <div className="nav-right">
-        <span className="contact-info">
-          📞 (613) 513-9893 &nbsp; ✉️ admin@yourcompany.com
-        </span>
-        <NavLink to="/quote" className="btn btn-primary nav-btn">
-          Get Quote
-        </NavLink>
-      </div>
-    </header>
+      {/* HERO with Inspire-style Navbar */}
+      <section className="hero-bg">
+        <div className="hero-overlay">
+          {/* NAVBAR */}
+          <header className="hero-nav">
+            <div className="nav-left">
+              <span className="brand">Clean. Cared for. Yours.</span>
+            </div>
+            <nav className="nav-links">
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/services">Services</NavLink>
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/faq">FAQ</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
+            </nav>
+            <div className="nav-right">
+              <span className="contact-info">
+                📞 (613) 513-9893 &nbsp; ✉️ admin@yourcompany.com
+              </span>
+              <NavLink to="/quote" className="btn btn-primary nav-btn">
+                Get Quote
+              </NavLink>
+            </div>
+          </header>
 
-    {/* HERO TEXT */}
-    <div className="hero-content hero-right-text">
-      <h1 className="hero-title">WELCOME</h1>
-      <div className="hero-divider"></div>
-      <p className="hero-subtitle">
-        YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
-      </p>
-      <div className="hero-buttons">
-        <NavLink to="/buy" className="btn btn-primary">
-          BUY A HOME
-        </NavLink>
-        <NavLink to="/sell" className="btn btn-outline">
-          SELL A HOME
-        </NavLink>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+          {/* HERO TEXT */}
+          <div className="hero-content">
+            <h1 className="hero-title">WELCOME</h1>
+            <div className="hero-divider"></div>
+            <p className="hero-subtitle">
+              YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
+            </p>
+            <div className="hero-buttons">
+              <NavLink to="/buy" className="btn btn-primary">
+                BUY A HOME
+              </NavLink>
+              <NavLink to="/sell" className="btn btn-outline">
+                SELL A HOME
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* GOOGLE REVIEWS */}
       <section className="reviews-section">
         <h2 className="section-title">What Our Clients Say</h2>
-        {/* Elfsight Google Reviews */}
         <div
           className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
           data-elfsight-app-lazy
