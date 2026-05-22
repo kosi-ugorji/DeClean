@@ -44,45 +44,23 @@ export default function Home() {
         <FiMessageCircle />
       </a>
 
-      {/* HERO */}
-      <section className="hero">
-        <div className="hero-inner container">
-          <motion.div
-            className="hero-left"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+      {/* HERO (Inspire-style) */}
+      <section className="hero hero-bg">
+        <div className="hero-overlay">
+          <div className="hero-content">
             <h1>
-              Premium Cleaning<br />
-              for Homes & Rentals
+              WELCOME <br />
+              YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
             </h1>
-            <p className="hero-subtitle">
-              Reliable, insured cleaners delivering spotless results every time.
-            </p>
-            <div className="hero-cta-row">
-              <NavLink to="/quote" className="btn btn-outline hero-btn">
-                Get Quote
+            <div className="hero-buttons">
+              <NavLink to="/buy" className="btn btn-primary">
+                BUY A HOME
               </NavLink>
-              <NavLink to="/book" className="btn btn-primary hero-btn">
-                Book Now
+              <NavLink to="/sell" className="btn btn-outline">
+                SELL A HOME
               </NavLink>
             </div>
-            <div className="hero-contact-row">
-              <FiPhone />
-              <a href="tel:6135139893">(613) 513-9893</a>
-            </div>
-            <div className="hero-rating">⭐ Rated 5.0 by customers</div>
-          </motion.div>
-
-          <motion.div
-            className="hero-right"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <img src={houseImage} alt="Clean home" />
-          </motion.div>
+          </div>
         </div>
       </section>
 
