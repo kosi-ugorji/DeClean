@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 
-/* HERO (full-page with navbar) */
+/* HERO */
 .hero-bg {
   position: relative;
   background: url('https://www.thespruce.com/thmb/fBOdyMFmEBHusOiO6Ryep-Ud9I0=/4000x2667/filters:no_upscale()/SPR-how-to-deep-cleaning-house-7152794-Hero-01-e5cd99973ec24e69b00b5ee6b992f760.jpg') 
@@ -23,7 +23,6 @@ body {
   justify-content: space-between;
 }
 
-/* Overlay */
 .hero-overlay {
   background: rgba(0, 0, 0, 0.45);
   width: 100%;
@@ -105,10 +104,8 @@ body {
   font-weight: 700;
   margin-bottom: 8px;
   max-width: 500px;
-  color: #fff;
 }
 
-/* Divider now uses gradient image */
 .hero-divider {
   height: 6px;
   background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
@@ -203,19 +200,10 @@ body {
   transform: translateY(-5px);
 }
 
-.community-title,
-.community-desc,
-.community-more {
-  position: relative;
-  z-index: 1;
-}
-
 .community-title {
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #000;
-  font-family: 'Inter', sans-serif;
 }
 
 .community-desc {
@@ -311,7 +299,7 @@ body {
 
 /* REVIEWS (Elfsight widget full width with gradient) */
 .reviews-section {
-  padding: 0; /* no background here */
+  padding: 0;
   background: none;
 }
 
@@ -323,7 +311,6 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
-/* Widget container full width + gradient */
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 {
   width: 100% !important;
   max-width: none !important;
@@ -331,356 +318,9 @@ body {
   padding: 4rem 20px;
   background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80')
               center/cover no-repeat;
+  min-height: 100%; /* ensure gradient covers full height */
 }
 
-/* Header inside widget */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.elfsight-app-3a7f5102-08ec-4999-9aAlright Chiemena — I’ve taken your CSS and directly edited it so the **Elfsight Google Reviews widget itself** spans across the entire width of the site and carries the gradient background you wanted. The gradient is no longer just behind the section; it’s applied to the widget container.  
-
-Here’s your rewritten CSS:
-
-```css
-/* GLOBAL IMPROVEMENTS */
-:root {
-  --primary: #5ca0f2; /* light blue */
-  --dark: #1e293b;
-  --text: #64748b;
-  --bg: #f8fafc;
-}
-
-body {
-  background: #fff;
-  font-family: 'Inter', 'Manrope', 'Helvetica Neue', Arial, sans-serif;
-  margin: 0;
-}
-
-/* HERO (full-page with navbar) */
-.hero-bg {
-  position: relative;
-  background: url('https://www.thespruce.com/thmb/fBOdyMFmEBHusOiO6Ryep-Ud9I0=/4000x2667/filters:no_upscale()/SPR-how-to-deep-cleaning-house-7152794-Hero-01-e5cd99973ec24e69b00b5ee6b992f760.jpg') 
-              center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Overlay */
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.45);
-  width: 100%;
-  height: 100%;
-  padding: 20px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* NAVBAR */
-.hero-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  color: #fff;
-  font-size: 0.95rem;
-}
-
-.nav-left .brand {
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.nav-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-.contact-info {
-  font-size: 0.95rem;
-  display: flex;
-  gap: 20px;
-}
-
-.contact-info span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.nav-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255,255,255,0.4);
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.3s;
-}
-
-.nav-links a:hover {
-  transform: scale(1.1);
-}
-
-/* HERO text */
-.hero-content {
-  text-align: right;
-  color: #fff;
-  max-width: 500px;
-  margin-left: auto;
-  margin-top: auto;
-  padding-bottom: 40px;
-}
-
-.hero-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  max-width: 500px;
-  color: #fff;
-}
-
-/* Divider now uses gradient image */
-.hero-divider {
-  height: 6px;
-  background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
-              center/cover no-repeat;
-  margin: 15px 0 15px auto;
-  width: 100%;
-  max-width: 500px;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-  max-width: 500px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-}
-
-.hero-buttons .btn {
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.3s;
-}
-
-.hero-buttons .btn:hover {
-  transform: scale(1.05);
-}
-
-.hero-buttons .btn-primary {
-  background: var(--primary);
-  color: #fff;
-}
-
-.hero-buttons .btn-outline {
-  background: #fff;
-  color: var(--dark);
-}
-
-/* FEATURES */
-.features {
-  background: var(--bg);
-  padding: 4rem 0;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  font-family: 'Manrope', sans-serif;
-}
-
-.communities-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.community-card {
-  background: #fff;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.community-card::before {
-  content: attr(data-icon);
-  font-size: 6rem;
-  color: rgba(92, 160, 242, 0.08);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.community-card:hover {
-  transform: translateY(-5px);
-}
-
-.community-title,
-.community-desc,
-.community-more {
-  position: relative;
-  z-index: 1;
-}
-
-.community-title {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #000;
-  font-family: 'Inter', sans-serif;
-}
-
-.community-desc {
-  font-size: 0.95rem;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-
-.community-more {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-/* SERVICES */
-.services {
-  padding: 4rem 0;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.service-card {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
-  transition: 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.service-title {
-  font-weight: 700;
-  padding: 1rem;
-}
-
-.service-desc {
-  padding: 0 1rem;
-  color: var(--text);
-}
-
-.service-card ul {
-  padding: 1rem;
-  list-style: none;
-}
-
-.service-card li {
-  display: flex;
-  gap: 0.5rem;
-  color: green;
-}
-
-/* CTA BANNER */
-.cta-banner {
-  margin-top: 3rem;
-  padding: 2rem;
-  background: var(--primary);
-  color: white;
-  text-align: center;
-  border-radius: 20px;
-}
-
-/* TESTIMONIALS */
-.testimonials {
-  padding: 4rem 0;
-  background: var(--bg);
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-/* REVIEWS (Elfsight widget full width with gradient) */
-.reviews-section {
-  padding: 0; /* no background here */
-  background: none;
-}
-
-.reviews-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  font-family: 'Manrope', sans-serif;
-}
-
-/* Widget container full width + gradient */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 4rem 20px;
-  background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80')
-              center/cover no-repeat;
-}
-
-/* Header inside widget */
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -691,14 +331,12 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #fff; /* readable on gradient */
+  color: #fff;
 }
 
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header-rating {
   font-size: 1rem;
   color: #fff;
-  margin-bottom: 1rem;
-}
 
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-button {
   padding: 10px 20px;
@@ -709,9 +347,10 @@ body {
   text-decoration: none;
 }
 
-/* Review cards on gradient */
+/* Review cards with frosted glass effect */
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-review {
-  background: rgba(255,255,255,0.9); /* semi-transparent for gradient effect */
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -739,14 +378,14 @@ body {
   text-align: right;
 }
 
-/* Responsive grid */
+/* Responsive grid for reviews */
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-reviews {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-/* Reviewer avatar styling */
+/* Reviewer avatar */
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-author-avatar {
   width: 40px;
   height: 40px;
