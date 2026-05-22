@@ -196,60 +196,79 @@
   line-height: 1.6;
 }
 
-/* Trust section */
-.trust-section {
-  background: #fafbfc;
-  padding-block: clamp(40px, 10vw, 68px);
+/* Trust section styled like certifications */
+.trust-section--blue {
+  background: #f7faff;
+  padding: 60px 20px;
   text-align: center;
 }
-.trust-section-container {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+
 .trust-title {
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 800;
-  color: #181d24;
-  margin-bottom: 32px;
-  font-family: var(--font-heading, 'Poppins', Arial, sans-serif);
+  color: #1877F2;
+  margin-bottom: 0.5em;
 }
-.trust-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(12px, 4vw, 26px);
-  justify-content: center;
-  margin-bottom: 50px;
+
+.trust-subtitle {
+  color: #42506a;
+  font-size: 1.1rem;
+  margin-bottom: 2em;
 }
-.trust-pill {
-  background: #f4f6f8;
-  color: #181d24;
-  border-radius: 22px;
-  padding: 13px 28px;
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+}
+
+.trust-card {
+  background: #fff;
+  border: 2px solid #1877F2;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+}
+
+.trust-icon {
+  font-size: 2rem;
+  color: #1877F2;
+  margin-bottom: 12px;
+}
+
+.trust-name {
   font-weight: 700;
-  font-size: 1.09rem;
-  display: inline-block;
+  font-size: 1.2rem;
+  color: #181d24;
   margin-bottom: 6px;
 }
-.trust-cta-row {
-  margin-top: clamp(38px, 10vw, 70px);
+
+.trust-desc {
+  color: #42506a;
+  font-size: 0.95rem;
 }
-.trust-cta-text {
-  color: #b3c5e6;
-  font-size: clamp(1rem, 2.5vw + .5rem, 1.32rem);
-  font-weight: 500;
-  margin-bottom: 28px;
-}
-.trust-cta-link {
-  color: var(--color-primary, #1877F2);
+
+.trust-cta-link--blue {
+  background: #1877F2;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
   font-weight: 700;
-  font-size: 1.05rem;
   text-decoration: none;
-  transition: color 0.13s;
+  transition: background 0.2s ease;
 }
-.trust-cta-link:hover {
-  color: #145dbf;
+
+.trust-cta-link--blue:hover {
+  background: #145dbf;
 }
+
 
 /* Small screens */
 @media (max-width: 700px) {
