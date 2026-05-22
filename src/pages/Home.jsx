@@ -126,13 +126,11 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="cta-banner">
-            <h3>Need cleaning this week?</h3>
-            <p>Book in under 1 minute.</p>
-            <Link to="/book" className="btn btn-primary">
-              Book Now
-            </Link>
+         <div className="cta-banner">
+  <h3>NEED CLEANING THIS WEEK?</h3>
+  <Link to="/contact" className="btn">Book Now</Link>
           </div>
+
         </div>
       </section>
 
