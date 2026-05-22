@@ -105,7 +105,15 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* SERVICES (Rhombus-style) */}
+      {/* INSTAGRAM FEED */}
+      <section className="instagram-section">
+        <div
+          className="elfsight-app-ff011d70-6144-4599-b90f-b96af1b5238c"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
+
+      {/* SERVICES */}
       <section className="services">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
@@ -125,13 +133,14 @@ export default function Home() {
               </Link>
             ))}
           </div>
-        </section>
-        <section>
-         <div className="cta-banner">
-  <h3>NEED CLEANING THIS WEEK?</h3>
-  <Link to="/contact" className="btn">Book Now</Link>
-          </div>
+        </div>
+      </section>
 
+      {/* CTA BANNER */}
+      <section>
+        <div className="cta-banner">
+          <h3>NEED CLEANING THIS WEEK?</h3>
+          <Link to="/contact" className="btn">Book Now</Link>
         </div>
       </section>
 
@@ -163,3 +172,4 @@ export default function Home() {
     </main>
   );
 }
+
