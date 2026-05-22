@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { FiMessageCircle } from "react-icons/fi";
-import { FaStar } from "react-icons/fa";
-import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
 import "./Home.css";
 import reviewsBg from "../assets/reviewsbg.png";
@@ -79,29 +77,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="services">
-        <div className="container">
-          <h2 className="section-title">Our Services</h2>
-          <div className="services-grid">
-            {[
-              { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning" },
-              { img: seniorFriendlyCleaning, title: "Senior Cleaning", desc: "Careful, respectful service" },
-              { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast guest-ready cleaning" },
-              { img: moveInMoveOut, title: "Move Cleaning", desc: "Deep cleaning service" }
-            ].map((s, i) => (
-              <Link to="/services" key={i} className="service-card">
-                <img src={s.img} alt={s.title} />
-                <div className="overlay">
-                  <div className="service-title">{s.title}</div>
-                  <div className="service-desc">{s.desc}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* GOOGLE REVIEWS */}
       <section className="reviews-section">
         <div
@@ -110,23 +85,22 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* FEATURES (REPLACED WITH OUR SERVICES) */}
+      {/* FEATURES (NOW SHOWING OUR SERVICES CONTENT) */}
       <section className="features">
         <div className="container">
           <h1 className="section-title"><b>Our Services</b></h1>
-          <div className="services-grid">
+          <div className="communities-grid">
             {[
               { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning" },
               { img: seniorFriendlyCleaning, title: "Senior Cleaning", desc: "Careful, respectful service" },
               { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast guest-ready cleaning" },
               { img: moveInMoveOut, title: "Move Cleaning", desc: "Deep cleaning service" }
             ].map((s, i) => (
-              <Link to="/services" key={i} className="service-card">
+              <Link to="/services" key={i} className="community-card">
                 <img src={s.img} alt={s.title} />
-                <div className="overlay">
-                  <div className="service-title">{s.title}</div>
-                  <div className="service-desc">{s.desc}</div>
-                </div>
+                <div className="community-title">{s.title}</div>
+                <div className="community-desc">{s.desc}</div>
+                <div className="community-more">MORE +</div>
               </Link>
             ))}
           </div>
