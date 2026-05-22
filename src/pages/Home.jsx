@@ -122,7 +122,10 @@ export default function Home() {
 
           <h2 className="section-title">Our Services</h2>
 
-          <div className="services-grid">
+                    <div className="services-grid">
+                      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <div class="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754" data-elfsight-app-lazy></div>
 
             {[
               {
