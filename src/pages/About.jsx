@@ -13,10 +13,13 @@ export default function AboutSection() {
       <div className="about-main container">
         <div className="about-story">
           <p>
-            Over time, my clients became more than just names on a schedule. They became friends, neighbors, and even family. I've helped new parents bring home their babies to clean nurseries, supported seniors who couldn't manage it all anymore, and prepped homes for joyful returnees after long trips. With every home, I saw the same thing: <b>cleaning is not just a service, it's a form of care.</b>
+            We are committed to delivering the best cleaning service in Ottawa through reliable service, attention to detail, and professional care. As a trusted cleaning service company, we provide high-quality residential and commercial cleaning solutions tailored to the needs of homeowners, renters, property managers, seniors, and busy professionals across Ottawa. <b>cleaning is not just a service, it's a form of care.</b>
           </p>
           <p>
-            That insight is what led me to start this business. I wanted to build something bigger than myself; a professional cleaning business that delivers with precision and polish, but also with empathy, consistency, and heart. I know firsthand what it feels like to be stretched too thin, overwhelmed, or simply in need of a hand. That's why every part of our service, from our checklists to our communication, is designed to ease your mental load and bring peace back into your home.
+            Our services include house cleaning service, deep cleaning, recurring home cleaning, move-in and move-out cleaning, Airbnb and rental property cleaning, office cleaning, and cleaning services for homes and rentals in Ottawa. We also specialize in cleaning service for seniors in Ottawa, helping create clean, safe, and comfortable living spaces with dependable and respectful service.
+          </p>
+           <p>
+            We focus on consistency, professionalism, and customer satisfaction in every visit. Whether you need weekly home cleaning, one-time deep cleaning, or reliable cleaning services in Ottawa for your property or business, our team is dedicated to delivering spotless results and a stress-free experience.
           </p>
           <div className="about-mission-card">
             <div className="about-mission-title"><b>Our Mission</b></div>
