@@ -281,14 +281,47 @@ body {
 }
 
 /* CTA BANNER */
+/* CTA BANNER (full-width, styled like black version but blue background) */
 .cta-banner {
-  margin-top: 3rem;
-  padding: 2rem;
-  background: var(--primary);
-  color: white;
+  width: 100%;                /* span full width */
+  margin: 0;                  /* remove side margins */
+  padding: 4rem 2rem;         /* larger padding for impact */
+  background: var(--primary); /* keep your blue background */
+  color: #fff;                /* white text */
   text-align: center;
-  border-radius: 20px;
+  border-radius: 0;           /* remove rounded corners */
 }
+
+.cta-banner h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;                /* force white */
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #fff;                /* force white */
+}
+
+.cta-banner .btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid rgba(255,255,255,0.7); /* white transparent lined box */
+  border-radius: 0;           /* square corners */
+  background: transparent;    /* transparent background */
+  color: #fff;                /* white text */
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-banner .btn:hover {
+  background: #fff;           /* invert on hover */
+  color: var(--primary);      /* blue text on hover */
+}
+
 
 /* TESTIMONIALS */
 .testimonials {
