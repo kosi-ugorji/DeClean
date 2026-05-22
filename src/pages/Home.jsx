@@ -106,40 +106,24 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* SERVICES (Styled like Featured Services) */}
+      {/* SERVICES (Rhombus-style) */}
       <section className="services">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
           <div className="services-grid">
             {[
-              {
-                img: residentialCleaning,
-                title: "Residential Cleaning",
-                desc: "Regular home cleaning"
-              },
-              {
-                img: seniorFriendlyCleaning,
-                title: "Senior Cleaning",
-                desc: "Careful, respectful service"
-              },
-              {
-                img: airbnbTurnovers,
-                title: "Airbnb Turnovers",
-                desc: "Fast guest-ready cleaning"
-              },
-              {
-                img: moveInMoveOut,
-                title: "Move Cleaning",
-                desc: "Deep cleaning service"
-              }
+              { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning" },
+              { img: seniorFriendlyCleaning, title: "Senior Cleaning", desc: "Careful, respectful service" },
+              { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast guest-ready cleaning" },
+              { img: moveInMoveOut, title: "Move Cleaning", desc: "Deep cleaning service" }
             ].map((s, i) => (
-              <div className="service-card" key={i}>
+              <Link to="/services" key={i} className="service-card">
                 <img src={s.img} alt={s.title} />
                 <div className="overlay">
                   <div className="service-title">{s.title}</div>
                   <div className="service-desc">{s.desc}</div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="cta-banner">
