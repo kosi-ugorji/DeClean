@@ -10,7 +10,7 @@ export default function AboutSection() {
     <section className="about-section">
       {/* NEW ABOUT SQUEAKY CLEAN SECTION */}
       <div className="about-squeaky">
-        <h2 className="about-squeaky-title"><b>ABOUT DECLEAN CLEANING SERVICES</b></h2>
+        <h1 className="about-squeaky-title"><b>ABOUT DECLEAN CLEANING SERVICES</b></h1>
         <p className="about-squeaky-subtitle">
           Ottawa's premier cleaning service company, delivering exceptional results since 2023
         </p>
