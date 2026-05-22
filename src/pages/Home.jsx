@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
 import "./Home.css";
+import reviewsBg from "../assets/reviewsbg.png";
 
 import airbnbTurnovers from "../assets/airbnb_turnover.png";
 import residentialCleaning from "../assets/residential_cleaning.png";
