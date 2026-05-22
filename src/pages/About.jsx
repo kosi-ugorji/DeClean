@@ -104,24 +104,48 @@ export default function AboutSection() {
       </div>
 
       {/* WHY OTTAWA TRUSTS US */}
-      <div className="trust-section">
-        <div className="trust-section-container">
-          <h2 className="trust-title">Why Ottawa Trusts Us</h2>
-          <div className="trust-pills">
-            <div className="trust-pill">Background–Checked</div>
-            <div className="trust-pill">Locally Owned</div>
-            <div className="trust-pill">Liability Insured</div>
-            <div className="trust-pill">Professionally Trained Cleaners</div>
-            <div className="trust-pill">Satisfaction Guaranteed</div>
-            <div className="trust-pill">Senior Friendly Services</div>
-          </div>
-          <div className="trust-cta-row">
-            <div className="trust-cta-text">
-              Join hundreds of Ottawa families who trust us with their homes and peace of mind.
-            </div>
-            <Link to="/book" className="trust-cta-link">Book a Clean</Link>
-          </div>
-        </div>
+<div className="trust-section trust-section--blue">
+  <h2 className="trust-title">Why Ottawa Trusts Us</h2>
+  <p className="trust-subtitle">
+    These qualities define why families and businesses rely on us every day.
+  </p>
+  <div className="trust-grid">
+    <div className="trust-card">
+      <div className="trust-icon">🔍</div>
+      <div className="trust-name">Background–Checked</div>
+      <div className="trust-desc">Every cleaner is vetted for safety and reliability.</div>
+    </div>
+    <div className="trust-card">
+      <div className="trust-icon">🏠</div>
+      <div className="trust-name">Locally Owned</div>
+      <div className="trust-desc">Proudly rooted in Ottawa, serving our community.</div>
+    </div>
+    <div className="trust-card">
+      <div className="trust-icon">🛡️</div>
+      <div className="trust-name">Liability Insured</div>
+      <div className="trust-desc">Peace of mind with full coverage protection.</div>
+    </div>
+    <div className="trust-card">
+      <div className="trust-icon">👩‍💼</div>
+      <div className="trust-name">Professionally Trained</div>
+      <div className="trust-desc">Skilled cleaners trained to deliver excellence.</div>
+    </div>
+    <div className="trust-card">
+      <div className="trust-icon">⭐</div>
+      <div className="trust-name">Satisfaction Guaranteed</div>
+      <div className="trust-desc">We don’t stop until your space shines.</div>
+    </div>
+    <div className="trust-card">
+      <div className="trust-icon">👵</div>
+      <div className="trust-name">Senior Friendly</div>
+      <div className="trust-desc">Gentle, respectful service for seniors at home.</div>
+    </div>
+  </div>
+  <div className="trust-cta-row">
+    <Link to="/book" className="trust-cta-link trust-cta-link--blue">Book a Clean</Link>
+  </div>
+</div>
+
       </div>
     </section>
   );
