@@ -55,24 +55,24 @@ export default function Home() {
     </header>
 
     {/* HERO TEXT */}
-    <div className="hero-content">
-    <h1 className="hero-title">
-  Premiium cleaning for<br />Homes & Rentals
-</h1>
+   <div className="hero-content">
+  <h1 className="hero-title">
+    Premium cleaning for<br />Homes & Rentals
+  </h1>
+  <div className="hero-divider"></div>
+  <p className="hero-subtitle">
+    Reliable, insured cleaners delivering<br />spotless results every time
+  </p>
+  <div className="hero-buttons">
+    <NavLink to="/buy" className="btn btn-primary">
+      GET QUOTE
+    </NavLink>
+    <NavLink to="/sell" className="btn btn-outline">
+      BOOK NOW
+    </NavLink>
+  </div>
+</div>
 
-<p className="hero-subtitle">
-  <b>Reliable, insured cleaners delivering<br />spotless results every time</b>
-</p>
-
-      <div className="hero-buttons">
-        <NavLink to="/buy" className="btn btn-primary">
-          GET QUOTE
-        </NavLink>
-        <NavLink to="/sell" className="btn btn-outline">
-          BOOK NOW
-        </NavLink>
-      </div>
-    </div>
   </div>
 </section>
 
