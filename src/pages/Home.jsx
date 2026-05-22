@@ -77,39 +77,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section className="features">
-        <div className="container">
-          <h1 className="section-title"><b>WHY CHOOSE US</b></h1>
-          <div className="communities-grid">
-            {[
-              { title: "Background Checked", desc: "Trusted cleaners" },
-              { title: "Locally Owned", desc: "Proudly serving Ottawa" },
-              { title: "Insured", desc: "Full protection" },
-              { title: "Trained Staff", desc: "Professional cleaning" },
-              { title: "Senior Friendly", desc: "Gentle care" },
-              { title: "Guaranteed", desc: "100% satisfaction" }
-            ].map((item, i) => (
-              <div className="community-card" key={i}>
-                <div className="community-title">{item.title}</div>
-                <div className="community-desc">{item.desc}</div>
-                <div className="community-more">MORE +</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GOOGLE REVIEWS */}
-      <section className="reviews-section">
-        <div
-          className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
-          data-elfsight-app-lazy
-        ></div>
-      </section>
-
-  
-
       {/* SERVICES */}
       <section className="services">
         <div className="container">
@@ -128,6 +95,41 @@ export default function Home() {
                   <div className="service-desc">{s.desc}</div>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
+
+      {/* GOOGLE REVIEWS */}
+      <section className="reviews-section">
+        <div
+          className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
+
+  
+
+      {/* FEATURES */}
+      <section className="features">
+        <div className="container">
+          <h1 className="section-title"><b>WHY CHOOSE US</b></h1>
+          <div className="communities-grid">
+            {[
+              { title: "Background Checked", desc: "Trusted cleaners" },
+              { title: "Locally Owned", desc: "Proudly serving Ottawa" },
+              { title: "Insured", desc: "Full protection" },
+              { title: "Trained Staff", desc: "Professional cleaning" },
+              { title: "Senior Friendly", desc: "Gentle care" },
+              { title: "Guaranteed", desc: "100% satisfaction" }
+            ].map((item, i) => (
+              <div className="community-card" key={i}>
+                <div className="community-title">{item.title}</div>
+                <div className="community-desc">{item.desc}</div>
+                <div className="community-more">MORE +</div>
+              </div>
             ))}
           </div>
         </div>
