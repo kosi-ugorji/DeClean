@@ -15,7 +15,8 @@ body {
 /* HERO (Inspire-style full-page with navbar) */
 .hero-bg {
   position: relative;
-  background: url('/images/hero-bg.jpg') center/cover no-repeat;
+  background: url('https://www.thespruce.com/thmb/fBOdyMFmEBHusOiO6Ryep-Ud9I0=/4000x2667/filters:no_upscale()/SPR-how-to-deep-cleaning-house-7152794-Hero-01-e5cd99973ec24e69b00b5ee6b992f760.jpg') 
+              center/cover no-repeat;
   height: 100vh; /* full screen */
   display: flex;
   flex-direction: column;
@@ -305,3 +306,4 @@ body {
     font-size: 1.2rem;
   }
 }
+
