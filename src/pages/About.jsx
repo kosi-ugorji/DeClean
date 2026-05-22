@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom"; // use Link for routing
 import { FaRegHeart, FaUsers, FaShieldAlt, FaMedal } from "react-icons/fa";
 import "./About.css";
+import Aboutus2 from "../assets/Aboutus2.jpeg";
+import Aboutus1 from "../assets/Aboutus.1jpeg";
 
 export default function AboutSection() {
   return (
@@ -65,8 +67,11 @@ export default function AboutSection() {
 
         <div className="our-story-images">
           {/* Placeholder images until you add real ones */}
-          <img src="https://via.placeholder.com/400x250?text=Team+Photo+1" alt="Placeholder team photo 1" />
-          <img src="https://via.placeholder.com/400x250?text=Team+Photo+2" alt="Placeholder team photo 2" />
+            <img src={Aboutus1} alt="Our cleaning team" />
+            <img src={Aboutus2} alt="Team at work" />
+          
+          </div>
+
         </div>
       </div>
 
