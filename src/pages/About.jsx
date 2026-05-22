@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // use Link for routing
 import { FaRegHeart, FaUsers, FaShieldAlt, FaMedal } from "react-icons/fa";
 import "./About.css";
 
@@ -58,16 +59,16 @@ export default function AboutSection() {
           <p>
             Today, we're a community–first cleaning company rooted in Ottawa, offering modern, tech-enabled service with old-school reliability and personal care. Whether you're a busy professional, a senior, an Airbnb host, or a working parent, we are here to restore calm, comfort, and confidence in your space, one clean at a time.
           </p>
-         <a href="/#/contact" className="story-btn">Get In Touch</a>
-
+          {/* Use Link for routing to Contact.jsx */}
+          <Link to="/contact" className="story-btn">Get In Touch</Link>
         </div>
 
-       
-<div className="our-story-images">
-  <img src="https://via.placeholder.com/400x250?text=Team+Photo+1" alt="Placeholder team photo 1" />
-  <img src="https://via.placeholder.com/400x250?text=Team+Photo+2" alt="Placeholder team photo 2" />
-</div>
-
+        <div className="our-story-images">
+          {/* Placeholder images until you add real ones */}
+          <img src="https://via.placeholder.com/400x250?text=Team+Photo+1" alt="Placeholder team photo 1" />
+          <img src="https://via.placeholder.com/400x250?text=Team+Photo+2" alt="Placeholder team photo 2" />
+        </div>
+      </div>
 
       {/* WHAT DRIVES US */}
       <div className="about-values-section about-values-section--gray">
@@ -117,11 +118,10 @@ export default function AboutSection() {
             <div className="trust-cta-text">
               Join hundreds of Ottawa families who trust us with their homes and peace of mind.
             </div>
-            <a href="/book" className="trust-cta-link">Book a Clean</a>
+            <Link to="/book" className="trust-cta-link">Book a Clean</Link>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
