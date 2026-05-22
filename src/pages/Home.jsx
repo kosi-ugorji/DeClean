@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FiCheck, FiMessageCircle } from "react-icons/fi";
+import { FiMessageCircle } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
@@ -106,7 +106,7 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES (Styled like Featured Services) */}
       <section className="services">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
@@ -115,39 +115,30 @@ export default function Home() {
               {
                 img: residentialCleaning,
                 title: "Residential Cleaning",
-                desc: "Regular home cleaning",
-                features: ["Weekly/bi-weekly", "Eco-friendly", "Trusted staff"]
+                desc: "Regular home cleaning"
               },
               {
                 img: seniorFriendlyCleaning,
                 title: "Senior Cleaning",
-                desc: "Careful, respectful service",
-                features: ["Discounted", "Same cleaner", "Gentle care"]
+                desc: "Careful, respectful service"
               },
               {
                 img: airbnbTurnovers,
                 title: "Airbnb Turnovers",
-                desc: "Fast guest-ready cleaning",
-                features: ["Same-day", "Photos", "5-star ready"]
+                desc: "Fast guest-ready cleaning"
               },
               {
                 img: moveInMoveOut,
                 title: "Move Cleaning",
-                desc: "Deep cleaning service",
-                features: ["Deep clean", "Landlord ready", "Deposit safe"]
+                desc: "Deep cleaning service"
               }
             ].map((s, i) => (
               <div className="service-card" key={i}>
                 <img src={s.img} alt={s.title} />
-                <div className="service-title">{s.title}</div>
-                <div className="service-desc">{s.desc}</div>
-                <ul>
-                  {s.features.map((f, j) => (
-                    <li key={j}>
-                      <FiCheck /> {f}
-                    </li>
-                  ))}
-                </ul>
+                <div className="overlay">
+                  <div className="service-title">{s.title}</div>
+                  <div className="service-desc">{s.desc}</div>
+                </div>
               </div>
             ))}
           </div>
