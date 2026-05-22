@@ -93,60 +93,60 @@ body {
   transform: scale(1.1);
 }
 
-/* HERO text bottom-right aligned */
+/* HERO text bottom-right aligned (compact) */
 .hero-content {
   text-align: right;
   color: #fff;
-  max-width: 600px;
+  max-width: 500px;       /* narrower block */
   margin-left: auto;
   margin-top: auto;
-  padding-bottom: 60px;
+  padding-bottom: 40px;   /* less bottom padding */
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-  max-width: 600px;
-  color: var(--primary); /* headline in light blue */
+  font-size: 2.4rem;      /* smaller headline */
+  font-weight: 700;
+  margin-bottom: 8px;     /* tighter spacing */
+  max-width: 500px;
+  color: #fff;            /* headline now white */
 }
 
 .hero-divider {
-  height: 4px;
-  background: #000; /* divider line in black */
-  margin: 20px 0 20px auto;
+  height: 3px;            /* thinner line */
+  background: #000;       /* divider line in black */
+  margin: 15px 0 15px auto;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 30px;
-  max-width: 600px;
+  font-size: 1.2rem;      /* smaller subtitle */
+  font-weight: 400;       /* lighter weight */
+  margin-bottom: 20px;
+  max-width: 500px;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 15px;              /* tighter gap */
 }
 
 .hero-buttons .btn {
-  padding: 12px 24px;
-  border-radius: 6px;
+  padding: 10px 20px;     /* smaller buttons */
+  border-radius: 5px;
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.3s;
 }
 
 .hero-buttons .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* subtler hover effect */
 }
 
 /* GET QUOTE button */
 .hero-buttons .btn-primary {
-  background: var(--primary); /* same as headline color */
+  background: var(--primary); /* light blue */
   color: #fff;
 }
 
@@ -305,10 +305,10 @@ body {
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
