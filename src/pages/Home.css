@@ -283,13 +283,14 @@ body {
 /* CTA BANNER */
 /* CTA BANNER (full-width, dark blue background) */
 .cta-banner {
-  width: 100%;                /* span full width */
-  margin: 0;                  /* remove side margins */
-  padding: 4rem 2rem;         /* generous padding */
-  background: var(--dark);    /* use darker blue */
-  color: #fff;                /* white text */
-  text-align: center;
-  border-radius: 0;           /* remove rounded corners */
+width: 100%;                /* span full width */
+margin: 0;                  /* remove side margins */
+padding: 4rem 2rem;         /* generous padding */
+background-color: #1877F2;  /* use Facebook blue */
+color: #fff;                /* white text */
+text-align: center;
+border-radius: 0;           /* remove rounded corners */
+
 }
 
 .cta-banner h3 {
