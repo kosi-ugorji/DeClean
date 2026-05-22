@@ -299,12 +299,6 @@ body {
   color: #fff;                /* force white */
 }
 
-.cta-banner p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #fff;                /* force white */
-}
-
 .cta-banner .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -321,6 +315,7 @@ body {
   background: #fff;           /* invert on hover */
   color: var(--dark);         /* dark blue text on hover */
 }
+
 
 
 
