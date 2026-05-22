@@ -82,23 +82,29 @@ export default function Home() {
       <section className="about-section">
         <div className="about-container">
           <div className="about-text">
-            <h2 className="about-title">About Squeaky Clean</h2>
-            <h3 className="about-subtitle">Nigeria's Most Trusted Cleaning Service</h3>
+            <h1 className="about-title">About DeClean Cleaning Services</h1>
+            <h1 className="about-subtitle"><b>Best Cleaning Service in Ottawa</b></h1>
             <p>
-              Since 2013, SqueakyClean Nigeria has been setting the standard for professional cleaning services across the country. 
-              We combine traditional cleaning excellence with modern techniques and eco-friendly products to deliver exceptional results.
+              At DeClean Cleaning Services Ottawa, we are committed to providing professional, reliable, and high-quality cleaning solutions for homes, offices, apartments, and rental properties across Ottawa. 
+              As a trusted cleaning service company in Ottawa, we combine industry-standard cleaning techniques, attention to detail, and exceptional customer service to deliver consistently spotless results.
             </p>
             <p>
-              Our team of certified professionals understands that a clean environment is essential for health, productivity, and peace of mind. 
-              Whether it’s your home, office, or commercial space, we treat every project with the same attention to detail and commitment to excellence.
+              Our experienced team specializes in house cleaning service, deep cleaning, move-in and move-out cleaning, Airbnb and rental cleaning, office cleaning, and cleaning services for homes and rentals in Ottawa. 
+              We also provide dependable cleaning service for seniors in Ottawa, helping maintain clean, safe, and comfortable living spaces with care and professionalism.
             </p>
+             <p>
+             We understand that every property is different, which is why we tailor our cleaning services to fit your specific needs, schedule, and budget. 
+               Whether you need recurring home cleaning, one-time deep cleaning, or commercial cleaning services in Ottawa, our goal is to make your space cleaner, healthier, and stress-free.
+            </p>
+            
 
             <ul className="about-list">
-              <li>Quality workmanship in every project</li>
-              <li>Eco-friendly cleaning solutions</li>
-              <li>Transparent pricing with no hidden fees</li>
-              <li>Reliable and punctual service delivery</li>
-              <li>Customer satisfaction guarantee</li>
+              <li>Professional and detail-oriented cleaning team</li>
+              <li>Reliable and punctual service</li>
+              <li>Affordable and transparent pricing</li>
+              <li>Eco-friendly cleaning products available</li>
+              <li>Flexible scheduling options</li>
+              <li>Satisfaction-focused cleaning service in Ottawa</li>
             </ul>
 
             <div className="about-stats">
