@@ -340,10 +340,10 @@ body {
 
 /* REVIEWS (Elfsight overrides, now full width) */
 .reviews-section {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAACUCAMAAABY+0dBAAAAA1BMVEUAAACnej3aAAAAO0lEQVR4nO3BAQEAAACAkP6v7ggKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAGmTQAAXqyHtAAAAAASUVORK5CYII=') 
-              center/cover no-repeat;
+  background: url('../assets/reviewsbg.png') center/cover no-repeat;
   padding: 4rem 0;
 }
+
 
 .reviews-section h2 {
   text-align: center;
