@@ -4,15 +4,8 @@ import "./About.css";
 
 export default function AboutSection() {
   return (
-    <section className="about-section">
-      {/* HERO QUOTE */}
-      <div className="about-hero">
-        <div className="about-hero-quote">
-          After more than five years of professionally cleaning homes, I realized something powerful: I wasn't just scrubbing surfaces, I was building relationships.
-        </div>
-      </div>
 
-      {/* NEW ABOUT SQUEAKY CLEAN SECTION */}
+     {/* NEW ABOUT SQUEAKY CLEAN SECTION */}
       <div className="about-squeaky">
         <h2 className="about-squeaky-title">About Squeaky Clean Nigeria</h2>
         <p className="about-squeaky-subtitle">
@@ -37,6 +30,15 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
+    <section className="about-section">
+      {/* HERO QUOTE */}
+      <div className="about-hero">
+        <div className="about-hero-quote">
+          After more than five years of professionally cleaning homes, I realized something powerful: I wasn't just scrubbing surfaces, I was building relationships.
+        </div>
+      </div>
+
+     
 
       {/* OTTAWA STORY */}
       <div className="about-main container">
