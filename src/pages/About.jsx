@@ -104,7 +104,10 @@ export default function AboutSection() {
 
       {/* WHY OTTAWA TRUSTS US */}
       <div className="trust-section trust-section--blue">
-        <h2 className="trust-title">Why Ottawa Trusts Us</h2>
+       <h2 className="trust-title" style={{ textAlign: "center", fontWeight: "900", color: "#1877F2" }}>
+          <b>Why Ottawa Trusts Us</b>
+        </h2>
+
         <p className="trust-subtitle">
           These qualities define why families and businesses rely on us every day.
         </p>
