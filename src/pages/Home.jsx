@@ -125,6 +125,8 @@ export default function Home() {
               </Link>
             ))}
           </div>
+        </section>
+        <section>
          <div className="cta-banner">
   <h3>NEED CLEANING THIS WEEK?</h3>
   <Link to="/contact" className="btn">Book Now</Link>
