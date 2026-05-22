@@ -85,22 +85,26 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* FEATURES (NOW SHOWING OUR SERVICES CONTENT) */}
+      {/* OUR SERVICES (Hover effect style) */}
       <section className="features">
         <div className="container">
           <h1 className="section-title"><b>Our Services</b></h1>
-          <div className="communities-grid">
+          <div className="communities-grid two-per-row">
             {[
               { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning" },
               { img: seniorFriendlyCleaning, title: "Senior Cleaning", desc: "Careful, respectful service" },
               { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast guest-ready cleaning" },
               { img: moveInMoveOut, title: "Move Cleaning", desc: "Deep cleaning service" }
             ].map((s, i) => (
-              <Link to="/services" key={i} className="community-card">
-                <img src={s.img} alt={s.title} />
-                <div className="community-title">{s.title}</div>
-                <div className="community-desc">{s.desc}</div>
-                <div className="community-more">MORE +</div>
+              <Link to="/services" key={i} className="community-card service-card">
+                <img src={s.img} alt={s.title} className="community-img" />
+                <div className="overlay">
+                  <div className="service-info">
+                    <div className="community-title">{s.title}</div>
+                    <div className="community-desc">{s.desc}</div>
+                    <div className="community-more">MORE +</div>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
