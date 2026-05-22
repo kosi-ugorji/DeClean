@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURES (Communities-style grid) */}
+      {/* FEATURES */}
       <section className="features">
         <div className="container">
           <h1 className="section-title"><b>WHY CHOOSE US</b></h1>
