@@ -58,7 +58,7 @@ export default function AboutSection() {
           <p>
             Today, we're a community–first cleaning company rooted in Ottawa, offering modern, tech-enabled service with old-school reliability and personal care. Whether you're a busy professional, a senior, an Airbnb host, or a working parent, we are here to restore calm, comfort, and confidence in your space, one clean at a time.
           </p>
-         <a href="/contact" className="story-btn">Get In Touch</a>
+         <a href="/#/contact" className="story-btn">Get In Touch</a>
 
         </div>
 
