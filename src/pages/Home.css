@@ -108,9 +108,11 @@ body {
   color: #fff;
 }
 
+/* Divider now uses gradient image */
 .hero-divider {
-  height: 3px;
-  background: #000;
+  height: 6px;
+  background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
+              center/cover no-repeat;
   margin: 15px 0 15px auto;
   width: 100%;
   max-width: 500px;
@@ -307,9 +309,10 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-/* REVIEWS (Elfsight overrides) */
+/* REVIEWS (Elfsight overrides, now full width) */
 .reviews-section {
-  background: var(--bg);
+  background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
+              center/cover no-repeat;
   padding: 4rem 0;
 }
 
@@ -322,8 +325,10 @@ body {
 }
 
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 {
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 20px;
 }
 
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header {
@@ -382,10 +387,10 @@ body {
   text-align: right;
 }
 
-/* Force reviews into grid (3 per row) */
+/* Force reviews into responsive grid */
 .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-reviews {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
@@ -442,6 +447,11 @@ body {
   }
 
   .communities-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  /* Reviews collapse to 1 per row on mobile */
+  .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-reviews {
+    grid-template-columns: 1fr;
   }
 }
