@@ -22,7 +22,7 @@ export default function Home() {
     <main>
       {/* FLOATING WHATSAPP BUTTON */}
       <a
-        href="https://wa.me/234XXXXXXXXXX"
+        href="https://wa.me/2348025010074"
         target="_blank"
         rel="noreferrer"
         className="whatsapp-float"
