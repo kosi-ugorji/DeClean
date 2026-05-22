@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 
-/* HERO */
+/* HERO (full-page with navbar) */
 .hero-bg {
   position: relative;
   background: url('https://www.thespruce.com/thmb/fBOdyMFmEBHusOiO6Ryep-Ud9I0=/4000x2667/filters:no_upscale()/SPR-how-to-deep-cleaning-house-7152794-Hero-01-e5cd99973ec24e69b00b5ee6b992f760.jpg') 
@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
 }
 
+/* Overlay */
 .hero-overlay {
   background: rgba(0, 0, 0, 0.45);
   width: 100%;
@@ -61,6 +62,12 @@ body {
   gap: 20px;
 }
 
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .nav-divider {
   width: 100%;
   height: 1px;
@@ -97,13 +104,15 @@ body {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #fff; /* force white */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* soft shadow */
+  max-width: 500px;
+  color: #fff;
 }
 
+/* Divider now uses gradient image */
 .hero-divider {
-  height: 3px;
-  background: #000;
+  height: 6px;
+  background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
+              center/cover no-repeat;
   margin: 15px 0 15px auto;
   width: 100%;
   max-width: 500px;
@@ -113,8 +122,7 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 20px;
-  color: #fff; /* force white */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* soft shadow */
+  max-width: 500px;
 }
 
 .hero-buttons {
@@ -145,7 +153,7 @@ body {
   color: var(--dark);
 }
 
-/* FEATURES */
+/* FEATURES (Communities-style grid with faint icons) */
 .features {
   background: var(--bg);
   padding: 4rem 0;
@@ -180,14 +188,34 @@ body {
   overflow: hidden;
 }
 
+.community-card::before {
+  content: attr(data-icon);
+  font-size: 6rem;
+  color: rgba(92, 160, 242, 0.08);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 .community-card:hover {
   transform: translateY(-5px);
+}
+
+.community-title,
+.community-desc,
+.community-more {
+  position: relative;
+  z-index: 1;
 }
 
 .community-title {
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #000;
+  font-family: 'Inter', sans-serif;
 }
 
 .community-desc {
@@ -202,60 +230,54 @@ body {
   color: var(--primary);
 }
 
-/* SERVICES (Rhombus-style) */
+/* SERVICES */
 .services {
   padding: 4rem 0;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 .service-card {
-  position: relative;
-  width: 280px;
-  height: 280px;
+  background: white;
+  border-radius: 16px;
   overflow: hidden;
-  transform: rotate(45deg);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
-  transition: transform 0.3s, filter 0.3s;
-  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+  transition: 0.3s;
 }
 
 .service-card:hover {
-  transform: rotate(45deg) scale(1.05);
-  filter: brightness(1.1);
+  transform: translateY(-5px);
 }
 
 .service-card img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
-  transform: rotate(-45deg);
-}
-
-.service-card .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  text-align: center;
-  transform: rotate(-45deg);
 }
 
 .service-title {
-  font-size: 1.2rem;
   font-weight: 700;
+  padding: 1rem;
 }
 
 .service-desc {
-  font-size: 0.95rem;
-  font-weight: 400;
+  padding: 0 1rem;
+  color: var(--text);
+}
+
+.service-card ul {
+  padding: 1rem;
+  list-style: none;
+}
+
+.service-card li {
+  display: flex;
+  gap: 0.5rem;
+  color: green;
 }
 
 /* CTA BANNER */
@@ -285,6 +307,99 @@ body {
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* REVIEWS (Elfsight overrides, now full width) */
+.reviews-section {
+  background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
+              center/cover no-repeat;
+  padding: 4rem 0;
+}
+
+.reviews-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  font-family: 'Manrope', sans-serif;
+}
+
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 20px;
+}
+
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header-rating {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Review cards */
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-review {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+/* Stars */
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-stars {
+  color: gold;
+  margin-bottom: 0.8rem;
+}
+
+/* Review text */
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-text {
+  font-size: 0.95rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+/* Author name */
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-author {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: right;
+}
+
+/* Force reviews into responsive grid */
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-reviews {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Reviewer avatar styling */
+.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 /* WHATSAPP BUTTON */
@@ -335,7 +450,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
-  .services-grid {
+  /* Reviews collapse to 1 per row on mobile */
+  .elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-reviews {
     grid-template-columns: 1fr;
   }
 }
