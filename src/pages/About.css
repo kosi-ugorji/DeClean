@@ -192,14 +192,10 @@
 }
 .trust-title {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 1000;
   color: #1877F2;   /* Blue */
   margin-bottom: 0.5em;
   text-align: center; /* Centralize the heading */
-}
-.trust-title {
-  text-transform: uppercase;   /* Optional: makes it stand out */
-  letter-spacing: 1px;         /* Optional: adds spacing for clarity */
 }
 
 .trust-subtitle {
