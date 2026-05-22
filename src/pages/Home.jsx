@@ -40,10 +40,12 @@ export default function Home() {
               <span className="brand">Clean. Cared for. Yours.</span>
             </div>
             <div className="nav-right">
-              <div className="contact-info">
-                📞 (613) 513-9893 &nbsp; ✉️ admin@yourcompany.com
+             <div className="contact-info">
+                <a href="tel:+16135139893">📞 (613) 513-9893</a> &nbsp; 
+                <a href="mailto:decleancleaningservicesottawa@gmail.com">✉️ decleancleaningservicesottawa@gmail.com</a>
               </div>
-              <div className="nav-divider"></div>
+
+            <div className="nav-divider"></div>
               <nav className="nav-links">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/services">Services</NavLink>
