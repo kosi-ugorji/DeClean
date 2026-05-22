@@ -8,62 +8,15 @@
 
 body {
   background: #fff;
-  font-family: system-ui, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* modern font like Inspire */
+  margin: 0;
 }
 
-/* HERO (Cleaning version) */
-.hero {
-  background: linear-gradient(120deg, var(--primary), #7ec9f9);
-  padding: 4rem 0;
-  border-radius: 0 0 40px 40px;
-  color: white;
-}
-
-.hero-inner {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-}
-
-.hero-left h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.1;
-}
-
-.hero-subtitle {
-  opacity: 0.9;
-  margin: 1rem 0 2rem;
-}
-
-.hero-cta-row {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.hero-contact-row {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.hero-rating {
-  margin-top: 1rem;
-  font-weight: 600;
-  opacity: 0.9;
-}
-
-.hero-right img {
-  width: 100%;
-  border-radius: 20px;
-}
-
-/* HERO (Inspire-style welcome with navbar + divider) */
+/* HERO (Inspire-style full-page with navbar) */
 .hero-bg {
   position: relative;
   background: url('/images/hero-bg.jpg') center/cover no-repeat;
-  height: 100vh;
+  height: 100vh; /* stretches full screen */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -71,7 +24,7 @@ body {
 
 /* Overlay */
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.45);
   width: 100%;
   height: 100%;
   padding: 20px 60px;
@@ -86,24 +39,29 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  font-size: 0.95rem;
 }
 
 .nav-left .brand {
   font-weight: 700;
   font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
 }
 
 .nav-links a {
-  margin: 0 15px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  position: relative;
   transition: transform 0.3s;
 }
 
 .nav-links a:hover {
-  transform: scale(1.1); /* grow slightly on hover */
+  transform: scale(1.1);
 }
 
 .nav-right {
@@ -114,6 +72,11 @@ body {
 
 .contact-info {
   font-size: 0.95rem;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 10px;
 }
 
 .nav-btn {
@@ -322,27 +285,21 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .hero-inner {
-    flex-direction: column;
-  }
-
-  .hero-left h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content h1,
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
   .hero-nav {
     flex-direction: column;
     gap: 15px;
   }
 
   .nav-links {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
 }
