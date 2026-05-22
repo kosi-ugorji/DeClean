@@ -78,48 +78,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT SQUEAKY CLEAN */}
-      <section className="about-section">
-        <div className="about-container">
-          <div className="about-text">
-            <h2 className="about-title">About Squeaky Clean</h2>
-            <h3 className="about-subtitle">Nigeria's Most Trusted Cleaning Service</h3>
-            <p>
-              Since 2013, SqueakyClean Nigeria has been setting the standard for professional cleaning services across the country. 
-              We combine traditional cleaning excellence with modern techniques and eco-friendly products to deliver exceptional results.
-            </p>
-            <p>
-              Our team of certified professionals understands that a clean environment is essential for health, productivity, and peace of mind. 
-              Whether it’s your home, office, or commercial space, we treat every project with the same attention to detail and commitment to excellence.
-            </p>
-
-            <ul className="about-list">
-              <li>Quality workmanship in every project</li>
-              <li>Eco-friendly cleaning solutions</li>
-              <li>Transparent pricing with no hidden fees</li>
-              <li>Reliable and punctual service delivery</li>
-              <li>Customer satisfaction guarantee</li>
-            </ul>
-
-            <div className="about-stats">
-              <div><strong>1,500+</strong> Trained Professionals</div>
-              <div><strong>500+</strong> Clients</div>
-            </div>
-
-            <div className="about-highlights">
-              <div><strong>Industry Leader</strong><br />Over 20 years of excellence in professional cleaning services across Nigeria</div>
-              <div><strong>Fully Insured</strong><br />Complete insurance coverage and bonding for your peace of mind</div>
-              <div><strong>24/7 Service</strong><br />Emergency cleaning services available around the clock</div>
-              <div><strong>Trained Professionals</strong><br />Certified cleaning professionals with ongoing training programs</div>
-            </div>
-          </div>
-
-          <div className="about-image">
-            <img src={teamPhoto} alt="SqueakyClean Nigeria Team" />
-          </div>
-        </div>
-      </section>
-
       {/* GOOGLE REVIEWS */}
       <section className="reviews-section">
         <div
