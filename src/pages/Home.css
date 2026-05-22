@@ -8,16 +8,16 @@
 
 body {
   background: #fff;
-  font-family: 'Helvetica Neue', Arial, sans-serif; /* modern font like Inspire */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
 }
 
-/* HERO (Inspire-style full-page with navbar) */
+/* HERO (full-page with navbar) */
 .hero-bg {
   position: relative;
   background: url('https://www.thespruce.com/thmb/fBOdyMFmEBHusOiO6Ryep-Ud9I0=/4000x2667/filters:no_upscale()/SPR-how-to-deep-cleaning-house-7152794-Hero-01-e5cd99973ec24e69b00b5ee6b992f760.jpg') 
               center/cover no-repeat;
-  height: 100vh; /* full screen */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,12 +93,12 @@ body {
   transform: scale(1.1);
 }
 
-/* HERO text bottom-right */
+/* HERO text bottom-left aligned */
 .hero-content {
-  text-align: right;
+  text-align: left; /* align all text to the same line */
   color: #fff;
   max-width: 600px;
-  margin-left: auto;
+  margin-left: 60px; /* push content in from left edge */
   margin-top: auto;
   padding-bottom: 60px;
 }
@@ -107,24 +107,27 @@ body {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 10px;
+  max-width: 600px;
 }
 
 .hero-divider {
-  width: 80px;
   height: 4px;
   background: var(--primary);
-  margin: 0 0 20px auto;
+  margin: 20px 0;
+  width: 100%;       /* make divider span full text block */
+  max-width: 600px;  /* keep consistent with text width */
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 30px;
+  max-width: 600px;  /* align with title and divider */
 }
 
 .hero-buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start; /* align buttons with text */
   gap: 20px;
 }
 
@@ -306,4 +309,3 @@ body {
     font-size: 1.2rem;
   }
 }
-
