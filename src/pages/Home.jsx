@@ -45,24 +45,27 @@ export default function Home() {
       </a>
 
       {/* HERO (Inspire-style) */}
-      <section className="hero hero-bg">
-        <div className="hero-overlay">
-          <div className="hero-content">
-            <h1>
-              WELCOME <br />
-              YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
-            </h1>
-            <div className="hero-buttons">
-              <NavLink to="/buy" className="btn btn-primary">
-                BUY A HOME
-              </NavLink>
-              <NavLink to="/sell" className="btn btn-outline">
-                SELL A HOME
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* HERO (Inspire-style modern with divider) */}
+<section className="hero hero-bg">
+  <div className="hero-overlay">
+    <div className="hero-content hero-right-text">
+      <h1 className="hero-title">WELCOME</h1>
+      <div className="hero-divider"></div>
+      <p className="hero-subtitle">
+        YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
+      </p>
+      <div className="hero-buttons">
+        <NavLink to="/buy" className="btn btn-primary">
+         Get Quote
+        </NavLink>
+        <NavLink to="/sell" className="btn btn-outline">
+          Book Now
+        </NavLink>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* GOOGLE REVIEWS */}
       <section className="reviews-section">
