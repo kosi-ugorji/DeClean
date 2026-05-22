@@ -97,31 +97,31 @@ body {
 .hero-content {
   text-align: right;
   color: #fff;
-  max-width: 500px;       /* narrower block */
+  max-width: 500px;
   margin-left: auto;
   margin-top: auto;
-  padding-bottom: 40px;   /* less bottom padding */
+  padding-bottom: 40px;
 }
 
 .hero-title {
-  font-size: 2.4rem;      /* smaller headline */
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 8px;     /* tighter spacing */
+  margin-bottom: 8px;
   max-width: 500px;
-  color: #fff;            /* headline now white */
+  color: #fff; /* headline now white */
 }
 
 .hero-divider {
-  height: 3px;            /* thinner line */
-  background: #000;       /* divider line in black */
+  height: 3px;
+  background: #000;
   margin: 15px 0 15px auto;
   width: 100%;
   max-width: 500px;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;      /* smaller subtitle */
-  font-weight: 400;       /* lighter weight */
+  font-size: 1.2rem;
+  font-weight: 400;
   margin-bottom: 20px;
   max-width: 500px;
 }
@@ -129,11 +129,11 @@ body {
 .hero-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 15px;              /* tighter gap */
+  gap: 15px;
 }
 
 .hero-buttons .btn {
-  padding: 10px 20px;     /* smaller buttons */
+  padding: 10px 20px;
   border-radius: 5px;
   font-weight: 600;
   text-decoration: none;
@@ -141,12 +141,12 @@ body {
 }
 
 .hero-buttons .btn:hover {
-  transform: scale(1.05); /* subtler hover effect */
+  transform: scale(1.05);
 }
 
 /* GET QUOTE button */
 .hero-buttons .btn-primary {
-  background: var(--primary); /* light blue */
+  background: var(--primary);
   color: #fff;
 }
 
@@ -156,7 +156,7 @@ body {
   color: var(--dark);
 }
 
-/* FEATURES */
+/* FEATURES (Communities-style grid) */
 .features {
   background: var(--bg);
   padding: 4rem 0;
@@ -169,24 +169,42 @@ body {
   margin-bottom: 2rem;
 }
 
-.features-row {
+.communities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-.feature {
-  background: white;
-  padding: 1.2rem;
-  border-radius: 16px;
-  display: flex;
-  gap: 1rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+.community-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
-.feature-icon {
+.community-card:hover {
+  transform: translateY(-5px);
+}
+
+.community-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.community-desc {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.community-more {
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--primary);
-  font-size: 1.5rem;
 }
 
 /* SERVICES */
