@@ -95,7 +95,7 @@ export default function Home() {
               { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning" },
               { img: seniorFriendlyCleaning, title: "Senior Cleaning", desc: "Careful, respectful service" },
               { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast guest-ready cleaning" },
-              { img: moveInMoveOut, title: "Move Cleaning", desc: "Deep cleaning service" }
+              { img: moveInMoveOut, title: "Move In/Out Cleaning", desc: "Deep cleaning service" }
             ].map((s, i) => (
               <Link to="/services" key={i} className="community-card">
                 <img src={s.img} alt={s.title} className="community-img" />
