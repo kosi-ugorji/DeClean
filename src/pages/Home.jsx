@@ -99,7 +99,6 @@ export default function Home() {
 
       {/* GOOGLE REVIEWS */}
       <section className="reviews-section">
-        <h2 className="section-title">What Our Clients Say</h2>
         <div
           className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
           data-elfsight-app-lazy
