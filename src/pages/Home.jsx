@@ -120,7 +120,7 @@ export default function Home() {
       <section className="services">
         <div className="container">
 
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title">O Services</h2>
 
                     <div className="services-grid">
                       <!-- Elfsight Google Reviews | Untitled Google Reviews -->
