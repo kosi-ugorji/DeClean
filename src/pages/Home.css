@@ -146,7 +146,7 @@ body {
 
 .hero-buttons .btn-primary {
   background: var(--dark);
-  color: #68bdf2;
+  color: #fff;
 }
 
 .hero-buttons .btn-outline {
