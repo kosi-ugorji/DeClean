@@ -40,12 +40,14 @@ export default function Home() {
               <span className="brand">Clean. Cared for. Yours.</span>
             </div>
             <div className="nav-right">
-             <div className="contact-info">
-                <a href="tel:+16135139893">📞 (613) 513-9893</a> &nbsp; 
-                <a href="mailto:decleancleaningservicesottawa@gmail.com">✉️ decleancleaningservicesottawa@gmail.com</a>
+              <div className="contact-info">
+                <a href="tel:+16135139893">📞 (613) 513-9893</a> &nbsp;
+                <a href="mailto:decleancleaningservicesottawa@gmail.com">
+                  ✉️ decleancleaningservicesottawa@gmail.com
+                </a>
               </div>
 
-            <div className="nav-divider"></div>
+              <div className="nav-divider"></div>
               <nav className="nav-links">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/services">Services</NavLink>
@@ -100,8 +102,6 @@ export default function Home() {
         </div>
       </section>
 
-      
-
       {/* GOOGLE REVIEWS */}
       <section className="reviews-section">
         <div
@@ -110,26 +110,24 @@ export default function Home() {
         ></div>
       </section>
 
-  
-
-      {/* FEATURES */}
+      {/* FEATURES (REPLACED WITH OUR SERVICES) */}
       <section className="features">
         <div className="container">
-          <h1 className="section-title"><b>WHY CHOOSE US</b></h1>
-          <div className="communities-grid">
+          <h1 className="section-title"><b>Our Services</b></h1>
+          <div className="services-grid">
             {[
-              { title: "Background Checked", desc: "Trusted cleaners" },
-              { title: "Locally Owned", desc: "Proudly serving Ottawa" },
-              { title: "Insured", desc: "Full protection" },
-              { title: "Trained Staff", desc: "Professional cleaning" },
-              { title: "Senior Friendly", desc: "Gentle care" },
-              { title: "Guaranteed", desc: "100% satisfaction" }
-            ].map((item, i) => (
-              <div className="community-card" key={i}>
-                <div className="community-title">{item.title}</div>
-                <div className="community-desc">{item.desc}</div>
-                <div className="community-more">MORE +</div>
-              </div>
+              { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning" },
+              { img: seniorFriendlyCleaning, title: "Senior Cleaning", desc: "Careful, respectful service" },
+              { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast guest-ready cleaning" },
+              { img: moveInMoveOut, title: "Move Cleaning", desc: "Deep cleaning service" }
+            ].map((s, i) => (
+              <Link to="/services" key={i} className="service-card">
+                <img src={s.img} alt={s.title} />
+                <div className="overlay">
+                  <div className="service-title">{s.title}</div>
+                  <div className="service-desc">{s.desc}</div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -143,17 +141,13 @@ export default function Home() {
         </div>
       </section>
 
-
-        {/* INSTAGRAM FEED */}
+      {/* INSTAGRAM FEED */}
       <section className="instagram-section">
         <div
           className="elfsight-app-ff011d70-6144-4599-b90f-b96af1b5238c"
           data-elfsight-app-lazy
         ></div>
       </section>
-
-      
     </main>
   );
 }
-
