@@ -74,16 +74,7 @@ export default function Home() {
 </section>
 
 
-      {/* GOOGLE REVIEWS */}
-      <section className="reviews-section">
-        <h2 className="section-title">What Our Clients Say</h2>
-        <div
-          className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
-          data-elfsight-app-lazy
-        ></div>
-      </section>
-
-      {/* FEATURES */}
+         {/* FEATURES */}
       <section className="features">
         <div className="container">
           <h2 className="section-title">Why Choose Us</h2>
@@ -107,6 +98,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+      {/* GOOGLE REVIEWS */}
+      <section className="reviews-section">
+        <h2 className="section-title">What Our Clients Say</h2>
+        <div
+          className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
+
 
       {/* SERVICES */}
       <section className="services">
