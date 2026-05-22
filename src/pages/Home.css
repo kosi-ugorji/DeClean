@@ -340,7 +340,7 @@ body {
 
 /* REVIEWS (Elfsight overrides, now full width) */
 .reviews-section {
-  background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAACUCAMAAABY+0dBAAAAA1BMVEUAAACnej3aAAAAO0lEQVR4nO3BAQEAAACAkP6v7ggKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAGmTQAAXqyHtAAAAAASUVORK5CYII=') 
               center/cover no-repeat;
   padding: 4rem 0;
 }
