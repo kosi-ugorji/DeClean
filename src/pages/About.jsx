@@ -58,14 +58,16 @@ export default function AboutSection() {
           <p>
             Today, we're a community–first cleaning company rooted in Ottawa, offering modern, tech-enabled service with old-school reliability and personal care. Whether you're a busy professional, a senior, an Airbnb host, or a working parent, we are here to restore calm, comfort, and confidence in your space, one clean at a time.
           </p>
-          <a href="/contact" className="story-btn">Get In Touch</a>
+         <a href="/contact" className="story-btn">Get In Touch</a>
+
         </div>
 
-        <div className="our-story-images">
-          <img src="/assets/team-photo1.png" alt="Our cleaning team" />
-          <img src="/assets/team-photo2.png" alt="Team at work" />
-        </div>
-      </div>
+       
+<div className="our-story-images">
+  <img src="https://via.placeholder.com/400x250?text=Team+Photo+1" alt="Placeholder team photo 1" />
+  <img src="https://via.placeholder.com/400x250?text=Team+Photo+2" alt="Placeholder team photo 2" />
+</div>
+
 
       {/* WHAT DRIVES US */}
       <div className="about-values-section about-values-section--gray">
