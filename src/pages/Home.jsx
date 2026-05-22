@@ -105,13 +105,7 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* INSTAGRAM FEED */}
-      <section className="instagram-section">
-        <div
-          className="elfsight-app-ff011d70-6144-4599-b90f-b96af1b5238c"
-          data-elfsight-app-lazy
-        ></div>
-      </section>
+  
 
       {/* SERVICES */}
       <section className="services">
@@ -144,31 +138,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="testimonials">
-        <div className="container">
-          <h2 className="section-title">Happy Clients</h2>
-          <div className="testimonials-grid">
-            {[
-              "Super clean and reliable service.",
-              "Very professional cleaners.",
-              "Best cleaning service I’ve used."
-            ].map((text, i) => (
-              <div className="testimonial-card" key={i}>
-                <div className="testimonial-stars">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, j) => (
-                      <FaStar key={j} />
-                    ))}
-                </div>
-                <BiSolidQuoteAltLeft />
-                <p>{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+
+        {/* INSTAGRAM FEED */}
+      <section className="instagram-section">
+        <div
+          className="elfsight-app-ff011d70-6144-4599-b90f-b96af1b5238c"
+          data-elfsight-app-lazy
+        ></div>
       </section>
+
+      
     </main>
   );
 }
