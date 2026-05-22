@@ -30,49 +30,49 @@ export default function Home() {
         <FiMessageCircle />
       </a>
 
-      {/* HERO with Inspire-style Navbar */}
-      <section className="hero-bg">
-        <div className="hero-overlay">
-          {/* NAVBAR */}
-          <header className="hero-nav">
-            <div className="nav-left">
-              <span className="brand">Clean. Cared for. Yours.</span>
-            </div>
-            <nav className="nav-links">
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/services">Services</NavLink>
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/faq">FAQ</NavLink>
-              <NavLink to="/contact">Contact</NavLink>
-            </nav>
-            <div className="nav-right">
-              <span className="contact-info">
-                📞 (613) 513-9893 &nbsp; ✉️ admin@yourcompany.com
-              </span>
-              <NavLink to="/quote" className="btn btn-primary nav-btn">
-                Get Quote
-              </NavLink>
-            </div>
-          </header>
-
-          {/* HERO TEXT */}
-          <div className="hero-content">
-            <h1 className="hero-title">WELCOME</h1>
-            <div className="hero-divider"></div>
-            <p className="hero-subtitle">
-              YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
-            </p>
-            <div className="hero-buttons">
-              <NavLink to="/buy" className="btn btn-primary">
-                BUY A HOME
-              </NavLink>
-              <NavLink to="/sell" className="btn btn-outline">
-                SELL A HOME
-              </NavLink>
-            </div>
-          </div>
+      
+{/* HERO with Inspire-style Navbar */}
+<section className="hero-bg">
+  <div className="hero-overlay">
+    {/* NAVBAR */}
+    <header className="hero-nav">
+      <div className="nav-left">
+        <span className="brand">Clean. Cared for. Yours.</span>
+      </div>
+      <div className="nav-right">
+        <div className="contact-info">
+          📞 (613) 513-9893 &nbsp; ✉️ admin@yourcompany.com
         </div>
-      </section>
+        <div className="nav-divider"></div>
+        <nav className="nav-links">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/faq">FAQ</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </nav>
+      </div>
+    </header>
+
+    {/* HERO TEXT */}
+    <div className="hero-content">
+      <h1 className="hero-title">WELCOME</h1>
+      <div className="hero-divider"></div>
+      <p className="hero-subtitle">
+        YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
+      </p>
+      <div className="hero-buttons">
+        <NavLink to="/buy" className="btn btn-primary">
+          GET QUOTE
+        </NavLink>
+        <NavLink to="/sell" className="btn btn-outline">
+          BOOK NOW
+        </NavLink>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* GOOGLE REVIEWS */}
       <section className="reviews-section">
