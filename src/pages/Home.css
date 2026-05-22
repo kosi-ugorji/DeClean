@@ -62,12 +62,6 @@ body {
   gap: 20px;
 }
 
-.contact-info span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .nav-divider {
   width: 100%;
   height: 1px;
@@ -108,7 +102,6 @@ body {
   color: #fff;
 }
 
-/* Divider now uses gradient image */
 .hero-divider {
   height: 6px;
   background: url('https://img.magnific.com/free-vector/wave-gradient-background-desogn_343694-4094.jpg?semt=ais_hybrid&w=740&q=80') 
@@ -153,7 +146,7 @@ body {
   color: var(--dark);
 }
 
-/* FEATURES (Communities-style grid with faint icons) */
+/* FEATURES (Our Services styled like Featured Communities) */
 .features {
   background: var(--bg);
   padding: 4rem 0;
@@ -167,269 +160,117 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
-.communities-grid {
+.communities-grid.two-per-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
 .community-card {
-  background: #fff;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
   overflow: hidden;
-}
-
-.community-card::before {
-  content: attr(data-icon);
-  font-size: 6rem;
-  color: rgba(92, 160, 242, 0.08);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .community-card:hover {
-  transform: translateY(-5px);
+  transform: scale(0.95); /* shrink on hover */
 }
 
-.community-title,
-.community-desc,
-.community-more {
-  position: relative;
-  z-index: 1;
+.community-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay default (light transparent white) */
+.community-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+/* Hover overlay (light blue transparent) */
+.community-card:hover .overlay {
+  background: rgba(92,160,242,0.6);
+}
+
+/* Service info text */
+.service-info {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.community-card:hover .service-info {
+  opacity: 1; /* fade in text */
 }
 
 .community-title {
-  font-weight: 700;
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #000;
-  font-family: 'Inter', sans-serif;
+  margin-bottom: 8px;
 }
 
 .community-desc {
   font-size: 0.95rem;
-  color: var(--text);
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .community-more {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-/* SERVICES */
-.services {
-  padding: 4rem 0;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.service-card {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
-  transition: 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.service-title {
-  font-weight: 700;
-  padding: 1rem;
-}
-
-.service-desc {
-  padding: 0 1rem;
-  color: var(--text);
-}
-
-.service-card ul {
-  padding: 1rem;
-  list-style: none;
-}
-
-.service-card li {
-  display: flex;
-  gap: 0.5rem;
-  color: green;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 /* CTA BANNER */
-/* CTA BANNER (full-width, dark blue background) */
 .cta-banner {
-width: 100%;                /* span full width */
-margin: 0;                  /* remove side margins */
-padding: 4rem 2rem;         /* generous padding */
-background-color: #1877F2;  /* use Facebook blue */
-color: #fff;                /* white text */
-text-align: center;
-border-radius: 0;           /* remove rounded corners */
-
+  width: 100%;
+  margin: 0;
+  padding: 4rem 2rem;
+  background-color: #1877F2;
+  color: #fff;
+  text-align: center;
+  border-radius: 0;
 }
 
 .cta-banner h3 {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #fff;                /* force white */
+  color: #fff;
 }
 
 .cta-banner .btn {
   display: inline-block;
   padding: 12px 28px;
-  border: 2px solid rgba(255,255,255,0.7); /* white transparent border */
-  border-radius: 0;           /* square corners */
-  background: transparent;    /* transparent background */
-  color: #fff;                /* white text */
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
 }
 
 .cta-banner .btn:hover {
-  background: #fff;           /* invert on hover */
-  color: var(--dark);         /* dark blue text on hover */
+  background: #fff;
+  color: var(--dark);
 }
 
-
-
-
-/* TESTIMONIALS */
-.testimonials {
-  padding: 4rem 0;
-  background: var(--bg);
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-/* REVIEWS (Elfsight overrides, now full width) */
+/* REVIEWS */
 .reviews-section {
   background: url('../assets/reviewsbg.png') center/cover no-repeat;
   padding: 4rem 0;
-}
-
-
-.reviews-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  font-family: 'Manrope', sans-serif;
-}
-
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 20px;
-}
-
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-header-rating {
-  font-size: 1rem;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-button {
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  background: var(--primary);
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Review cards */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-review {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  margin-bottom: 1.5rem;
-}
-
-/* Stars */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-stars {
-  color: gold;
-  margin-bottom: 0.8rem;
-}
-
-/* Review text */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-text {
-  font-size: 0.95rem;
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-
-/* Author name */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-author {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text);
-  text-align: right;
-}
-
-/* Force reviews into responsive grid */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-reviews {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Reviewer avatar styling */
-.elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754 .eapps-google-reviews-author-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
 }
 
 /* WHATSAPP BUTTON */
