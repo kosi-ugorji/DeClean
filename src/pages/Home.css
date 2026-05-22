@@ -1,6 +1,6 @@
 /* GLOBAL IMPROVEMENTS */
 :root {
-  --primary: #5ca0f2;
+  --primary: #5ca0f2; /* light blue */
   --dark: #1e293b;
   --text: #64748b;
   --bg: #f8fafc;
@@ -93,13 +93,13 @@ body {
   transform: scale(1.1);
 }
 
-/* HERO text bottom-left aligned */
+/* HERO text bottom-right aligned */
 .hero-content {
-  text-align: left; /* align all text to the same line */
+  text-align: right;        /* keep text aligned to the right */
   color: #fff;
   max-width: 600px;
-  margin-left: 60px; /* push content in from left edge */
-  margin-top: auto;
+  margin-left: auto;        /* push block to the right */
+  margin-top: auto;         /* push block down to bottom */
   padding-bottom: 60px;
 }
 
@@ -108,26 +108,27 @@ body {
   font-weight: 800;
   margin-bottom: 10px;
   max-width: 600px;
+  color: var(--primary);    /* headline in light blue */
 }
 
 .hero-divider {
   height: 4px;
-  background: var(--primary);
-  margin: 20px 0;
-  width: 100%;       /* make divider span full text block */
-  max-width: 600px;  /* keep consistent with text width */
+  background: #000;         /* divider line in black */
+  margin: 20px 0 20px auto; /* spacing above/below, aligned right */
+  width: 100%;              /* span full text block */
+  max-width: 600px;         /* consistent with text width */
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 30px;
-  max-width: 600px;  /* align with title and divider */
+  max-width: 600px;
 }
 
 .hero-buttons {
   display: flex;
-  justify-content: flex-start; /* align buttons with text */
+  justify-content: flex-end; /* buttons aligned to the right */
   gap: 20px;
 }
 
