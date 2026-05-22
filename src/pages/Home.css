@@ -157,6 +157,7 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
+  animation: fadeInUp 0.8s ease both;
 }
 
 .about-text {
@@ -165,10 +166,11 @@ body {
 }
 
 .about-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #1877F2; /* blue accent */
   margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
 }
 
 .about-subtitle {
@@ -180,21 +182,22 @@ body {
 
 .about-text p {
   margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text);
 }
 
 .about-list {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .about-list li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.2rem;
+  margin-bottom: 0.7rem;
+  padding-left: 1.5rem;
   position: relative;
   color: var(--dark);
+  transition: color 0.3s ease;
 }
 
 .about-list li::before {
@@ -202,15 +205,28 @@ body {
   color: #1877F2; /* blue checkmark */
   position: absolute;
   left: 0;
+  font-weight: bold;
+}
+
+.about-list li:hover {
+  color: #1877F2;
 }
 
 .about-stats {
   display: flex;
   gap: 2rem;
   margin: 1.5rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #1877F2;
+}
+
+.about-stats div {
+  transition: transform 0.3s ease;
+}
+
+.about-stats div:hover {
+  transform: scale(1.05);
 }
 
 .about-highlights {
@@ -222,10 +238,16 @@ body {
 
 .about-highlights div {
   background: rgba(92,160,242,0.1);
-  padding: 1rem;
+  padding: 1.2rem;
   border-left: 4px solid #1877F2;
   border-radius: 6px;
   font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.about-highlights div:hover {
+  background: rgba(92,160,242,0.2);
+  transform: translateY(-3px);
 }
 
 .about-image {
@@ -233,13 +255,44 @@ body {
   border: 6px solid #1877F2;
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: fadeInRight 0.8s ease both;
 }
 
 .about-image img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.4s ease;
 }
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Simple fade-in animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    order: -1; /* show image above text on mobile */
+    margin-bottom: 1.5rem;
+  }
+}
+
 
 /* FEATURES (Our Services styled like Featured Communities) */
 .features {
