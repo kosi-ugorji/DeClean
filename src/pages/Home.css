@@ -156,7 +156,7 @@ body {
   color: var(--dark);
 }
 
-/* FEATURES (Communities-style grid) */
+/* FEATURES (Communities-style grid with faint icons) */
 .features {
   background: var(--bg);
   padding: 4rem 0;
@@ -167,7 +167,7 @@ body {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  font-family: 'Manrope', sans-serif; /* same font as Featured Communities */
+  font-family: 'Manrope', sans-serif;
 }
 
 .communities-grid {
@@ -179,10 +179,30 @@ body {
 .community-card {
   background: #fff;
   border-radius: 8px;
-  padding: 2rem 1rem;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s;
+
+  /* Square shape */
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.community-card::before {
+  content: attr(data-icon); /* faint background icon */
+  font-size: 6rem;
+  color: rgba(92, 160, 242, 0.08); /* faint light blue */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .community-card:hover {
@@ -194,19 +214,25 @@ body {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #000;
-  font-family: 'Inter', sans-serif; /* same font as communities */
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .community-desc {
   font-size: 0.95rem;
   color: var(--text);
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .community-more {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--primary);
+  position: relative;
+  z-index: 1;
 }
 
 /* SERVICES */
