@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   FiPhone,
@@ -24,9 +24,16 @@ import moveInMoveOut from "../assets/empty_apartment.png";
 import houseImage from "../assets/house_pic.png";
 
 export default function Home() {
+  useEffect(() => {
+    // Load Elfsight script once when component mounts
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <main>
-
       {/* FLOATING WHATSAPP BUTTON */}
       <a
         href="https://wa.me/234XXXXXXXXXX"
@@ -40,7 +47,6 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner container">
-
           <motion.div
             className="hero-left"
             initial={{ opacity: 0, y: 40 }}
@@ -51,11 +57,9 @@ export default function Home() {
               Premium Cleaning<br />
               for Homes & Rentals
             </h1>
-
             <p className="hero-subtitle">
               Reliable, insured cleaners delivering spotless results every time.
             </p>
-
             <div className="hero-cta-row">
               <NavLink to="/quote" className="btn btn-outline hero-btn">
                 Get Quote
@@ -64,15 +68,11 @@ export default function Home() {
                 Book Now
               </NavLink>
             </div>
-
             <div className="hero-contact-row">
               <FiPhone />
               <a href="tel:6135139893">(613) 513-9893</a>
             </div>
-
-            <div className="hero-rating">
-              ⭐ Rated 5.0 by customers
-            </div>
+            <div className="hero-rating">⭐ Rated 5.0 by customers</div>
           </motion.div>
 
           <motion.div
@@ -83,18 +83,24 @@ export default function Home() {
           >
             <img src={houseImage} alt="Clean home" />
           </motion.div>
-
         </div>
+      </section>
+
+      {/* GOOGLE REVIEWS */}
+      <section className="reviews-section">
+        <h2 className="section-title">What Our Clients Say</h2>
+        {/* Elfsight Google Reviews */}
+        <div
+          className="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754"
+          data-elfsight-app-lazy
+        ></div>
       </section>
 
       {/* FEATURES */}
       <section className="features">
         <div className="container">
-
           <h2 className="section-title">Why Choose Us</h2>
-
           <div className="features-row">
-
             {[
               [FiShield, "Background Checked", "Trusted cleaners"],
               [FiMapPin, "Locally Owned", "Proudly serving Ottawa"],
@@ -111,7 +117,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       </section>
@@ -119,14 +124,8 @@ export default function Home() {
       {/* SERVICES */}
       <section className="services">
         <div className="container">
-
-          <h2 className="section-title">O Services</h2>
-
-                    <div className="services-grid">
-                      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-          <script src="https://elfsightcdn.com/platform.js" async></script>
-          <div class="elfsight-app-3a7f5102-08ec-4999-9a40-7dc89113f754" data-elfsight-app-lazy></div>
-
+          <h2 className="section-title">Our Services</h2>
+          <div className="services-grid">
             {[
               {
                 img: residentialCleaning,
@@ -155,10 +154,8 @@ export default function Home() {
             ].map((s, i) => (
               <div className="service-card" key={i}>
                 <img src={s.img} alt={s.title} />
-
                 <div className="service-title">{s.title}</div>
                 <div className="service-desc">{s.desc}</div>
-
                 <ul>
                   {s.features.map((f, j) => (
                     <li key={j}>
@@ -168,9 +165,7 @@ export default function Home() {
                 </ul>
               </div>
             ))}
-
           </div>
-
           <div className="cta-banner">
             <h3>Need cleaning this week?</h3>
             <p>Book in under 1 minute.</p>
@@ -178,18 +173,14 @@ export default function Home() {
               Book Now
             </Link>
           </div>
-
         </div>
       </section>
 
       {/* TESTIMONIALS */}
       <section className="testimonials">
         <div className="container">
-
           <h2 className="section-title">Happy Clients</h2>
-
           <div className="testimonials-grid">
-
             {[
               "Super clean and reliable service.",
               "Very professional cleaners.",
@@ -197,21 +188,19 @@ export default function Home() {
             ].map((text, i) => (
               <div className="testimonial-card" key={i}>
                 <div className="testimonial-stars">
-                  {Array(5).fill(0).map((_, j) => (
-                    <FaStar key={j} />
-                  ))}
+                  {Array(5)
+                    .fill(0)
+                    .map((_, j) => (
+                      <FaStar key={j} />
+                    ))}
                 </div>
-
                 <BiSolidQuoteAltLeft />
                 <p>{text}</p>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
-
     </main>
   );
 }
