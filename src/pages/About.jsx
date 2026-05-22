@@ -4,9 +4,8 @@ import "./About.css";
 
 export default function AboutSection() {
   return (
-
-     {/* NEW ABOUT SQUEAKY CLEAN SECTION */}
-     <section className="about-section">
+    <section className="about-section">
+      {/* NEW ABOUT SQUEAKY CLEAN SECTION */}
       <div className="about-squeaky">
         <h2 className="about-squeaky-title">About Squeaky Clean Nigeria</h2>
         <p className="about-squeaky-subtitle">
@@ -31,14 +30,11 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-   
-      
 
-     
-
-      {/* OTTAWA STORY */}
-      <div className="about-main container">
-        <div className="about-story">
+      {/* OTTAWA STORY WITH IMAGES */}
+      <div className="our-story-container">
+        <div className="our-story-text">
+          <h2 className="our-story-title">Our Story</h2>
           <p>
             We are committed to delivering the best cleaning service in Ottawa through reliable service, attention to detail, and professional care. As a trusted cleaning service company, we provide high-quality residential and commercial cleaning solutions tailored to the needs of homeowners, renters, property managers, seniors, and busy professionals across Ottawa. <b>Cleaning is not just a service, it's a form of care.</b>
           </p>
@@ -62,6 +58,12 @@ export default function AboutSection() {
           <p>
             Today, we're a community–first cleaning company rooted in Ottawa, offering modern, tech-enabled service with old-school reliability and personal care. Whether you're a busy professional, a senior, an Airbnb host, or a working parent, we are here to restore calm, comfort, and confidence in your space, one clean at a time.
           </p>
+          <a href="/contact" className="story-btn">Get In Touch</a>
+        </div>
+
+        <div className="our-story-images">
+          <img src="/assets/team-photo1.png" alt="Our cleaning team" />
+          <img src="/assets/team-photo2.png" alt="Team at work" />
         </div>
       </div>
 
@@ -96,7 +98,7 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    
+
       {/* WHY OTTAWA TRUSTS US */}
       <div className="trust-section">
         <div className="trust-section-container">
