@@ -281,12 +281,12 @@ body {
 }
 
 /* CTA BANNER */
-/* CTA BANNER (full-width, styled like black version but blue background) */
+/* CTA BANNER (full-width, dark blue background) */
 .cta-banner {
   width: 100%;                /* span full width */
   margin: 0;                  /* remove side margins */
-  padding: 4rem 2rem;         /* larger padding for impact */
-  background: var(--primary); /* keep your blue background */
+  padding: 4rem 2rem;         /* generous padding */
+  background: var(--dark);    /* use darker blue */
   color: #fff;                /* white text */
   text-align: center;
   border-radius: 0;           /* remove rounded corners */
@@ -308,7 +308,7 @@ body {
 .cta-banner .btn {
   display: inline-block;
   padding: 12px 28px;
-  border: 2px solid rgba(255,255,255,0.7); /* white transparent lined box */
+  border: 2px solid rgba(255,255,255,0.7); /* white transparent border */
   border-radius: 0;           /* square corners */
   background: transparent;    /* transparent background */
   color: #fff;                /* white text */
@@ -319,8 +319,9 @@ body {
 
 .cta-banner .btn:hover {
   background: #fff;           /* invert on hover */
-  color: var(--primary);      /* blue text on hover */
+  color: var(--dark);         /* dark blue text on hover */
 }
+
 
 
 /* TESTIMONIALS */
