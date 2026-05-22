@@ -77,7 +77,7 @@ export default function Home() {
       {/* FEATURES (Communities-style grid) */}
       <section className="features">
         <div className="container">
-          <h1 className="section-title">WHY CHOOSE US</h1>
+          <h1 className="section-title"><b>WHY CHOOSE US</b></h1>
           <div className="communities-grid">
             {[
               { title: "Background Checked", desc: "Trusted cleaners" },
