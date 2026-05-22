@@ -78,10 +78,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT SQUEAKY CLEAN (Inserted here) */}
+      {/* ABOUT SQUEAKY CLEAN */}
       <section className="about-section">
         <div className="about-container">
-          {/* LEFT SIDE TEXT */}
           <div className="about-text">
             <h2 className="about-title">About Squeaky Clean</h2>
             <h3 className="about-subtitle">Nigeria's Most Trusted Cleaning Service</h3>
@@ -115,7 +114,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT SIDE IMAGE */}
           <div className="about-image">
             <img src={teamPhoto} alt="SqueakyClean Nigeria Team" />
           </div>
@@ -130,7 +128,7 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* OUR SERVICES (Hover effect style) */}
+      {/* OUR SERVICES */}
       <section className="features">
         <div className="container">
           <h1 className="section-title"><b>Our Services</b></h1>
@@ -139,9 +137,9 @@ export default function Home() {
               { img: residentialCleaning, title: "Residential Cleaning", desc: "Regular home cleaning" },
               { img: seniorFriendlyCleaning, title: "Senior Cleaning", desc: "Careful, respectful service" },
               { img: airbnbTurnovers, title: "Airbnb Turnovers", desc: "Fast guest-ready cleaning" },
-              { img: moveInMoveOut, title: "Move In/Out Cleaning", desc: "Deep cleaning service" }
+              { img: moveInMoveOut, title: "Move Cleaning", desc: "Deep cleaning service" }
             ].map((s, i) => (
-              <Link to="/services" key={i} className="community-card service-card">
+              <Link to="/services" key={i} className="community-card">
                 <img src={s.img} alt={s.title} className="community-img" />
                 <div className="overlay">
                   <div className="service-info">
