@@ -146,7 +146,7 @@ body {
 
 /* GET QUOTE button */
 .hero-buttons .btn-primary {
-  background: #68bdf2; /* new color */
+  background: var(--primary); /* same as headline color */
   color: #fff;
 }
 
