@@ -44,10 +44,32 @@ export default function Home() {
         <FiMessageCircle />
       </a>
 
-      {/* HERO (Inspire-style) */}
-      {/* HERO (Inspire-style modern with divider) */}
+     {/* HERO with Navbar */}
 <section className="hero hero-bg">
   <div className="hero-overlay">
+    {/* NAVBAR */}
+    <header className="hero-nav">
+      <div className="nav-left">
+        <span className="brand">Clean. Cared for. Yours.</span>
+      </div>
+      <nav className="nav-links">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/faq">FAQ</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+      </nav>
+      <div className="nav-right">
+        <span className="contact-info">
+          📞 (613) 513-9893 &nbsp; ✉️ admin@yourcompany.com
+        </span>
+        <NavLink to="/quote" className="btn btn-primary nav-btn">
+          Get Quote
+        </NavLink>
+      </div>
+    </header>
+
+    {/* HERO TEXT */}
     <div className="hero-content hero-right-text">
       <h1 className="hero-title">WELCOME</h1>
       <div className="hero-divider"></div>
@@ -56,15 +78,16 @@ export default function Home() {
       </p>
       <div className="hero-buttons">
         <NavLink to="/buy" className="btn btn-primary">
-         Get Quote
+          BUY A HOME
         </NavLink>
         <NavLink to="/sell" className="btn btn-outline">
-          Book Now
+          SELL A HOME
         </NavLink>
       </div>
     </div>
   </div>
 </section>
+
 
 
       {/* GOOGLE REVIEWS */}
