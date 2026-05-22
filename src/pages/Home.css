@@ -8,7 +8,7 @@
 
 body {
   background: #fff;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', 'Manrope', 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
 }
 
@@ -108,7 +108,7 @@ body {
   font-weight: 700;
   margin-bottom: 8px;
   max-width: 500px;
-  color: #fff; /* headline now white */
+  color: #fff;
 }
 
 .hero-divider {
@@ -167,11 +167,12 @@ body {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 2rem;
+  font-family: 'Manrope', sans-serif; /* same font as Featured Communities */
 }
 
 .communities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
   gap: 1.5rem;
 }
 
@@ -193,6 +194,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #000;
+  font-family: 'Inter', sans-serif; /* same font as communities */
 }
 
 .community-desc {
@@ -328,5 +330,9 @@ body {
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .communities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive grid */
   }
 }
