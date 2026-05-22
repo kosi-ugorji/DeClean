@@ -56,10 +56,10 @@ export default function Home() {
 
     {/* HERO TEXT */}
     <div className="hero-content">
-      <h1 className="hero-title">WELCOME</h1>
+      <h1 className="hero-title">Premiium cleaning for<br>Homes & Rentals</br></h1>
       <div className="hero-divider"></div>
       <p className="hero-subtitle">
-        YOUR REAL ESTATE EXPERIENCE MADE SIMPLE
+        <b>Reliable,insured cleaners delivering<br>spotless results every time</br></b>
       </p>
       <div className="hero-buttons">
         <NavLink to="/buy" className="btn btn-primary">
