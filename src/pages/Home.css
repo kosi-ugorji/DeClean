@@ -146,6 +146,101 @@ body {
   color: var(--dark);
 }
 
+/* ABOUT SECTION */
+.about-section {
+  background: var(--bg);
+  padding: 4rem 2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  color: var(--dark);
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1877F2; /* blue accent */
+  margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.about-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+  color: var(--dark);
+}
+
+.about-list li::before {
+  content: "✔";
+  color: #1877F2; /* blue checkmark */
+  position: absolute;
+  left: 0;
+}
+
+.about-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1877F2;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.about-highlights div {
+  background: rgba(92,160,242,0.1);
+  padding: 1rem;
+  border-left: 4px solid #1877F2;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  border: 6px solid #1877F2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* FEATURES (Our Services styled like Featured Communities) */
 .features {
   background: var(--bg);
@@ -175,7 +270,7 @@ body {
 }
 
 .community-card:hover {
-  transform: scale(0.95); /* shrink on hover */
+  transform: scale(0.95);
 }
 
 .community-img {
@@ -185,7 +280,6 @@ body {
   display: block;
 }
 
-/* Overlay default (light transparent white) */
 .community-card .overlay {
   position: absolute;
   top: 0;
@@ -199,12 +293,10 @@ body {
   transition: background 0.3s ease;
 }
 
-/* Hover overlay (light blue transparent) */
 .community-card:hover .overlay {
   background: rgba(92,160,242,0.6);
 }
 
-/* Service info text */
 .service-info {
   text-align: center;
   color: #fff;
@@ -214,7 +306,7 @@ body {
 }
 
 .community-card:hover .service-info {
-  opacity: 1; /* fade in text */
+  opacity: 1;
 }
 
 .community-title {
@@ -273,6 +365,14 @@ body {
   padding: 4rem 0;
 }
 
+.reviews-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  font-family: 'Manrope', sans-serif;
+}
+
 /* WHATSAPP BUTTON */
 .whatsapp-float {
   position: fixed;
@@ -317,8 +417,17 @@ body {
     font-size: 1rem;
   }
 
-  .communities-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  .communities-grid.two-per-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    order: -1; /* show image above text on mobile */
+    margin-bottom: 1.5rem;
   }
 
   /* Reviews collapse to 1 per row on mobile */
