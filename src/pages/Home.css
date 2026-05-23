@@ -451,17 +451,34 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  /* Navbar spans full width and aligns left */
   .hero-nav {
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: stretch;   /* stretch across */
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav-left,
+  .nav-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .contact-info {
+    justify-content: flex-start; /* phone + email left */
+    width: 100%;
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: flex-start;
+    text-align: left;
+    width: 100%;
   }
 
+  /* Keep hero text/buttons as they are unless you want them left too */
   .hero-title {
     font-size: 2rem;
   }
@@ -470,16 +487,18 @@ body {
     font-size: 1rem;
   }
 
+  /* Services grid collapses */
   .communities-grid.two-per-row {
     grid-template-columns: 1fr;
   }
 
+  /* About section stacks */
   .about-container {
     flex-direction: column;
   }
 
   .about-image {
-    order: -1; /* show image above text on mobile */
+    order: -1;
     margin-bottom: 1.5rem;
   }
 
