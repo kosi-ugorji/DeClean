@@ -451,11 +451,16 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  /* Navbar spans full width and aligns left */
+  /* Reduce overlay padding so content doesn't overflow */
+  .hero-overlay {
+    padding: 15px 20px; /* smaller side padding for mobile */
+  }
+
+  /* Navbar spans full width but stays inside margins */
   .hero-nav {
     flex-direction: column;
     gap: 15px;
-    align-items: stretch;   /* stretch across */
+    align-items: flex-start;
     text-align: left;
     width: 100%;
   }
@@ -467,7 +472,9 @@ body {
   }
 
   .contact-info {
-    justify-content: flex-start; /* phone + email left */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 100%;
   }
 
@@ -476,6 +483,7 @@ body {
     justify-content: flex-start;
     text-align: left;
     width: 100%;
+    gap: 15px;
   }
 
   /* Keep hero text/buttons as they are unless you want them left too */
@@ -507,3 +515,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
