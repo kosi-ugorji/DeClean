@@ -69,11 +69,7 @@ export default function Navbar() {
             </NavLink>
           </li>
         </ul>
-
-        {/* Phone call button */}
-        <a href="tel:+1234567890" className="navbar-phone">
-          <FiPhone size={24} /> Call Us
-        </a>
+        
       </nav>
     </header>
   );
