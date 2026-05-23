@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT SQUEAKY CLEAN */}
+      {/* ABOUT DECLEAN CLEANING SERVICES */}
       <section className="about-section">
         <div className="about-container">
           <div className="about-text">
@@ -108,12 +108,12 @@ export default function Home() {
             </ul>
 
             <div className="about-stats">
-              <div><strong>1,500+</strong> Trained Professionals</div>
+              <div><strong>30+</strong> Trained Professionals</div>
               <div><strong>500+</strong> Clients</div>
             </div>
 
             <div className="about-highlights">
-              <div><strong>Industry Leader</strong><br />Over 20 years of excellence in professional cleaning services across Nigeria</div>
+              <div><strong>Industry Leader</strong><br />Many years of excellence in professional cleaning services across Ottawa</div>
               <div><strong>Fully Insured</strong><br />Complete insurance coverage and bonding for your peace of mind</div>
               <div><strong>24/7 Service</strong><br />Emergency cleaning services available around the clock</div>
               <div><strong>Trained Professionals</strong><br />Certified cleaning professionals with ongoing training programs</div>
