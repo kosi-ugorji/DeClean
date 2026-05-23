@@ -1,5 +1,3 @@
-pls merge with this code and rewrite
-
 /* GLOBAL IMPROVEMENTS */
 :root {
   --primary: #5ca0f2; /* light blue */
@@ -282,6 +280,19 @@ body {
   from { opacity: 0; transform: translateX(40px); }
   to { opacity: 1; transform: translateX(0); }
 }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    order: -1; /* show image above text on mobile */
+    margin-bottom: 1.5rem;
+  }
+}
+
 
 /* FEATURES (Our Services styled like Featured Communities) */
 .features {
