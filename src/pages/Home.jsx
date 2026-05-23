@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FiMessageCircle } from "react-icons/fi";
-import { Link, NavLink } from "react-router-dom";
+
 import "./Home.css";
 import reviewsBg from "../assets/reviewsbg.png";
 
