@@ -109,7 +109,7 @@ export default function Home() {
 
             <div className="about-stats">
               <div><strong>30+</strong> Trained Professionals</div>
-              <div><strong>500+</strong> Clients</div>
+              <div><strong>100+</strong> Clients</div>
             </div>
 
             <div className="about-highlights">
