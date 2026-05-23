@@ -5,31 +5,33 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  display: flex;
-  justify-content: center;
+  display: flex;              /* added */
+  justify-content: center;    /* added */
 }
 
-.navbar-container {
-  width: 100%;
-  max-width: 1280px;
+.navbar {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem clamp(1rem, 4vw, 2.5rem);
-  min-height: clamp(56px, 6vh, 76px);
+  min-height: 76px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  min-height: clamp(56px, 6vh, 76px);   /* added from improvements */
+  padding-inline: clamp(1rem, 4vw, 2.5rem); /* added */
 }
 
 .navbar-logo {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: clamp(1.25rem, 4vw + 0.5rem, 2rem);
+  font-size: 2rem;
   color: var(--color-primary);
   letter-spacing: -1px;
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: 2rem;
   user-select: none;
   white-space: nowrap;
+  font-size: clamp(1.25rem, 4vw + 0.5rem, 2rem); /* added */
 }
 
 .navbar-logo span {
@@ -37,22 +39,24 @@
   font-weight: 700;
 }
 
-/* Navigation menu */
 .navbar-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   align-items: center;
-  transition: max-height .35s ease;
+  transition: all 0.3s;
+  font-size: clamp(0.95rem, 1vw + 0.6rem, 1.09rem); /* added */
 }
 
-.navbar-menu li { display: flex; }
+.navbar-menu li {
+  display: flex;
+}
 
 .navbar-menu a {
   font-family: var(--font-heading);
-  font-size: clamp(0.95rem, 1vw + 0.6rem, 1.09rem);
+  font-size: 1.09rem;
   color: var(--color-black);
   font-weight: 700;
   border-radius: 8px;
@@ -66,67 +70,126 @@
   background: #f3f8fd;
 }
 
-/* Remove Call Us button completely */
-.navbar-phone { display: none; }
+/* Call Us button hidden everywhere */
+.navbar-phone {
+  display: none;   /* added */
+}
 
-/* Mobile toggle button */
+.btn {
+  min-width: 0;
+  font-size: 1rem;
+  padding: 0.6em 1.3em;
+}
+
 .navbar-mobile-toggle {
   display: none;
   background: none;
   border: none;
   padding: 0.4em;
-  margin-left: auto;
+  margin-left: 1em;
   cursor: pointer;
   color: var(--color-primary);
 }
 
-/* --- Tablet breakpoint --- */
-@media (max-width: 960px) {
-  .navbar-menu { gap: 1rem; }
-  .navbar-logo { margin-right: 1rem; }
+/* --- Breakpoints --- */
+@media (max-width: 1020px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .navbar-menu {
+    gap: 1.1rem;
+  }
+  .navbar-cta {
+    gap: 0.6rem;
+    margin-left: 1rem;
+  }
 }
 
-/* --- Mobile breakpoint --- */
-@media (max-width: 700px) {
-  .navbar-container { flex-direction: row; align-items: flex-start; }
-  .navbar-logo { font-size: 1.25rem; margin-right: 0.5rem; }
+@media (max-width: 900px) {
+  .navbar-menu {
+    gap: 0.9rem;
+  }
+  .navbar-logo {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+}
 
-  .navbar-mobile-toggle { display: block; z-index: 120; }
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+    min-height: unset;
+    padding-bottom: 0.5rem;
+  }
+  .navbar-logo {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+  }
+  .navbar-cta {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 0;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-mobile-toggle {
+    display: block;
+    z-index: 120;
+  }
 
   .navbar-menu {
     position: absolute;
     top: 100%;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     flex-direction: column;
     background: #fff;
-    padding: 1.25rem .75rem;
+    gap: 1rem;
+    padding: 1.5rem 0.5rem 0.75rem 0.5rem;
     border-radius: 0 0 16px 16px;
-    box-shadow: 0 8px 32px rgba(92,160,242,.11);
-    max-height: 0;
-    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(92,160,242,0.11);
+    display: none;
+    align-items: stretch;
+    max-height: 0;         /* added */
+    overflow: hidden;      /* added */
+    transition: max-height .35s ease; /* added */
   }
-  .navbar-menu.open { max-height: 400px; }
-  .navbar-menu li { width: 100%; }
-}
-
-/* --- Desktop/Laptop breakpoint --- */
-@media (min-width: 900px) {
-  .navbar-container {
+  .navbar-menu.open {
+    display: flex;
+    max-height: 400px;     /* added */
+  }
+  .navbar-menu li {
+    width: 100%;
     justify-content: flex-start;
   }
+}
+
+/* --- Desktop/Laptop alignment --- */
+@media (min-width: 900px) {
+  .navbar-container {
+    justify-content: flex-start; /* added */
+  }
   .navbar-logo {
-    margin-right: auto; /* pushes logo left */
+    margin-right: auto;          /* added */
   }
   .navbar-menu {
-    margin-left: auto;  /* anchors menu to top-right */
+    margin-left: auto;           /* added */
   }
 
-  /* optional: collapse tagline back to single line */
+  /* optional tagline collapse */
   .navbar-tagline {
     flex-direction: row;
     gap: 0.25em;
   }
-  .navbar-tagline .break { display: none; }
+  .navbar-tagline .break {
+    display: none;
+  }
 }
 
 /* ───────── Tagline stack ───────── */
@@ -149,4 +212,3 @@
     font-size: 0.5em;
   }
 }
-
