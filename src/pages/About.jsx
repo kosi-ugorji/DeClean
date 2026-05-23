@@ -8,7 +8,7 @@ import Aboutus2 from "../assets/Aboutus2.jpeg";
 export default function AboutSection() {
   return (
     <section className="about-section">
-      {/* NEW ABOUT SQUEAKY CLEAN SECTION */}
+      {/* NEW ABOUT DECLEAN SECTION */}
       <div className="about-squeaky">
         <h1 className="about-squeaky-title"><b>ABOUT DECLEAN CLEANING SERVICES</b></h1>
         <p className="about-squeaky-subtitle">
@@ -16,15 +16,15 @@ export default function AboutSection() {
         </p>
         <div className="about-squeaky-stats">
           <div className="stat">
-            <span className="stat-number">1,500+</span>
+            <span className="stat-number">30+</span>
             <span className="stat-label">Trained Professionals</span>
           </div>
           <div className="stat">
-            <span className="stat-number">20+</span>
+            <span className="stat-number">2+</span>
             <span className="stat-label">Years Experience</span>
           </div>
           <div className="stat">
-            <span className="stat-number">500+</span>
+            <span className="stat-number">100+</span>
             <span className="stat-label">Clients</span>
           </div>
           <div className="stat">
@@ -39,13 +39,13 @@ export default function AboutSection() {
         <div className="our-story-text">
           <h2 className="our-story-title">Our Story</h2>
           <p>
-            We are committed to delivering the best cleaning service in Ottawa through reliable service, attention to detail, and professional care. As a trusted cleaning service company, we provide high-quality residential and commercial cleaning solutions tailored to the needs of homeowners, renters, property managers, seniors, and busy professionals across Ottawa. <b>Cleaning is not just a service, it's a form of care.</b>
+            DeClean is committed to delivering the best cleaning service in Ottawa through reliable service, attention to detail, and professional care. As a trusted cleaning company, DeClean provides high‑quality residential and commercial cleaning solutions tailored to the needs of homeowners, renters, property managers, seniors, and busy professionals across Ottawa. <b>Cleaning is not just a service — it is a form of care.</b>
           </p>
           <p>
-            Our services include house cleaning service, deep cleaning, recurring home cleaning, move-in and move-out cleaning, Airbnb and rental property cleaning, office cleaning, and cleaning services for homes and rentals in Ottawa. We also specialize in cleaning service for seniors in Ottawa, helping create clean, safe, and comfortable living spaces with dependable and respectful service.
+            DeClean is committed to delivering the best cleaning service in Ottawa through reliable service, attention to detail, and professional care. As a trusted cleaning company, DeClean provides high‑quality residential and commercial cleaning solutions tailored to the needs of homeowners, renters, property managers, seniors, and busy professionals across Ottawa. Cleaning is not just a service — it is a form of care.
           </p>
           <p>
-            We focus on consistency, professionalism, and customer satisfaction in every visit. Whether you need weekly home cleaning, one-time deep cleaning, or reliable cleaning services in Ottawa for your property or business, our team is dedicated to delivering spotless results and a stress-free experience.
+            DeClean focuses on consistency, professionalism, and customer satisfaction in every visit. Whether weekly home cleaning, one‑time deep cleaning, or reliable property and business cleaning is required, DeClean’s team is dedicated to delivering spotless results and a stress‑free experience.
           </p>
           <div className="about-mission-card">
             <div className="about-mission-title"><b>Our Mission</b></div>
