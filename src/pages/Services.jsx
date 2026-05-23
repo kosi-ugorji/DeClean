@@ -15,11 +15,11 @@ const services = [
       "Dusting all surfaces", "Bathroom cleaning", "Trash removal", "Pet-safe products available"
     ],
     addOns: [
-      "Inside Fridge", "Inside Oven – $30", "Bed Linen Change – $10/bed",
-      "Laundry (2 loads) – $20", "Baseboards – $25+", "Interior Windows – $5/window"
+      "Inside Fridge", "Inside Oven", "Bed Linen Change",
+      "Laundry (2 loads)", "Baseboards", "Interior Windows"
     ],
     offers: [
-      "Seniors: 10% off", "Bi-weekly: $20 off"
+      "Seniors: 10% off", "Bi-weekly"
     ]
   },
   {
@@ -31,7 +31,7 @@ const services = [
       "Bathroom & kitchen sanitization", "Vacuuming & mopping", "Same cleaner option", "Phone reminders"
     ],
     addOns: [
-      "Bed Linen Change – $10/bed", "Laundry Service – $20", "Interior Windows – $5/window", "Baseboard Detailing – $25–$50", "Hard-to-reach cleaning"
+      "Bed Linen Change", "Laundry Service", "Interior Windows – $5/window", "Baseboard Detailing", "Hard-to-reach cleaning"
     ],
     offers: [
       "10% Senior Discount on all packages"
