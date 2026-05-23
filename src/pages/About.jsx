@@ -65,7 +65,9 @@ export default function AboutSection() {
         </div>
 
         <div className="our-story-images">
-          <img src={Aboutus1} alt="Our cleaning team" />
+          {/* Show this one on mobile */}
+          <img src={Aboutus1} alt="Our cleaning team" className="mobile-show" />
+          {/* Hide this one on mobile */}
           <img src={Aboutus2} alt="Team at work" />
         </div>
       </div>
