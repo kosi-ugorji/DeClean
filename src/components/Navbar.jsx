@@ -39,17 +39,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <div className="navbar-cta">
-          <div className="navbar-phone">
-            <FiPhone />
-            <span>
-              <a href="tel:6135139893" style={{ color: '#141827', textDecoration: 'none' }}>
-                (613) 513-9893
-              </a>
-            </span>
-          </div>
-          <NavLink to="/quote" className="btn btn-outline">Get Quote</NavLink>
-          <NavLink to="/book" className="btn btn-primary">Book Now</NavLink>
+      
         </div>
       </nav>
     </header>
