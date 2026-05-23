@@ -1,31 +1,32 @@
+/* ───────── Base (mobile-first) ───────── */
 .navbar-outer {
   background: #fff;
   border-radius: 0 0 24px 24px;
-  box-shadow: none;
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  justify-content: center;
 }
 
-.navbar {
+.navbar-container {
+  width: 100%;
+  max-width: 1280px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 76px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  position: relative;
+  flex-wrap: wrap;
+  padding: 0.5rem clamp(1rem, 4vw, 2.5rem);
+  min-height: clamp(56px, 6vh, 76px);
 }
 
 .navbar-logo {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 4vw + 0.5rem, 2rem);
   color: var(--color-primary);
-  letter-spacing: -1px;
   text-decoration: none;
-  margin-right: 2rem;
-  user-select: none;
+  margin-right: 1rem;
   white-space: nowrap;
 }
 
@@ -34,36 +35,44 @@
   font-weight: 700;
 }
 
+.navbar-tagline {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-size: 0.55em;
+  font-weight: 700;
+  margin-left: 6px;
+  color: var(--color-primary);
+  transition: color 0.18s;
+}
+.navbar-tagline .break::after { content: ""; }
+.navbar-logo:hover .navbar-tagline { color: #2196f3; }
+
 .navbar-menu {
-  display: flex;
-  gap: 1.2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  align-items: center;
-  transition: all 0.3s;
-}
-
-.navbar-menu li {
   display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: max-height .35s ease;
 }
 
+.navbar-menu li { display: flex; }
 .navbar-menu a {
   font-family: var(--font-heading);
-  font-size: 1.09rem;
+  font-size: clamp(0.95rem, 1vw + 0.6rem, 1.09rem);
   color: var(--color-black);
   font-weight: 700;
   border-radius: 8px;
   padding: 7px 12px;
   transition: color 0.18s, background 0.18s;
 }
-
 .navbar-menu .active,
 .navbar-menu a:hover {
   color: var(--color-primary);
   background: #f3f8fd;
 }
-
 
 .navbar-phone {
   display: flex;
@@ -71,15 +80,8 @@
   font-weight: 600;
   color: var(--color-black);
   font-size: 1.03rem;
-  margin-right: 0.7rem;
   gap: 0.3em;
   letter-spacing: -0.5px;
-}
-
-.btn {
-  min-width: 0;
-  font-size: 1rem;
-  padding: 0.6em 1.3em;
 }
 
 .navbar-mobile-toggle {
@@ -87,136 +89,31 @@
   background: none;
   border: none;
   padding: 0.4em;
-  margin-left: 1em;
+  margin-left: auto;
   cursor: pointer;
   color: var(--color-primary);
 }
 
-@media (max-width: 1020px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .navbar-menu {
-    gap: 1.1rem;
-  }
-  .navbar-cta {
-    gap: 0.6rem;
-    margin-left: 1rem;
-  }
-}
+/* ───────── Breakpoints ───────── */
 
-@media (max-width: 900px) {
+/* Tablet (≥700px) */
+@media (min-width: 700px) {
   .navbar-menu {
-    gap: 0.9rem;
-  }
-  .navbar-logo {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .navbar {
-    flex-wrap: wrap;
+    position: static;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 0.5rem;
-    min-height: unset;
-    padding-bottom: 0.5rem;
+    max-height: none;
   }
-  .navbar-logo {
-    font-size: 1.25rem;
-    margin-right: 0.5rem;
-  }
-  .navbar-cta {
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: 0;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .navbar-mobile-toggle {
-    display: block;
-    z-index: 120;
-  }
-
-  .navbar-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: #fff;
-    gap: 1rem;
-    padding: 1.5rem 0.5rem 0.75rem 0.5rem;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 8px 32px 0 rgba(92,160,242,0.11);
-    display: none;
-    align-items: stretch;
-  }
-  .navbar-menu.open {
-    display: flex;
-  }
-  .navbar-menu li {
-    width: 100%;
-    justify-content: flex-start;
-  }
+  .navbar-menu li { width: auto; }
+  .navbar-mobile-toggle { display: none; }
 }
 
-/* --- 0. General improvements --- */
-.navbar {
-  min-height: clamp(56px, 6vh, 76px);
-  padding-inline: clamp(1rem, 4vw, 2.5rem);
-}
+/* Mobile (<700px) */
+@media (max-width: 699px) {
+  .navbar-container { align-items: flex-start; }
+  .navbar-logo { font-size: 1.25rem; margin-right: 0.5rem; }
 
-.navbar-logo {
-  font-size: clamp(1.25rem, 4vw + 0.5rem, 2rem);
-}
+  .navbar-mobile-toggle { display: block; z-index: 120; }
 
-.navbar-menu a {
-  font-size: clamp(0.95rem, 1vw + 0.6rem, 1.09rem);
-}
-
-/* Optional container to keep items centered on big screens */
-.navbar-outer {
-  display: flex;
-  justify-content: center;
-}
-.navbar-container {
-  width: 100%;
-  max-width: 1280px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* --- 1. Single tablet breakpoint --- */
-@media (max-width: 960px) {
-  .navbar-menu { gap: 1rem; }
-  .navbar-logo { margin-right: 1rem; }
-  .navbar-cta { margin-left: 1rem; gap: 0.6rem; }
-}
-
-/* --- 2. Mobile “hamburger” breakpoint --- */
-@media (max-width: 700px) {
-  /* stack header rows */
-  .navbar-container { flex-direction: row; align-items: flex-start; }
-
-  /* burger shows, phone/cta stack */
-  .navbar-mobile-toggle { display: block; margin-left: auto; }
-
-  .navbar-cta {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: .5rem;
-    margin: .5rem 0 0 auto;
-  }
-
-  /* mobile menu collapsible */
   .navbar-menu {
     position: absolute;
     top: 100%;
@@ -226,52 +123,18 @@
     padding: 1.25rem .75rem;
     border-radius: 0 0 16px 16px;
     box-shadow: 0 8px 32px rgba(92,160,242,.11);
-
-    /* start closed */
     max-height: 0;
     overflow: hidden;
-    transition: max-height .35s ease;
   }
-  /* class toggled by JS */
   .navbar-menu.open { max-height: 400px; }
   .navbar-menu li { width: 100%; }
 }
 
-/* ─────────  Tagline stack  ───────── */
-.navbar-tagline {
-  display: inline-flex;
-  flex-direction: column;   /* each line below the previous one   */
-  line-height: 1.1;
-  font-size: 0.55em;        /* ~55 % of the main logo size         */
-  font-weight: 700;
-  margin-left: 6px;         /* little gap from “DECLEAN”           */
-  color: var(--color-primary);           /* blue by default       */
-  transition: color 0.18s;
-}
-
-/* make the commas disappear (they’re now line breaks) */
-.navbar-tagline .break::after { content: ""; }
-
-/* keep hover colour in sync with the main logo */
-.navbar-logo:hover .navbar-tagline {
-  color: #2196f3;           /* or whichever hover colour you use   */
-}
-
-/* ─────────  Responsive tweak  ───────── */
-@media (max-width: 600px) {
-  .navbar-tagline {
-    line-height: 1;         /* tighten stack on phones             */
-    font-size: 0.5em;       /* a hair smaller                      */
-  }
-}
-
+/* Large screens (≥900px) */
 @media (min-width: 900px) {
-  /* optional: collapse back to single line on big screens */
   .navbar-tagline {
     flex-direction: row;
     gap: 0.25em;
   }
-  .navbar-tagline .break {
-    display: none;
-  }
+  .navbar-tagline .break { display: none; }
 }
