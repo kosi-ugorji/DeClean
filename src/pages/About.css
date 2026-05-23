@@ -266,7 +266,7 @@ img, .section {
   .our-story-container {
     flex-direction: column;
     gap: 24px;
-    padding: 0 12px; /* tighter margins */
+    padding: 0 12px;
   }
 
   .our-story-images {
@@ -274,8 +274,15 @@ img, .section {
     gap: 12px;
   }
 
+  /* Hide all images by default on mobile */
   .our-story-images img {
-    flex: 1;
+    display: none;
+  }
+
+  /* Show only Aboutus1.jpeg */
+  .our-story-images img.mobile-show {
+    display: block;
+    width: 100%;
     border-radius: 6px;
     object-fit: cover;
   }
@@ -297,7 +304,7 @@ img, .section {
     padding-block: 38px;
   }
 
-    .about-values-title {
+  .about-values-title {
     font-size: 1.25rem;
   }
 
