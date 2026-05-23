@@ -281,19 +281,6 @@ body {
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-  }
-
-  .about-image {
-    order: -1; /* show image above text on mobile */
-    margin-bottom: 1.5rem;
-  }
-}
-
-
 /* FEATURES (Our Services styled like Featured Communities) */
 .features {
   background: var(--bg);
