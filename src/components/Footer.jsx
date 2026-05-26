@@ -81,14 +81,14 @@ export default function Footer() {
           <div className="footer-service-areas">
             We proudly serve:
             <ul>
-              <li>Central Ottawa</li>
-              <li>Centretown</li>
-              <li>ByWard Market</li>
               <li>Downtown Ottawa</li>
-              <li>Little Italy</li>
-              <li>Hintonburg</li>
-              <li>Glebe</li>
-              <li>Sandy Hill</li>
+              <li>Riverside</li>
+              <li>Oeleans</li>
+              <li>Barrhaven</li>
+              <li>Kanata</li>
+              <li>Clarence Rockland</li>
+              <li>Manotick</li>
+              <li>Napean</li>
               <li>...and many more!</li>
             </ul>
           </div>
